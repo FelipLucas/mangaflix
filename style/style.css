@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Anton&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 *{
     margin: 0;
     padding: 0;
@@ -12,6 +13,117 @@ body{
     background-color: #000000;
 }
 
+/*header*/
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    width: 100%;
+    height: 40px;
+    background-color: transparent;
+    z-index: 4;
+}
+
+.div-header-title{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin: 0 0 0 2rem;
+}
+
+.div-header-title a{
+    text-decoration: none;
+}
+
+.div-header-title h2{
+    font-family: "Bebas Neue", sans-serif;
+    color: #b5151d;
+    font-size: 20;
+    cursor: pointer;
+}
+
+header nav{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+header nav a{
+    text-decoration: none;
+    font-size: 12px;
+}
+
+header nav a:active{
+    font-weight: 600;
+}
+
+.div-header-perfil{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin: 0 2rem;
+}
+
+.div-header-perfil svg{
+    cursor: pointer;
+    margin-left: 5px;
+}
+
+.bi-caret-up-fill{
+    display: none;
+}
+
+.bi-bell-fill{
+    display: none;
+}
+
+.div-header-perfil div{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.div-header-perfil img{
+    width: 25px;
+    height: 25px;
+    image-rendering: optimizeQuality;
+    border-radius: 5px;
+}
+
+.div-search{
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    width: 21px;
+    background-color: transparent;
+    border-radius: 5px;
+    border: none;
+    overflow: hidden;
+}
+
+.div-search input{
+    padding: 5px;
+    background-color: transparent;
+    text-align: center;
+    border: none;
+    z-index: -4;
+}
+
+.div-search input::placeholder{
+    color: #ffffffbd;
+}
+
+.div-search svg{
+    position: absolute;
+    left: 0;
+}
+
+/*principal*/
 .section-principal{
     position: relative;
     display: flex;
@@ -55,12 +167,11 @@ body{
 .div-ratio{
     display: flex;
     align-items: center;
-    gap: 0;
+    cursor: pointer;
 }
 
-.div-ratio svg{
-    width: 14px;
-    height: 14px;
+.bi-star-fill:hover{
+    cursor: pointer;
 }
 
 .p-carac{
@@ -104,6 +215,10 @@ body{
     display: flex;
     align-items: center;
     gap: .5rem;
+}
+
+.buttons-principal a{
+    text-decoration: none;
 }
 
 .btn1-principal{
@@ -152,7 +267,7 @@ body{
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(90deg, rgba(0,0,0, .85), rgba(0,0,0, 0.7) 25%, transparent 35%) ;
+    background: linear-gradient(90deg, rgba(0,0,0, .85), rgba(0,0,0, 0.7) 20%, transparent 35%) ;
     z-index: 1;
 }
 
@@ -163,7 +278,7 @@ body{
     width: 100px;
     height: 30px;
     background-color: #000000;
-    z-index: 3;
+    z-index: 999;
     border-left: .5px solid #ffffffff;
 }
 
@@ -198,6 +313,7 @@ body{
     object-fit: cover;
     cursor: pointer;
     transition: .3s;
+    border-radius: 5px;
 }
 
 .div-carousel img:hover{
@@ -275,4 +391,52 @@ body{
 
 .div-gener-movie p{
     font-size: 12px;
+}
+
+/*pagina informações*/
+.section-informations-pages{
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    margin: 10rem 0;
+    width: 100%;
+    height: 40vh;
+}
+
+.section-informations-pages img{
+    width: 300px;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.div-informations-pages{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin: 3rem 0;
+}
+
+.div-descriptions-pages{
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+.div-informations-pages h1{
+    font-size: 27px;
+}
+
+.div-informations-pages div p{
+    font-family: 12px;
+    color: #ffffffca;
+}
+
+/*stars*/
+.bi-star-fill:hover{
+    fill: #e61a1a;
+}
+
+#special-star{
+    display: none;
 }
