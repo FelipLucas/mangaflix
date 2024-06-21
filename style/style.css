@@ -99,11 +99,12 @@ header nav a:active{
     display: flex;
     align-items: center;
     gap: 1rem;
-    width: 21px;
+    width: 25px;
     background-color: transparent;
     border-radius: 5px;
     border: none;
     overflow: hidden;
+    transition: .5s ease-in-out;
 }
 
 .div-search input{
@@ -118,9 +119,56 @@ header nav a:active{
     color: #ffffffbd;
 }
 
-.div-search svg{
+.div-search svg.bi-search{
     position: absolute;
+    left: 5px;
+    z-index: 4;
+}
+
+.div-search svg.bi-x{
+    display: none;
+    position: absolute;
+    right: 5px;
+    cursor: pointer;
+    z-index: 4;
+}
+
+.div-perfs-log{
+    display: none;
+    position: absolute;
+    top: 0;
     left: 0;
+    width: 105px;
+    height: 100vh;
+    background-color: #141414;
+    z-index: 99999;
+    transition: .5s ease-in-out;
+}
+
+.div-perfs-log img{
+    display: flex;
+    width: 50px;
+    margin: 1rem auto;
+    border-radius: 5px;
+    box-shadow: #ffffff 0px .5px 10px, #fff 0px 1px 10px, #fff 0px 1px 10px, #fff 0px 1px 10px, #fff 0px -3px 5px;
+    cursor: pointer;
+}
+
+.div-list-perfslog{
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    margin: 2.5rem 0 0 1rem;
+}
+
+.div-list-perfslog a{
+    text-decoration: none;
+    font-size: 13px;
+    color: #ffffffe2;
+}
+
+.div-list-perfslog a:hover{
+    color: #e61a1a;
 }
 
 /*principal*/
@@ -136,7 +184,7 @@ header nav a:active{
     width: 100%;
     height: 100%;
     object-fit: cover;
-    filter: brightness(50%);
+    filter: brightness(100%);
 }
 
 .div-principal{
@@ -267,7 +315,7 @@ header nav a:active{
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(90deg, rgba(0,0,0, .85), rgba(0,0,0, 0.7) 20%, transparent 35%) ;
+    background: linear-gradient(90deg, rgba(0,0,0, .85), rgba(0,0,0, 0.7) 40%, transparent 75%) ;
     z-index: 1;
 }
 
@@ -278,7 +326,7 @@ header nav a:active{
     width: 100px;
     height: 30px;
     background-color: #000000;
-    z-index: 999;
+    z-index: 3;
     border-left: .5px solid #ffffffff;
 }
 

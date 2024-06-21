@@ -84,11 +84,42 @@ star.addEventListener('click', () =>{
 },50);
 
 //seacrh
-let searchButton = document.querySelector('.bi-search');
 let searchDiv = document.querySelector('.div-search');
+let searchButton = document.querySelector('.bi-search');
+let searchInput = document.querySelector('#isearch');
+let closeSearch = document.querySelector('.bi-x');
 
 const searchOpen = setInterval(() =>{
-    searchButton.addEventListener('click' () =>{
-        searchDiv.style.width = '500px';
-    })
+    searchButton.addEventListener('click', () =>{
+        searchDiv.style.width = '170px';
+        searchDiv.style.border = '1px solid #fff';
+        searchInput.style.zIndex = '3';
+        closeSearch.style.display = 'block';
+    });
+
+    closeSearch.addEventListener('click', () =>{
+        searchDiv.style.width = '25px';
+        searchDiv.style.border = 'none';
+        searchInput.style.zIndex = '-4';
+        closeSearch.style.display = 'none';
+
+        perfil.style.display = 'none';
+    });
 },50);
+
+//perfil
+let perfilOpen = document.querySelector('.div-header-perfil img');
+let perfil = document.querySelector('.div-perfs-log');  
+
+const openPerfil = setInterval(() =>{
+    perfilOpen.addEventListener('click', () =>{
+        perfil.style.display = 'block';
+    });
+    arrowDown.addEventListener('click', () =>{
+        perfil.style.display = 'block';
+    });
+
+    arrowUp.addEventListener('click', () =>{
+        perfil.style.display = 'none';
+    });
+}, 50);
