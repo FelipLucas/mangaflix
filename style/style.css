@@ -161,14 +161,29 @@ header nav a:active{
     margin: 2.5rem 0 0 1rem;
 }
 
+.div-list-perfslog svg{
+    width: 20px;
+    height: 10px;
+}
+
 .div-list-perfslog a{
     text-decoration: none;
-    font-size: 13px;
+    font-size: 12px;
     color: #ffffffe2;
 }
 
 .div-list-perfslog a:hover{
     color: #e61a1a;
+}
+
+.second-x{
+    display: flex;
+    margin: 1rem auto 1rem auto;
+    cursor: pointer;
+}
+
+.second-x:hover{
+    transform: rotate(70deg);
 }
 
 /*principal*/

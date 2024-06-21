@@ -102,14 +102,13 @@ const searchOpen = setInterval(() =>{
         searchDiv.style.border = 'none';
         searchInput.style.zIndex = '-4';
         closeSearch.style.display = 'none';
-
-        perfil.style.display = 'none';
     });
 },50);
 
 //perfil
 let perfilOpen = document.querySelector('.div-header-perfil img');
 let perfil = document.querySelector('.div-perfs-log');  
+let closerLog = document.querySelector('.second-x')
 
 const openPerfil = setInterval(() =>{
     perfilOpen.addEventListener('click', () =>{
@@ -121,5 +120,11 @@ const openPerfil = setInterval(() =>{
 
     arrowUp.addEventListener('click', () =>{
         perfil.style.display = 'none';
+    });
+
+    closerLog.addEventListener('click', () =>{
+        perfil.style.display = 'none';
+        arrowUp.style.display = 'none';
+        arrowDown.style.display = 'block';
     });
 }, 50);
