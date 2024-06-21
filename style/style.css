@@ -526,7 +526,7 @@ header nav a:active{
 /*Wacth*/
 .section-watch{
     display: flex;
-    margin: 8rem auto;
+    margin: 8rem auto 2rem auto;
     width: 800px;
     gap: 1rem;
     z-index: -1;
@@ -597,7 +597,7 @@ header nav a:active{
 .div-title-videos-movies{
     display: flex;
     align-items: center;
-    width: 90%;
+    width: 70%;
     margin: 4rem auto;
     height: 60px;
     background-color: #141414;
@@ -609,4 +609,72 @@ header nav a:active{
     align-items: center;
     gap: 10px;
     margin: 0 2rem;
+}
+
+.section-episodes-movies{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin: 2rem auto;
+    width: 70%;
+    background-color: #000000;
+}
+
+.div-episodes-movies{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    height: 60px;
+}
+
+.div-episodes-movies{
+    border-bottom: .5px solid #ffffff3d;
+}
+
+.div-episodes-movies div{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.div-episodes-movies div svg{
+    width: 14px;
+    height: 14px;
+    margin-right: 5px;
+}
+
+.div-episodes-movies div img{
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+}
+
+.div-episodes-movies div a{
+    text-decoration: none;
+}
+
+.p-episode-movie{
+    position: relative;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.p-episode-movie:before{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: .5px;
+    background-color: #e61a1a;
+    transition: .5s ease-in-out;
+}
+
+.p-episode-movie:hover:before{
+    width: 100%;
+}
+
+.p-episode-movie-date{
+    font-size: 10px;
+    color: #9e9898;
 }
