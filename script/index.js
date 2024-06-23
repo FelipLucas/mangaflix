@@ -1,5 +1,5 @@
 //favoritar
-let favorite = document.querySelector('.first-heart');
+let favorite = document.querySelector('.bi-heart');
 let favoriteFill = document.querySelector('.bi-heart-fill');
 
 const favoritarConst = setInterval(() =>{
