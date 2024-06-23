@@ -3,19 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="images/images.png" type="image/x-icon">
-    <link rel="stylesheet" href="style/style.css">
+    <link rel="shortcut icon" href="../images/images.png" type="image/x-icon">
+    <link rel="stylesheet" href="../style/style.css">
+    <script src="../script/animes.js" defer></script>
     <title>Tokyo Ghoul - Watch</title>
 </head>
 <body>
     <head>
         <header>
             <div class="div-header-title">
-                <a href="index.html">
+                <a href="../index.html">
                     <h2>漫画を読む</h2>
                 </a>
             <nav>
-                <a href="index.html">Home</a>
+                <a href="../index.html">Home</a>
                 <a href="">Series</a>
                 <a href="">Movies</a>
                 <a href="">Categories</a>
@@ -109,8 +110,8 @@
         <section class="section-episodes-movies">
             <div class="div-episodes-movies">
                 <div class="div-episodes001">
-                    <a href=""><img src="https://animesonlinecc.to/wp-content/uploads/2019/06/6yma5KqOEHN71A0PUY9qjc5vmek-300x170.jpg" alt=""></a>
-                    <a href="">
+                    <a href="tokyoGhoul-001.html"><img src="https://animesonlinecc.to/wp-content/uploads/2019/06/6yma5KqOEHN71A0PUY9qjc5vmek-300x170.jpg" alt=""></a>
+                    <a href="tokyoGhoul-001.html">
                         <p class="p-episode-movie">Episódio 001</p>
                     </a>
                     <p class="p-episode-movie-date">17-01-2024</p>
@@ -178,105 +179,6 @@
                 </div>
             </div>
         </section>
-        <section class="section-episode-anime">
-            <div class="div-episode01-anime">
-                <video src="videos/Tokyo Ghoul - Season 1/Tokyo Ghoul Eps.01.mp4" type = 'video/mp4' controls></video>
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
-                    <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z"/>
-                </svg>
-            </div>
-            <div class="overlay-episodes-anime"></div>
-        </section>
     </main>
-    <script>
-/*menu*/
-var menu =  document.querySelector('header');
-var notification = document.querySelector('.bi-bell');
-var notificationFill = document.querySelector('.bi-bell-fill');
-var arrowDown = document.querySelector('.bi-caret-down-fill');
-var arrowUp = document.querySelector('.bi-caret-up-fill');
-var imageLog = document.querySelector('.div-header-perfil img')
-
-const menuColor = setInterval(() =>{
-    if(window.scrollY > 10){
-        menu.style.background = '#000000';
-    }else{
-        menu.style.background = 'transparent';
-    }
-
-    notification.addEventListener('click', () =>{
-        notification.style.display = 'none';
-        notificationFill.style.display = 'block';
-    });
-    
-    notificationFill.addEventListener('click', () =>{
-        notification.style.display = 'block';
-        notificationFill.style.display = 'none';
-    });
-}, 50);
-
-
-const menuPerfil = setInterval(() =>{
-    arrowDown.addEventListener('click', () =>{
-        arrowDown.style.display = 'none';
-        arrowUp.style.display = 'block';
-    });
-    arrowUp.addEventListener('click', () =>{
-        arrowDown.style.display = 'block';
-        arrowUp.style.display = 'none';
-    });
-
-    imageLog.addEventListener('click', () =>{
-        arrowDown.style.display = 'none';
-        arrowUp.style.display = 'block';
-    });
-}, 50)
-
-//seacrh
-let searchDiv = document.querySelector('.div-search');
-let searchButton = document.querySelector('.bi-search');
-let searchInput = document.querySelector('#isearch');
-let closeSearch = document.querySelector('.bi-x');
-
-const searchOpen = setInterval(() =>{
-    searchButton.addEventListener('click', () =>{
-        searchDiv.style.width = '170px';
-        searchDiv.style.border = '1px solid #fff';
-        searchInput.style.zIndex = '3';
-        closeSearch.style.display = 'block';
-    });
-
-    closeSearch.addEventListener('click', () =>{
-        searchDiv.style.width = '25px';
-        searchDiv.style.border = 'none';
-        searchInput.style.zIndex = '-4';
-        closeSearch.style.display = 'none';
-    });
-},50);
-
-//perfil
-let perfilOpen = document.querySelector('.div-header-perfil img');
-let perfil = document.querySelector('.div-perfs-log');  
-let closerLog = document.querySelector('.second-x')
-
-const openPerfil = setInterval(() =>{
-    perfilOpen.addEventListener('click', () =>{
-        perfil.style.display = 'block';
-    });
-    arrowDown.addEventListener('click', () =>{
-        perfil.style.display = 'block';
-    });
-
-    arrowUp.addEventListener('click', () =>{
-        perfil.style.display = 'none';
-    });
-
-    closerLog.addEventListener('click', () =>{
-        perfil.style.display = 'none';
-        arrowUp.style.display = 'none';
-        arrowDown.style.display = 'block';
-    });
-}, 50);
-    </script>
 </body>
 </html>

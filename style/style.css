@@ -637,7 +637,7 @@ header nav a:active{
     gap: 2rem;
 }
 
-.div-episodes-movies div svg{
+.div-episodes001 svg{
     width: 14px;
     height: 14px;
     margin-right: 5px;
@@ -681,42 +681,124 @@ header nav a:active{
 
 /*episodes*/
 .section-episode-anime{
-    display: block;
-    width: 100%;
+    display: flex;
+    gap: 2rem;
+    width: 70%;
     height: 100%;
+    margin: 10rem auto 0 auto;
 }
 
-.div-episode01-anime{
-    display: block;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 3;
+.name-espisodio-anime{
+    margin-bottom: 2rem;
 }
 
 .div-episode01-anime video{
     position: relative;
-    width: 1200px;
-    height: 800px;
+    width: 1000px;
+    height: 560px;
 }
 
-.overlay-episodes-anime{
-    display: none;
-    position: absolute;
-    bottom: 0;
-    left: 0;
+.div-anime-populars{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 3rem 2rem;
+    width: 350px;
+    height: 70vh;
+    background-color: #141414;
+    border-left: .5px solid #ffffff23;
+}
+
+.div-anime-populars-title{
+    display: flex;
+    align-items: center;
+}
+
+.div-anime-populars-title svg{
+    margin-right: 10px;
+}
+
+.div-anime-populars h1{
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.div-anime-populars-des{
+    display: flex;
+    gap: 1rem;
     width: 100%;
-    height: 100%;
-    background-color: #000000c9;
-    z-index: 2;
+    background-color: #0000006d;
+    border-radius: 5px;
 }
 
-.bi-x-lg{
-    position: absolute;
-    top: 0;
-    right: -1rem;
-    width: 25px;
-    height: 25px;
+.div-anime-populars div img{
+    width: 80px;
+    height: 100px;
+    object-fit: cover;
+}
+
+.div-populars{
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    margin: 1rem 0;
+}
+
+.div-anime-populars h3{
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.div-episodes-buttons a{
+    text-decoration: none;
+}
+
+.div-populars p{
+    font-size: 12px;
+    color: #ffffffbc;
+}
+
+.div-populars div{
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+
+.div-episodes-buttons{
+    display: flex;
+    width: 1000px;
+}
+
+.div-episodes-buttons div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 333px;
+    height: 50px;
+    border: .5px solid #ffffff44;
+}
+
+.div-episodes-buttons div:not(.first-child-button-anime){
     cursor: pointer;
+}
+
+.div-episodes-buttons div p{
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.div-episodes-buttons div p:hover:not(.p-first-child-animes){
+    color: #cf2525;
+}
+
+.p-first-child-animes{
+    color: #ffffff82;
+}
+
+.div-episodes-buttons svg{
+    margin-right: 5px;
+    color: #ffffff;
+}
+.div-episodes-buttons svg:last-child{
+    margin-left: 5px;
 }
