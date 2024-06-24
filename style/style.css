@@ -328,8 +328,12 @@ header nav a:active{
     animation: images 1s ease-in-out reverse forwards;
 }
 
-.choose-images div:not(:last-child){
-    margin: 2rem auto;
+.choose-images div:not(:first-child){
+    margin: 2rem auto 2rem auto;
+}
+
+.choose-images div:first-child{
+    margin: 2rem auto 0 auto;
 }
 
 .choose-images img{
