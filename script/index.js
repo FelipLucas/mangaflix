@@ -139,7 +139,7 @@ const openPerfil = setInterval(() =>{
     });
 
     closerLog.addEventListener('click', () =>{
-        perfil.style.display = 'none';
+        perfil.style.animation = 'none';
         arrowUp.style.display = 'none';
         arrowDown.style.display = 'block';
         choosePefilImage.style.display = 'none';
