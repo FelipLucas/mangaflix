@@ -125,6 +125,7 @@ let imagesChooseFiveSrc = imagesChooseFive.src;
 let imagesChooseSix = document.querySelector('.img-choose-images6');
 let imagesChooseSixSrc = imagesChooseSix.src;
 
+let arrowClosePerfil = document.querySelector('.bi-chevron-double-left');
 
 const openPerfil = setInterval(() =>{
     perfilOpen.addEventListener('click', () =>{
@@ -139,7 +140,7 @@ const openPerfil = setInterval(() =>{
     });
 
     closerLog.addEventListener('click', () =>{
-        perfil.style.animation = 'none';
+        perfil.style.display = 'none';
         arrowUp.style.display = 'none';
         arrowDown.style.display = 'block';
         choosePefilImage.style.display = 'none';
@@ -147,36 +148,33 @@ const openPerfil = setInterval(() =>{
 
     imagePerfil.addEventListener('click', () =>{
         choosePefilImage.style.display = 'flex';
-    })
+    });
     
     imagesChooseOne.addEventListener('click', () =>{
-        choosePefilImage.style.display = 'none';
         imagePerfil.src = imagesChoosePerfilSrc;
         imagePerfilSearch.src = imagesChoosePerfilSrc;
-    })
+    });
     imagesChooseTwo.addEventListener('click', () =>{
-        choosePefilImage.style.display = 'none';
         imagePerfil.src = imagesChooseTwoSrc;
         imagePerfilSearch.src = imagesChooseTwoSrc;
-    })
+    });
     imagesChooseThree.addEventListener('click', () =>{
-        choosePefilImage.style.display = 'none';
         imagePerfil.src = imagesChooseThreeSrc;
         imagePerfilSearch.src = imagesChooseThreeSrc;
-    })
+    });
     imagesChooseFour.addEventListener('click', () =>{
-        choosePefilImage.style.display = 'none';
         imagePerfil.src = imagesChooseFourSrc;
         imagePerfilSearch.src = imagesChooseFourSrc;
-    })
+    });
     imagesChooseFive.addEventListener('click', () =>{
-        choosePefilImage.style.display = 'none';
         imagePerfil.src = imagesChooseFiveSrc;
         imagePerfilSearch.src = imagesChooseFiveSrc;
-    })
+    });
     imagesChooseSix.addEventListener('click', () =>{
-        choosePefilImage.style.display = 'none';
         imagePerfil.src = imagesChooseSixSrc;
         imagePerfilSearch.src = imagesChooseSixSrc;
+    });
+    arrowClosePerfil.addEventListener('click', () =>{
+        choosePefilImage.style.display = 'none';
     })
 }, 50);
