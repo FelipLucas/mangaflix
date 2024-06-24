@@ -103,6 +103,29 @@ let perfilOpen = document.querySelector('.div-header-perfil img');
 let perfil = document.querySelector('.div-perfs-log');  
 let closerLog = document.querySelector('.second-x')
 
+let imagePerfil = document.querySelector('.img-perfil-choose');
+let imagePerfilSearch = document.querySelector('.img-perfil-search');
+let choosePefilImage = document.querySelector('.choose-images');
+
+let imagesChooseOne = document.querySelector('.img-choose-images1');
+let imagesChoosePerfilSrc = imagesChooseOne.src;
+
+let imagesChooseTwo = document.querySelector('.img-choose-images2');
+let imagesChooseTwoSrc = imagesChooseTwo.src;
+
+let imagesChooseThree = document.querySelector('.img-choose-images3');
+let imagesChooseThreeSrc = imagesChooseThree.src;
+
+let imagesChooseFour = document.querySelector('.img-choose-images4');
+let imagesChooseFourSrc = imagesChooseFour.src;
+
+let imagesChooseFive = document.querySelector('.img-choose-images5');
+let imagesChooseFiveSrc = imagesChooseFive.src;
+
+let imagesChooseSix = document.querySelector('.img-choose-images6');
+let imagesChooseSixSrc = imagesChooseSix.src;
+
+
 const openPerfil = setInterval(() =>{
     perfilOpen.addEventListener('click', () =>{
         perfil.style.display = 'block';
@@ -119,5 +142,41 @@ const openPerfil = setInterval(() =>{
         perfil.style.display = 'none';
         arrowUp.style.display = 'none';
         arrowDown.style.display = 'block';
+        choosePefilImage.style.display = 'none';
     });
+
+    imagePerfil.addEventListener('click', () =>{
+        choosePefilImage.style.display = 'flex';
+    })
+    
+    imagesChooseOne.addEventListener('click', () =>{
+        choosePefilImage.style.display = 'none';
+        imagePerfil.src = imagesChoosePerfilSrc;
+        imagePerfilSearch.src = imagesChoosePerfilSrc;
+    })
+    imagesChooseTwo.addEventListener('click', () =>{
+        choosePefilImage.style.display = 'none';
+        imagePerfil.src = imagesChooseTwoSrc;
+        imagePerfilSearch.src = imagesChooseTwoSrc;
+    })
+    imagesChooseThree.addEventListener('click', () =>{
+        choosePefilImage.style.display = 'none';
+        imagePerfil.src = imagesChooseThreeSrc;
+        imagePerfilSearch.src = imagesChooseThreeSrc;
+    })
+    imagesChooseFour.addEventListener('click', () =>{
+        choosePefilImage.style.display = 'none';
+        imagePerfil.src = imagesChooseFourSrc;
+        imagePerfilSearch.src = imagesChooseFourSrc;
+    })
+    imagesChooseFive.addEventListener('click', () =>{
+        choosePefilImage.style.display = 'none';
+        imagePerfil.src = imagesChooseFiveSrc;
+        imagePerfilSearch.src = imagesChooseFiveSrc;
+    })
+    imagesChooseSix.addEventListener('click', () =>{
+        choosePefilImage.style.display = 'none';
+        imagePerfil.src = imagesChooseSixSrc;
+        imagePerfilSearch.src = imagesChooseSixSrc;
+    })
 }, 50);

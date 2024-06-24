@@ -20,7 +20,6 @@ header{
     left: 0;
     display: flex;
     align-items: center;
-    justify-content: space-between;
     gap: 2rem;
     width: 100%;
     height: 40px;
@@ -62,6 +61,8 @@ header nav a:active{
 }
 
 .div-header-perfil{
+    position: absolute;
+    right: 0;
     display: flex;
     align-items: center;
     gap: 1rem;
@@ -147,16 +148,30 @@ header nav a:active{
     position: absolute;
     top: 0;
     left: 0;
-    width: 105px;
+    width: 0px;
     height: 100vh;
-    background-color: #141414;
+    background-color: #0a0a0a;
     z-index: 99999;
-    transition: .5s ease-in-out;
+    animation: perfil-secao 1s ease-in-out forwards;
+}
+
+@keyframes perfil-secao {
+    0%{
+        width: 0;
+    }
+    50%{
+        width: 100px;
+    }
+    100%{
+        width: 200px;
+    }
 }
 
 .div-perfs-log img{
     display: flex;
     width: 50px;
+    height: 50px;
+    object-fit: cover;
     margin: 1rem auto;
     border-radius: 5px;
     box-shadow: #ffffff 0px .5px 10px, #fff 0px 1px 10px, #fff 0px 1px 10px, #fff 0px 1px 10px, #fff 0px -3px 5px;
@@ -167,7 +182,7 @@ header nav a:active{
     display: flex;
     flex-direction: column;
     gap: .5rem;
-    margin: 2.5rem 0 0 1rem;
+    margin: 4rem 0 0 1rem;
 }
 
 .div-list-perfslog svg{
@@ -195,6 +210,133 @@ header nav a:active{
     transform: rotate(70deg);
 }
 
+/*ratio star*/
+.avaliar{
+    display: flex;
+}
+
+.form-cadaster{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin: 2rem auto;
+}
+
+.div-cadaster{
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    gap: 1rem;
+}
+
+.form-cadaster div label{
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.form-cadaster input:focus{
+    border: none;
+    outline: none;
+}
+
+#iemail{
+    width: 150px;
+    padding: 10px;
+    font-size: 13px;
+    border: 1px solid #ccc;
+    background-color: #ebebeb00;
+    color: #ffffff;
+}
+
+#ipassword{
+    width: 150px;
+    padding: 10px;
+    font-size: 13px;
+    border: 1px solid #2d2d2d4d;
+    background-color: transparent;
+    color: #ffffff;
+}
+
+#isubmit{
+    width: 70px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 0;
+    background-color: #141414;
+    color: #D92525;
+    font-size: 13px;
+    cursor: pointer;
+    transition: .5s ease-in-out;
+}
+
+#isubmit:hover{
+    background-color: #cf2525;
+    color: #ffffff;
+}
+
+.div-links-cadaster{
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    margin: 1rem 2rem;
+}
+
+.div-links-cadaster a{
+    text-align: right;
+    font-size: 12px;
+    color: #cf2525;
+}
+
+.choose-images{
+    position: absolute;
+    top: 0;
+    left: 200px;
+    display: none;
+    flex-direction: column;
+    width: 0px;
+    height: 300px;
+    background: #0a0a0a;
+    transition: .5s;
+    animation: images 1s ease-in-out reverse forwards;
+}
+
+@keyframes images{
+    0%{
+        width: 0%;
+    }
+    50%{
+        width: 300px;
+    }
+    0%{
+        width: 600px;
+    }
+}
+
+.choose-images div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    animation: images 1s ease-in-out reverse forwards;
+}
+
+.choose-images div:not(:last-child){
+    margin: 2rem auto;
+}
+
+.choose-images img{
+    width: 100px;
+    height: 100px;
+    border-radius: 5px;
+    object-fit: cover;
+    cursor: pointer;
+    transition: .3s ease-in-out;
+}
+
+
+.choose-images img:hover{
+    filter: brightness(50%);
+}
 /*principal*/
 .section-principal{
     position: relative;
@@ -380,6 +522,7 @@ header nav a:active{
     margin: 4rem auto;
     background-color: #141414;
     border-bottom: 1px solid #da171760;
+    border-radius: 5px;
 }
 
 .div-carousel{
@@ -527,7 +670,7 @@ header nav a:active{
 .section-watch{
     display: flex;
     margin: 8rem auto 2rem auto;
-    width: 800px;
+    width: 1430px;
     gap: 1rem;
     z-index: -1;
 }
@@ -539,8 +682,9 @@ header nav a:active{
 }
 
 .div-watch{
-    width: 600px;
+    width: 1230px;
     background-color: #141414;
+    border-radius: 5px;
 }
 
 .div-title-movie{
@@ -602,6 +746,7 @@ header nav a:active{
     height: 60px;
     background-color: #141414;
     border-bottom: 1px solid #da171760;
+    border-radius: 5px;
 }
 
 .div-title-videos-movies p{
