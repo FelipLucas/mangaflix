@@ -66,7 +66,31 @@ const searchOpen = setInterval(() =>{
 //perfil
 let perfilOpen = document.querySelector('.div-header-perfil img');
 let perfil = document.querySelector('.div-perfs-log');  
-let closerLog = document.querySelector('.second-x')
+let closerLog = document.querySelector('.second-x');
+
+let imagePerfil = document.querySelector('.img-perfil-choose');
+let imagePerfilSearch = document.querySelector('.img-perfil-search');
+let choosePefilImage = document.querySelector('.choose-images');
+
+let imagesChooseOne = document.querySelector('.img-choose-images1');
+let imagesChoosePerfilSrc = imagesChooseOne.src;
+
+let imagesChooseTwo = document.querySelector('.img-choose-images2');
+let imagesChooseTwoSrc = imagesChooseTwo.src;
+
+let imagesChooseThree = document.querySelector('.img-choose-images3');
+let imagesChooseThreeSrc = imagesChooseThree.src;
+
+let imagesChooseFour = document.querySelector('.img-choose-images4');
+let imagesChooseFourSrc = imagesChooseFour.src;
+
+let imagesChooseFive = document.querySelector('.img-choose-images5');
+let imagesChooseFiveSrc = imagesChooseFive.src;
+
+let imagesChooseSix = document.querySelector('.img-choose-images6');
+let imagesChooseSixSrc = imagesChooseSix.src;
+
+let arrowClosePerfil = document.querySelector('.bi-chevron-double-left');
 
 const openPerfil = setInterval(() =>{
     perfilOpen.addEventListener('click', () =>{
@@ -84,5 +108,36 @@ const openPerfil = setInterval(() =>{
         perfil.style.display = 'none';
         arrowUp.style.display = 'none';
         arrowDown.style.display = 'block';
+    });
+    imagePerfil.addEventListener('click', () =>{
+        choosePefilImage.style.display = 'flex';
+    });
+    
+    imagesChooseOne.addEventListener('click', () =>{
+        imagePerfil.src = imagesChoosePerfilSrc;
+        imagePerfilSearch.src = imagesChoosePerfilSrc;
+    });
+    imagesChooseTwo.addEventListener('click', () =>{
+        imagePerfil.src = imagesChooseTwoSrc;
+        imagePerfilSearch.src = imagesChooseTwoSrc;
+    });
+    imagesChooseThree.addEventListener('click', () =>{
+        imagePerfil.src = imagesChooseThreeSrc;
+        imagePerfilSearch.src = imagesChooseThreeSrc;
+    });
+    imagesChooseFour.addEventListener('click', () =>{
+        imagePerfil.src = imagesChooseFourSrc;
+        imagePerfilSearch.src = imagesChooseFourSrc;
+    });
+    imagesChooseFive.addEventListener('click', () =>{
+        imagePerfil.src = imagesChooseFiveSrc;
+        imagePerfilSearch.src = imagesChooseFiveSrc;
+    });
+    imagesChooseSix.addEventListener('click', () =>{
+        imagePerfil.src = imagesChooseSixSrc;
+        imagePerfilSearch.src = imagesChooseSixSrc;
+    });
+    arrowClosePerfil.addEventListener('click', () =>{
+        choosePefilImage.style.display = 'none';
     });
 }, 50);

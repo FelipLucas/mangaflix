@@ -1,21 +1,15 @@
-//favoritar
-let favorite = document.querySelector('.bi-heart');
-let favoriteFill = document.querySelector('.bi-heart-fill');
-
-const favoritarConst = setInterval(() =>{
-favorite.addEventListener('click', () =>{
-    favorite.style.display = 'none';
-    favoriteFill.style.display = 'block';
-});
-favoriteFill.addEventListener('click', () =>{
-    favorite.style.display = 'block';
-    favoriteFill.style.display = 'none';
-});
-}, 50);
-
 //abrir caracteristicas filmes
 let hoverMoves = document.querySelector('.div-slides img');
 let hoverMoveInformations = document.querySelector('.div-click-movie');
+
+let hoverMovesTwo = document.querySelector('.div-slides2 img');
+let hoverMoveInformationsTwo = document.querySelector('.div-click-movie2');
+
+let hoverMovesThree = document.querySelector('.div-slides3 img');
+let hoverMoveInformationsThree = document.querySelector('.div-click-movie3');
+
+let hoverMovesFour = document.querySelector('.div-slides4 img');
+let hoverMoveInformationsFour = document.querySelector('.div-click-movie4');
 
 hoverMoves.addEventListener('mouseover', () =>{
     hoverMoveInformations.style.display = 'flex';
@@ -31,6 +25,22 @@ hoverMoves.addEventListener('mouseout', () =>{
 hoverMoveInformations.addEventListener('mouseout', () =>{
     hoverMoves.style.scale = '1';
     hoverMoveInformations.style.display = 'none';
+});
+
+hoverMovesTwo.addEventListener('mouseover', () =>{
+    hoverMoveInformationsTwo.style.display = 'flex';
+});
+hoverMoveInformationsTwo.addEventListener('mouseover', () =>{
+    hoverMoveInformationsTwo.style.display = 'flex';
+    hoverMovesTwo.style.scale = '1.3';
+});
+
+hoverMovesTwo.addEventListener('mouseout', () =>{
+    hoverMoveInformationsTwo.style.display = 'none';
+});
+hoverMoveInformationsTwo.addEventListener('mouseout', () =>{
+    hoverMovesTwo.style.scale = '1';
+    hoverMoveInformationsTwo.style.display = 'none';
 });
 
 /*menu*/
