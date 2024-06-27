@@ -1044,3 +1044,74 @@ header nav a:active{
 .div-episodes-buttons svg:last-child{
     margin-left: 5px;
 }
+
+/*movies*/
+.section-movies-title{
+    display: flex;
+    align-items: center;
+    width: 87%;
+    height: 60px;
+    margin: 10rem auto;
+    border-radius: 5px;
+    background-color: #141414;
+    border-bottom: 1px solid #da171760;
+}
+
+.div-movies-title{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin: 0 3rem;
+}
+
+.section-movies-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin: 5rem auto;
+    width: 100%;
+}
+
+.div-movie-slide, .div-movie-slide2, .div-movie-slide3, .div-movie-slide4, .div-movie-slide5, .div-movie-slide6, .div-movie-slide7, .div-movie-slide8{
+    position: relative;
+    width: 250px;
+    height: 150px;
+}
+
+.div-movie-slide img, .div-movie-slide2 img, .div-movie-slide3 img, .div-movie-slide4 img, .div-movie-slide5 img, .div-movie-slide6 img, .div-movie-slide7 img, .div-movie-slide8 img{
+    width: 250px;
+    height: 150px;
+    object-fit: cover;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: .3s ease-in-out;
+}
+
+.div-movie-slide img:hover, .div-movie-slide2 img:hover, .div-movie-slide3 img:hover, .div-movie-slide4 img:hover, .div-movie-slide5 img:hover, .div-movie-slide6 img:hover, .div-movie-slide7 img:hover, .div-movie-slide8 img:hover{
+    scale: 1.01;
+    filter: brightness(70%);
+    transform: rotate(1deg);
+}
+
+.div-movie-slide p, .div-movie-slide2 p, .div-movie-slide3 p, .div-movie-slide4 p, .div-movie-slide5 p, .div-movie-slide6 p, .div-movie-slide7 p, .div-movie-slide8 p{
+    display: none;
+    position: absolute;
+    bottom: 5px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 15px;
+    transition: .3s ease-in-out;
+    animation: p-movie-animation .5s;
+}
+
+@keyframes p-movie-animation {
+    from{
+        display: none;
+        transform: translateY(5px);
+    }
+    to{
+        display: block;
+        transform: translateY(none);
+    }
+}

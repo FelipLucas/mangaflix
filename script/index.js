@@ -42,6 +42,37 @@ hoverMoveInformationsTwo.addEventListener('mouseout', () =>{
     hoverMovesTwo.style.scale = '1';
     hoverMoveInformationsTwo.style.display = 'none';
 });
+hoverMovesThree.addEventListener('mouseover', () =>{
+    hoverMoveInformationsThree.style.display = 'flex';
+});
+hoverMoveInformationsThree.addEventListener('mouseover', () =>{
+    hoverMoveInformationsThree.style.display = 'flex';
+    hoverMovesThree.style.scale = '1.3';
+});
+
+hoverMovesThree.addEventListener('mouseout', () =>{
+    hoverMoveInformationsThree.style.display = 'none';
+});
+hoverMoveInformationsThree.addEventListener('mouseout', () =>{
+    hoverMovesThree.style.scale = '1';
+    hoverMoveInformationsThree.style.display = 'none';
+});
+
+hoverMovesFour.addEventListener('mouseover', () =>{
+    hoverMoveInformationsFour.style.display = 'flex';
+});
+hoverMoveInformationsFour.addEventListener('mouseover', () =>{
+    hoverMoveInformationsFour.style.display = 'flex';
+    hoverMovesFour.style.scale = '1.3';
+});
+
+hoverMovesFour.addEventListener('mouseout', () =>{
+    hoverMoveInformationsFour.style.display = 'none';
+});
+hoverMoveInformationsFour.addEventListener('mouseout', () =>{
+    hoverMovesFour.style.scale = '1';
+    hoverMoveInformationsFour.style.display = 'none';
+});
 
 /*menu*/
 var menu =  document.querySelector('header');
