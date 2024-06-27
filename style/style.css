@@ -543,6 +543,7 @@ header nav a:active{
     align-items: center;
     justify-content: center;
     gap: 2rem;
+    margin: 4rem 0;
 }
 
 .div-slides img{
@@ -683,6 +684,76 @@ header nav a:active{
 
 .div-gener-movie p{
     font-size: 12px;
+}
+
+.section-top-10{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 5rem;
+    margin: 10rem 0;
+    width: 100%;
+}
+
+.div-top-10{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.section-top-10 h1{
+    display: flex;
+    margin: 0 auto;
+    width: 80%;
+}
+
+.div-top-10 div{
+    position: relative;
+    display: flex;
+}
+
+.div-top-10 div h4{
+    font-family:  'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 400px;
+    font-weight: 300;
+    color: #ffffffe3;
+}
+
+.p-top10-1{
+    margin: -5.9rem -5rem 0 0;
+}
+.p-top10-2{
+    margin: -5.9rem -5rem 0 0;
+}
+.p-top10-3{
+    margin: -5.9rem -5rem 0 0;
+}
+
+.div-top-10 div img{
+    width: 200px;
+    height: 280px;
+    border-radius: 5px;
+    filter: brightness(80%);
+    z-index: 1;
+    box-shadow: #000000 0px .5px 30px, #000000 0px 1px 30px, #2e2e2e 0px 1px 30px, #000000 0px 1px 10px, #000000 0px -3px 5px;
+    transition: .3s ease-in-out;
+    cursor: pointer;
+}
+
+.div-top-10 div img:hover{
+    scale: 1.03;
+}
+
+.div-top-10 div p, .div2-top-10 div p, .div3-top-10 div p, .div4-top-10 div p, .div5-top-10 div p{
+    display: none;
+    position: absolute;
+    bottom: 90px;
+    right: 15px;
+    font-weight: 600;
+    color: #000000;
+    animation: p2-movie-animation .5s ease-in-out;
+    z-index: 1;
 }
 
 /*pagina informações*/
@@ -1060,8 +1131,14 @@ header nav a:active{
 .div-movies-title{
     display: flex;
     align-items: center;
-    gap: 1rem;
+    gap: .5rem;
     margin: 0 3rem;
+}
+
+.div-movies-title h1{
+    font-size: 18px;
+    font-weight: 500;   
+    color: #ffffffef;
 }
 
 .section-movies-container{
@@ -1089,7 +1166,7 @@ header nav a:active{
 }
 
 .div-movie-slide img:hover, .div-movie-slide2 img:hover, .div-movie-slide3 img:hover, .div-movie-slide4 img:hover, .div-movie-slide5 img:hover, .div-movie-slide6 img:hover, .div-movie-slide7 img:hover, .div-movie-slide8 img:hover{
-    scale: 1.01;
+    scale: 1.03;
     filter: brightness(70%);
     transform: rotate(1deg);
 }
@@ -1109,6 +1186,16 @@ header nav a:active{
     from{
         display: none;
         transform: translateY(5px);
+    }
+    to{
+        display: block;
+        transform: translateY(none);
+    }
+}
+@keyframes p2-movie-animation {
+    from{
+        display: none;
+        transform: translateY(17px);
     }
     to{
         display: block;

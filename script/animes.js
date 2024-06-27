@@ -178,6 +178,7 @@ imageMovieHover.addEventListener('mouseout', () =>{
 
 pMovieHover.addEventListener('mouseover', () =>{
     pMovieHover.style.display = 'block';
+    imageMovieHover.style.scale = '1.03';
 });
 pMovieHover.addEventListener('mouseout', () =>{
     pMovieHover.style.display = 'none';
@@ -233,8 +234,50 @@ imageMovieHoverFive.addEventListener('mouseout', () =>{
 });
 
 pMovieHoverFive.addEventListener('mouseover', () =>{
-    pMovieHoverFour.style.display = 'block';
+    pMovieHoverFive.style.display = 'block';
 });
 pMovieHoverFive.addEventListener('mouseout', () =>{
-    pMovieHoverFour.style.display = 'none';
+    pMovieHoverFive.style.display = 'none';
+});
+
+imageMovieHoverSix.addEventListener('mouseover', () =>{
+    pMovieHoverSix.style.display = 'block';
+});
+imageMovieHoverSix.addEventListener('mouseout', () =>{
+    pMovieHoverSix.style.display = 'none';
+});
+
+pMovieHoverSix.addEventListener('mouseover', () =>{
+    pMovieHoverSix.style.display = 'block';
+});
+pMovieHoverSix.addEventListener('mouseout', () =>{
+    pMovieHoverSix.style.display = 'none';
+});
+
+imageMovieHoverSeven.addEventListener('mouseover', () =>{
+    pMovieHoverSeven.style.display = 'block';
+});
+imageMovieHoverSeven.addEventListener('mouseout', () =>{
+    pMovieHoverSeven.style.display = 'none';
+});
+
+pMovieHoverSeven.addEventListener('mouseover', () =>{
+    pMovieHoverSeven.style.display = 'block';
+});
+pMovieHoverSeven.addEventListener('mouseout', () =>{
+    pMovieHoverSeven.style.display = 'none';
+});
+
+imageMovieHoverEigth.addEventListener('mouseover', () =>{
+    pMovieHoverEigth.style.display = 'block';
+});
+imageMovieHoverEigth.addEventListener('mouseout', () =>{
+    pMovieHoverEigth.style.display = 'none';
+});
+
+pMovieHoverEigth.addEventListener('mouseover', () =>{
+    pMovieHoverEigth.style.display = 'block';
+});
+pMovieHoverEigth.addEventListener('mouseout', () =>{
+    pMovieHoverEigth.style.display = 'none';
 });

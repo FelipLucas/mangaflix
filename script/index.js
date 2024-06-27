@@ -219,3 +219,54 @@ const openPerfil = setInterval(() =>{
         choosePefilImage.style.display = 'none';
     })
 }, 50);
+
+//top 10
+let imageTop10 = document.querySelector('.div-img-top-10 img');
+let paraghTop10 = document.querySelector('.div-img-top-10 p');
+
+let imageTop10Two = document.querySelector('.div2-img-top-10 img');
+let paraghTop10Two = document.querySelector('.div2-img-top-10 p');
+
+let imageTop10Three = document.querySelector('.div3-img-top-10 img');
+let paraghTop10Three = document.querySelector('.div3-img-top-10 p');
+
+let imageTop10Four = document.querySelector('.div4-img-top-10 img');
+let paraghTop10Four = document.querySelector('.div4-img-top-10 p');
+
+let imageTop10Five = document.querySelector('.div5-img-top-10 img');
+let paraghTop10Five = document.querySelector('.div5-img-top-10 p');
+
+imageTop10.addEventListener('mouseover', () =>{
+    paraghTop10.style.display = 'block';
+});
+imageTop10.addEventListener('mouseout', () =>{
+    paraghTop10.style.display = 'none';
+});
+
+imageTop10Two.addEventListener('mouseover', () =>{
+    paraghTop10Two.style.display = 'block';
+});
+imageTop10Two.addEventListener('mouseout', () =>{
+    paraghTop10Two.style.display = 'none';
+});
+
+imageTop10Three.addEventListener('mouseover', () =>{
+    paraghTop10Three.style.display = 'block';
+});
+imageTop10Three.addEventListener('mouseout', () =>{
+    paraghTop10Three.style.display = 'none';
+});
+
+imageTop10Four.addEventListener('mouseover', () =>{
+    paraghTop10Four.style.display = 'block';
+})
+imageTop10Four.addEventListener('mouseout', () =>{
+    paraghTop10Four.style.display = 'none';
+})
+
+imageTop10Five.addEventListener('mouseover', () =>{
+    paraghTop10Five.style.display = 'block';
+})
+imageTop10Five.addEventListener('mouseout', () =>{
+    paraghTop10Five.style.display = 'none';
+})
