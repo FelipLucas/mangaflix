@@ -1,3 +1,177 @@
+//slider
+let slideWrapper = document.querySelector('.slide-item1');
+let slideWrapperTwo = document.querySelector('.slide-item2');
+let slideWrapperThree = document.querySelector('.slide-item3');
+
+let principalSlide = document.querySelector('.div-principal');
+let principalSlideTwo = document.querySelector('.div-principal2');
+let principalSlideThree = document.querySelector('.div-principal3');
+
+let buttonSlideWrapper = document.querySelector('.bi-circle-fill-one');
+let buttonSlideWrapperTwo = document.querySelector('.bi-circle-fill-two');
+let buttonSlideWrapperThree = document.querySelector('.bi-circle-fill-three');
+
+let overlaySlideWrapper = document.querySelector('.overlay-principal');
+let overlaySlideWrapperTwo = document.querySelector('.overlay-principal.two');
+let overlaySlideWrapperThree = document.querySelector('.overlay-principal.three');
+
+buttonSlideWrapperTwo.addEventListener('click', () =>{
+    slideWrapperTwo.style.transform = 'translateX(-100%)';
+
+    principalSlide.style.display = 'none';
+    overlaySlideWrapper.style.display = 'none';
+
+    buttonSlideWrapperTwo.classList.add('active');
+    buttonSlideWrapper.classList.remove('active');
+
+    setInterval(() =>{
+        buttonSlideWrapper.addEventListener('click', () =>{
+            slideWrapperTwo.style.transform = 'translateX(100%)';
+
+            principalSlide.style.display = 'block';
+            principalSlideTwo.style.display = 'none';
+
+            overlaySlideWrapper.style.display = 'block';
+
+            buttonSlideWrapper.classList.add('active');
+            buttonSlideWrapperTwo.classList.remove('active');
+
+            setTimeout(() =>{
+                window.location.reload();
+            },2000);
+        });
+    },100);
+});
+
+buttonSlideWrapperThree.addEventListener('click', () =>{
+    slideWrapperThree.style.transform = 'translateX(-200%)';
+
+    principalSlideTwo.style.display = 'none';
+    principalSlide.style.display = 'none';
+
+    overlaySlideWrapperTwo.style.display = 'none';
+    overlaySlideWrapper.style.display = 'none';
+
+    buttonSlideWrapperThree.classList.add('active');
+    buttonSlideWrapperTwo.classList.remove('active');
+    buttonSlideWrapper.classList.remove('active');
+
+    setInterval(() =>{
+        buttonSlideWrapper.addEventListener('click', () =>{
+            slideWrapperThree.style.transform = 'translateX(200%)';
+
+            principalSlide.style.display = 'block';
+            principalSlideThree.style.display = 'none';
+
+            overlaySlideWrapper.style.display = 'block';
+
+            buttonSlideWrapper.classList.add('active');
+            buttonSlideWrapperThree.classList.remove('active');
+
+            setTimeout(() =>{
+                window.location.reload();
+            },2000)
+        });
+    },100)
+
+    setInterval(() =>{
+        buttonSlideWrapperTwo.addEventListener('click', () =>{
+            slideWrapperThree.style.transform = 'translateX(100%)';
+
+            principalSlideTwo.style.display = 'block';
+            principalSlideThree.style.display = 'none';
+
+            overlaySlideWrapperTwo.style.display = 'block';
+
+            buttonSlideWrapperTwo.classList.add('active');
+            buttonSlideWrapperThree.classList.remove('active');
+
+            setTimeout(() =>{
+                window.location.reload();
+            },2000)
+        });
+    },100)
+});
+
+const sliderAuto = setInterval(() =>{
+    slideWrapperTwo.style.transform = 'translateX(-100%)';
+    principalSlide.style.display = 'none';
+    overlaySlideWrapper.style.display = 'none';
+    buttonSlideWrapperTwo.classList.add('active');
+    buttonSlideWrapper.classList.remove('active');
+
+    setInterval(() =>{
+        buttonSlideWrapper.addEventListener('click', () =>{
+            slideWrapperTwo.style.transform = 'translateX(100%)';
+
+            principalSlide.style.display = 'block';
+            principalSlideTwo.style.display = 'none';
+
+            overlaySlideWrapper.style.display = 'block';
+
+            buttonSlideWrapper.classList.add('active');
+            buttonSlideWrapperTwo.classList.remove('active');
+
+            setTimeout(() =>{
+                window.location.reload();
+            },2000);
+        });
+    },100);
+}, 5000);
+
+const sliderAutoTwo = setInterval(() =>{
+    slideWrapperThree.style.transform = 'translateX(-200%)';
+    principalSlideTwo.style.display = 'none';
+    overlaySlideWrapperTwo.style.display = 'none';
+    buttonSlideWrapperThree.classList.add('active');
+    buttonSlideWrapperTwo.classList.remove('active');
+
+    setInterval(() =>{
+        buttonSlideWrapper.addEventListener('click', () =>{
+            slideWrapperThree.style.transform = 'translateX(200%)';
+
+            principalSlide.style.display = 'block';
+            principalSlideThree.style.display = 'none';
+
+            overlaySlideWrapper.style.display = 'block';
+
+            buttonSlideWrapper.classList.add('active');
+            buttonSlideWrapperThree.classList.remove('active');
+
+            setTimeout(() =>{
+                window.location.reload();
+            },2000);
+        });
+    },100);
+
+    setInterval(() =>{
+        buttonSlideWrapperTwo.addEventListener('click', () =>{
+            slideWrapperThree.style.transform = 'translateX(100%)';
+
+            principalSlideTwo.style.display = 'block';
+            principalSlideThree.style.display = 'none';
+
+            overlaySlideWrapperTwo.style.display = 'block';
+
+            buttonSlideWrapperTwo.classList.add('active');
+            buttonSlideWrapperThree.classList.remove('active');
+
+            setTimeout(() =>{
+                window.location.reload();
+            },2000);
+        });
+    },100);
+},10000);
+
+const sliderAutoThree = setInterval(() =>{
+    window.location.reload()
+    principalSlideThree.style.zIndex = '-1';
+    principalSlide.style.zIndex = '1';
+    overlaySlideWrapperThree.style.display = 'none';
+    buttonSlideWrapper.classList.add('active');
+    buttonSlideWrapperThree.classList.remove('active');
+},15000);
+
 //abrir caracteristicas filmes
 let hoverMoves = document.querySelector('.div-slides img');
 let hoverMoveInformations = document.querySelector('.div-click-movie');
