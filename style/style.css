@@ -346,7 +346,6 @@ header nav a:active{
     transition: .3s ease-in-out;
 }
 
-
 .choose-images img:hover{
     filter: brightness(50%);
 }
@@ -393,6 +392,11 @@ header nav a:active{
 }
 
 .div-principal img, .div-principal2 img, .div-principal3 img{
+    width: 40px;
+    height: 40px;
+}
+
+.div-subdes-principal svg{
     width: 40px;
     height: 40px;
 }
@@ -497,7 +501,7 @@ header nav a:active{
     margin-top: 2rem;
     padding: 4px;
     color: #ffffff;
-    background-color: #cf2525;
+    background-color: #e61a1a;
     border: none;   
     cursor: pointer;
     transition: .3s ease-in-out;
@@ -514,7 +518,7 @@ header nav a:active{
     z-index: 1;
 }
 
-.idade-classi{
+.idade-classi, .idade-classi2, .idade-classi3{
     position: absolute;
     bottom: 5rem;
     right: 0;
@@ -525,7 +529,7 @@ header nav a:active{
     border-left: .5px solid #ffffffff;
 }
 
-.idade-classi img{
+.idade-classi img, .idade-classi2 img, .idade-classi3 img{
     width: 30px;
     height: 30px;
     margin-left: .7rem;
@@ -573,7 +577,7 @@ header nav a:active{
     height: 60px;
     margin: 4rem auto;
     background-color: #141414;
-    border-bottom: 1px solid #da171760;
+    border-bottom: 1px solid #ffffff91;
     border-radius: 5px;
 }
 
@@ -1157,6 +1161,33 @@ header nav a:active{
     margin-left: 5px;
 }
 
+@media only screen and (min-width: 1700px){
+    .section-episode-anime{
+        width: 70%;
+    }
+    .div-episode01-anime video{
+        width: 1000px;
+        height: 600px;
+    }
+    .div-episodes-buttons{
+        width: 1000px;
+    }
+    .div-episodes-buttons div{
+        width: 333px;
+    }
+}
+@media only screen and (max-width: 1000px){
+    .section-episode-anime{
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .div-anime-populars{
+        display: flex;
+        width: 100vw;
+        height: 60vh;
+    }
+}
+
 /*movies*/
 .section-movies-title{
     display: flex;
@@ -1224,6 +1255,238 @@ header nav a:active{
     animation: p-movie-animation .5s;
 }
 
+/*musics*/
+.section-played-musics{
+    display: none;
+    position: absolute;
+    top: 1rem;
+    left: 0;
+    width: 75vw;
+    height: 60px;
+    z-index: 5;
+}
+
+.div-played-musics{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    width: 1500px;
+    gap: 2rem;
+}
+
+.div-played-musics img{
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+
+.div-played-title p:last-child{
+    font-size: 12px;
+    color: #ffffffca;
+}
+
+.div-played-butttons{
+    position: absolute;
+    right: 5px;
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+
+.div-played-butttons svg{
+    cursor: pointer;
+}
+
+.circle-fill{
+    display: none;
+}
+
+.div-p-home-musics{
+    margin-left: 5rem;
+    transform: translatey(10rem);
+}
+
+.div-p-home-musics a{
+    font-weight: 600;
+    text-decoration: underline;
+}
+
+.section-disk{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.section-disk img{
+    width: 500px;
+    height: 500px;
+    object-fit: cover;
+    image-rendering: optimizeQuality;
+    animation: rotate 1s infinite ease-in-out;
+}
+
+.section-musics-container{
+    display: flex;
+    flex-direction: column;
+    gap: 10rem;
+    margin: 15rem 3rem;
+    width: 50%;
+    height: 700px;
+
+}
+
+.section-musics-container img{
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+.div-musics01{
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    width: 500px;
+}
+
+.div-musics01 div{
+    display: flex;
+    flex-direction: column;
+}
+
+.div-musics01 div p:last-child{
+    font-size: 12px;
+    color: #ffffffca;
+}
+
+.div-musics01 svg{
+    cursor: pointer;
+}
+
+.div-p-timer, .div-p-timer-two{
+    position: absolute;
+    right: 5px;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.div-p-timer-two{
+    padding-right: 10px;
+}
+
+.div-p-timer-two svg{
+    cursor: pointer;
+}
+
+.div-musics02{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    width: 500px;
+}
+
+.div-musics02 div p:last-child{
+    font-size: 12px;
+    color: #ffffffca;
+}
+
+.div-musics-play{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.div-musics-play svg{
+    cursor: pointer;
+}
+
+.div-title-music{
+    position: absolute;
+    top: -4rem;
+    left: 1rem;
+    font-size: 80px;
+    font-weight: 600;
+    color: #ffffff91;
+    z-index: -1;
+}
+
+.section-musics-description{
+    position: absolute;
+    left: 50%;
+    top: 70px;
+    width: 50%;
+    height: 94.1%;
+    background-color: #ffffff79;
+    z-index: -1;
+}
+
+.div-musics-description{
+    display: none;
+    position: absolute;
+    top: 15rem;
+    right: 0;
+    width: 600px;
+    height: 800px;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: #141414;
+    animation: music-choose .5s ease-in-out forwards;
+}
+
+.div-musics-description img{
+    width: 200px;
+    height: 200px;
+    border-radius: 5px;
+}
+
+.div-des-buttons{
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    width: 530px;
+    margin: 2rem 2rem;
+    padding: 15px;
+    background-color: #0a0a0a;
+}
+
+.div-p-title-des p:last-child{
+    font-size: 12px;
+    color: #ffffffca;
+}
+
+.div-info-des{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin: 5rem auto;
+}
+
+.div-info-des h3{
+    margin: 0 2.5rem;
+}
+
+.div-info-des p{
+    font-size: 14px;
+    color: #ffffffca;
+    margin: 0 2.5rem;
+}
+
+.pause-fill{
+    display: none;
+}
+.pause-fill2{
+    display: none;
+}
+
 @keyframes p-movie-animation {
     from{
         display: none;
@@ -1242,5 +1505,21 @@ header nav a:active{
     to{
         display: block;
         transform: translateY(none);
+    }
+}
+@keyframes music-choose {
+    from{
+        width: 0;
+    }
+    to{
+        width: 600px;
+    }
+}
+@keyframes rotate {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
     }
 }

@@ -15,11 +15,16 @@ let overlaySlideWrapper = document.querySelector('.overlay-principal');
 let overlaySlideWrapperTwo = document.querySelector('.overlay-principal.two');
 let overlaySlideWrapperThree = document.querySelector('.overlay-principal.three');
 
+let idadeClassificacao18 = document.querySelector('.idade-classi');
+let idadeClassificacao14 = document.querySelector('.idade-classi2');
+let idadeClassificacao12 = document.querySelector('.idade-classi3');
+
 buttonSlideWrapperTwo.addEventListener('click', () =>{
     slideWrapperTwo.style.transform = 'translateX(-100%)';
 
     principalSlide.style.display = 'none';
     overlaySlideWrapper.style.display = 'none';
+    idadeClassificacao18.style.display = 'none';
 
     buttonSlideWrapperTwo.classList.add('active');
     buttonSlideWrapper.classList.remove('active');
@@ -33,12 +38,14 @@ buttonSlideWrapperTwo.addEventListener('click', () =>{
 
             overlaySlideWrapper.style.display = 'block';
 
+            idadeClassificacao18.style.display = 'block';
+
             buttonSlideWrapper.classList.add('active');
             buttonSlideWrapperTwo.classList.remove('active');
 
             setTimeout(() =>{
                 window.location.reload();
-            },2000);
+            },1500);
         });
     },100);
 });
@@ -51,6 +58,8 @@ buttonSlideWrapperThree.addEventListener('click', () =>{
 
     overlaySlideWrapperTwo.style.display = 'none';
     overlaySlideWrapper.style.display = 'none';
+    idadeClassificacao18.style.display = 'none';
+    idadeClassificacao14.style.display = 'none';
 
     buttonSlideWrapperThree.classList.add('active');
     buttonSlideWrapperTwo.classList.remove('active');
@@ -65,12 +74,15 @@ buttonSlideWrapperThree.addEventListener('click', () =>{
 
             overlaySlideWrapper.style.display = 'block';
 
+            idadeClassificacao12.style.display = 'none';
+            idadeClassificacao18.style.display = 'block';
+
             buttonSlideWrapper.classList.add('active');
             buttonSlideWrapperThree.classList.remove('active');
 
             setTimeout(() =>{
                 window.location.reload();
-            },2000)
+            },1500)
         });
     },100)
 
@@ -82,6 +94,9 @@ buttonSlideWrapperThree.addEventListener('click', () =>{
             principalSlideThree.style.display = 'none';
 
             overlaySlideWrapperTwo.style.display = 'block';
+
+            idadeClassificacao12.style.display = 'none';
+            idadeClassificacao14.style.display = 'block';
 
             buttonSlideWrapperTwo.classList.add('active');
             buttonSlideWrapperThree.classList.remove('active');
@@ -99,6 +114,7 @@ const sliderAuto = setInterval(() =>{
     overlaySlideWrapper.style.display = 'none';
     buttonSlideWrapperTwo.classList.add('active');
     buttonSlideWrapper.classList.remove('active');
+    idadeClassificacao18.style.display = 'none';
 
     setInterval(() =>{
         buttonSlideWrapper.addEventListener('click', () =>{
@@ -108,6 +124,8 @@ const sliderAuto = setInterval(() =>{
             principalSlideTwo.style.display = 'none';
 
             overlaySlideWrapper.style.display = 'block';
+
+            idadeClassificacao18.style.display = 'block';
 
             buttonSlideWrapper.classList.add('active');
             buttonSlideWrapperTwo.classList.remove('active');
@@ -123,6 +141,8 @@ const sliderAutoTwo = setInterval(() =>{
     slideWrapperThree.style.transform = 'translateX(-200%)';
     principalSlideTwo.style.display = 'none';
     overlaySlideWrapperTwo.style.display = 'none';
+    idadeClassificacao14.style.display = 'none';
+    idadeClassificacao14.style.display = 'none';
     buttonSlideWrapperThree.classList.add('active');
     buttonSlideWrapperTwo.classList.remove('active');
 
@@ -134,6 +154,9 @@ const sliderAutoTwo = setInterval(() =>{
             principalSlideThree.style.display = 'none';
 
             overlaySlideWrapper.style.display = 'block';
+
+            idadeClassificacao18.style.display = 'block';
+            idadeClassificacao12.style.display = 'none';
 
             buttonSlideWrapper.classList.add('active');
             buttonSlideWrapperThree.classList.remove('active');
@@ -153,6 +176,9 @@ const sliderAutoTwo = setInterval(() =>{
 
             overlaySlideWrapperTwo.style.display = 'block';
 
+            idadeClassificacao12.style.display = 'none';
+            idadeClassificacao14.style.display = 'block';
+
             buttonSlideWrapperTwo.classList.add('active');
             buttonSlideWrapperThree.classList.remove('active');
 
@@ -165,11 +191,6 @@ const sliderAutoTwo = setInterval(() =>{
 
 const sliderAutoThree = setInterval(() =>{
     window.location.reload()
-    principalSlideThree.style.zIndex = '-1';
-    principalSlide.style.zIndex = '1';
-    overlaySlideWrapperThree.style.display = 'none';
-    buttonSlideWrapper.classList.add('active');
-    buttonSlideWrapperThree.classList.remove('active');
 },15000);
 
 //abrir caracteristicas filmes
@@ -184,6 +205,9 @@ let hoverMoveInformationsThree = document.querySelector('.div-click-movie3');
 
 let hoverMovesFour = document.querySelector('.div-slides4 img');
 let hoverMoveInformationsFour = document.querySelector('.div-click-movie4');
+
+let heart = document.querySelector('.bi-heart');
+let heartFill = document.querySelector('.bi-heart-fill');
 
 hoverMoves.addEventListener('mouseover', () =>{
     hoverMoveInformations.style.display = 'flex';
@@ -246,6 +270,15 @@ hoverMovesFour.addEventListener('mouseout', () =>{
 hoverMoveInformationsFour.addEventListener('mouseout', () =>{
     hoverMovesFour.style.scale = '1';
     hoverMoveInformationsFour.style.display = 'none';
+});
+
+heart.addEventListener('click', () =>{
+    heartFill.style.display = 'block';
+    heart.style.display = 'none';
+});
+heartFill.addEventListener('click', () =>{
+    heartFill.style.display = 'none';
+    heart.style.display = 'block';
 });
 
 /*menu*/
