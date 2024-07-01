@@ -1256,7 +1256,7 @@ header nav a:active{
 }
 
 /*musics*/
-.section-played-musics, .section-played-musics2{
+.section-played-musics, .section-played-musics2, .section-played-musics3, .section-played-musics4, .section-played-musics5{
     display: none;
     position: absolute;
     top: 1rem;
@@ -1266,7 +1266,7 @@ header nav a:active{
     z-index: 5;
 }
 
-.div-played-musics, .div-played-musics2{
+.div-played-musics, .div-played-musics2, .div-played-musics3, .div-played-musics4, .div-played-musics5{
     position: relative;
     display: flex;
     justify-content: center;
@@ -1276,7 +1276,7 @@ header nav a:active{
     gap: 2rem;
 }
 
-.div-played-musics img, .div-played-musics2 img{
+.div-played-musics img, .div-played-musics2 img, .div-played-musics3 img, .div-played-musics4 img, .div-played-musics5 img{
     width: 50px;
     height: 50px;
     object-fit: cover;
@@ -1284,12 +1284,12 @@ header nav a:active{
 }
 
 
-.div-played-title p:last-child, .div-played-title2 p:last-child{
+.div-played-title p:last-child, .div-played-title2 p:last-child, .div-played-title3 p:last-child, .div-played-title4 p:last-child, .div-played-title5 p:last-child{
     font-size: 12px;
     color: #ffffffca;
 }
 
-.div-played-butttons, .div-played-butttons2{
+.div-played-butttons, .div-played-butttons2, .div-played-butttons3, .div-played-butttons4, .div-played-butttons5{
     position: absolute;
     right: 5px;
     display: flex;
@@ -1297,11 +1297,11 @@ header nav a:active{
     gap: .5rem;
 }
 
-.div-played-butttons svg, .div-played-butttons2 svg{
+.div-played-butttons svg, .div-played-butttons2 svg, .div-played-butttons3 svg, .div-played-butttons4 svg, .div-played-butttons5 svg{ 
     cursor: pointer;
 }
 
-.circle-fill, .circle-fill2{
+.circle-fill, .circle-fill2, .circle-fill3, .circle-fill4, .circle-fill5{
     display: none;
 }
 
@@ -1327,7 +1327,6 @@ header nav a:active{
     height: 500px;
     object-fit: cover;
     image-rendering: optimizeQuality;
-    animation: rotate 1s infinite ease-in-out;
 }
 
 .section-musics-container{
@@ -1369,7 +1368,7 @@ header nav a:active{
     cursor: pointer;
 }
 
-.div-p-timer, .div-p-timer-two, .div-p-timer-two2{
+.div-p-timer, .div-p-timer-two, .div-p-timer-two2, .div-p-timer-two3{
     position: absolute;
     right: 5px;
     display: flex;
@@ -1418,7 +1417,7 @@ header nav a:active{
     z-index: -1;
 }
 
-.section-musics-description, .section-musics-description2{
+.section-musics-description{
     position: absolute;
     left: 50%;
     top: 70px;
@@ -1428,7 +1427,7 @@ header nav a:active{
     z-index: -1;
 }
 
-.div-musics-description, .div-musics-description2{
+.div-musics-description, .div-musics-description2, .div-musics-description3, .div-musics-description4, .div-musics-description5{
     display: none;
     position: absolute;
     top: 15rem;
@@ -1442,7 +1441,7 @@ header nav a:active{
     animation: music-choose .5s ease-in-out forwards;
 }
 
-.div-musics-description img, .div-musics-description2 img{
+.div-musics-description img, .div-musics-description2 img, .div-musics-description3 img, .div-musics-description4 img, .div-musics-description5 img{
     width: 200px;
     height: 200px;
     border-radius: 5px;
@@ -1453,7 +1452,7 @@ header nav a:active{
     align-items: center;
 }
 
-.div-des-buttons, .div-des-buttons2{
+.div-des-buttons, .div-des-buttons2, .div-des-buttons3{
     position: relative;
     display: flex;
     align-items: center;
@@ -1464,23 +1463,23 @@ header nav a:active{
     background-color: #0a0a0a;
 }
 
-.div-p-title-des p:last-child, .div-p-title-des2 p:last-child{
+.div-p-title-des p:last-child, .div-p-title-des2 p:last-child, .div-p-title-des3 p:last-child{
     font-size: 12px;
     color: #ffffffca;
 }
 
-.div-info-des, .div-info-des2{
+.div-info-des, .div-info-des2, .div-info-des3{
     display: flex;
     flex-direction: column;
     gap: 1rem;
     margin: 5rem auto;
 }
 
-.div-info-des h3, .div-info-des2 h3{
+.div-info-des h3, .div-info-des2 h3, .div-info-des3 h3{
     margin: 0 2.5rem;
 }
 
-.div-info-des p, .div-info-des2 p{
+.div-info-des p, .div-info-des2 p, .div-info-des3 p{
     font-size: 14px;
     color: #ffffffca;
     margin: 0 2.5rem;
@@ -1496,6 +1495,21 @@ header nav a:active{
     display: none;
 }
 .pause-fill4{
+    display: none;
+}
+.pause-fill5{
+    display: none;
+}
+.pause-fill6{
+    display: none;
+}
+.pause-fill7{
+    display: none;
+}
+.pause-fill8{
+    display: none;
+}
+.pause-fill9{
     display: none;
 }
 
