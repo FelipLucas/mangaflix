@@ -127,8 +127,8 @@ const sliderAuto = setInterval(() =>{
 
             idadeClassificacao18.style.display = 'block';
 
-            buttonSlideWrapper.classList.add('active');
-            buttonSlideWrapperTwo.classList.remove('active');
+            buttonSlideWrapper.classList.remove('active');
+            buttonSlideWrapperTwo.classList.add('active');
 
             setTimeout(() =>{
                 window.location.reload();
