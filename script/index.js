@@ -211,6 +211,9 @@ let heartFill = document.querySelector('.bi-heart-fill');
 
 hoverMoves.addEventListener('mouseover', () =>{
     hoverMoveInformations.style.display = 'flex';
+    hoverMoves.style.scale = '1.3';
+    hoverMovesTwo.style.scale = '1.3';
+    hoverMovesTwo.style.scale = '1.0';
 });
 hoverMoveInformations.addEventListener('mouseover', () =>{
     hoverMoveInformations.style.display = 'flex';
@@ -227,6 +230,9 @@ hoverMoveInformations.addEventListener('mouseout', () =>{
 
 hoverMovesTwo.addEventListener('mouseover', () =>{
     hoverMoveInformationsTwo.style.display = 'flex';
+    hoverMovesTwo.style.scale = '1.3';
+    hoverMoves.style.scale = '1.0';
+    hoverMovesThree.style.scale = '1.0';
 });
 hoverMoveInformationsTwo.addEventListener('mouseover', () =>{
     hoverMoveInformationsTwo.style.display = 'flex';
@@ -242,6 +248,9 @@ hoverMoveInformationsTwo.addEventListener('mouseout', () =>{
 });
 hoverMovesThree.addEventListener('mouseover', () =>{
     hoverMoveInformationsThree.style.display = 'flex';
+    hoverMovesThree.style.scale = '1.3';
+    hoverMovesTwo.style.scale = '1.0';
+    hoverMovesFour.style.scale = '1.0';
 });
 hoverMoveInformationsThree.addEventListener('mouseover', () =>{
     hoverMoveInformationsThree.style.display = 'flex';
@@ -258,6 +267,8 @@ hoverMoveInformationsThree.addEventListener('mouseout', () =>{
 
 hoverMovesFour.addEventListener('mouseover', () =>{
     hoverMoveInformationsFour.style.display = 'flex';
+    hoverMovesFour.style.scale = '1.3';
+    hoverMovesThree.style.scale = '1.0';
 });
 hoverMoveInformationsFour.addEventListener('mouseover', () =>{
     hoverMoveInformationsFour.style.display = 'flex';
