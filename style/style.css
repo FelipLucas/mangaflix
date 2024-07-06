@@ -1646,13 +1646,13 @@ header nav a:active {
   position: absolute;
   top: 0;
   left: 0;
-  display: none;
+  display: flex;
   gap: 5rem;
   width: 100vw;
   height: 100vh;
   background-color: #000000;
   z-index: 9999;
-  animation: categories-animation 1s ease-in-out;
+  /*animation: categories-animation 1s ease-in-out;*/
 }
 
 .div-categories-list{
@@ -1714,7 +1714,7 @@ header nav a:active {
   font-weight: 600;
 }
 
-.div-images-categories{
+.div-images-categories, .div-images-categories2{
   position: relative;
   display: flex;
   flex-direction: column;
@@ -1724,13 +1724,13 @@ header nav a:active {
   height: 100%;
 }
 
-.div-images-categories div{
+.div-images-categories div, .div-images-categories2 div{
   display: flex;
   align-items: center;
   gap: .5rem;
 }
 
-.div-images-categories img{
+.div-images-categories img, .div-images-categories2 img{
   width: 250px;
   height: 400px;
   filter: brightness(80%);
@@ -1740,7 +1740,7 @@ header nav a:active {
   transition: .3s ease-in-out;
 }
 
-.div-images-categories img:hover{
+.div-images-categories img:hover, .div-images-categories2 img:hover{
   filter: brightness(60%);
 }
 

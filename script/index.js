@@ -13,9 +13,7 @@ let buttonSlideWrapperThree = document.querySelector(".bi-circle-fill-three");
 
 let overlaySlideWrapper = document.querySelector(".overlay-principal");
 let overlaySlideWrapperTwo = document.querySelector(".overlay-principal.two");
-let overlaySlideWrapperThree = document.querySelector(
-  ".overlay-principal.three",
-);
+let overlaySlideWrapperThree = document.querySelector(".overlay-principal.three");
 
 let idadeClassificacao18 = document.querySelector(".idade-classi");
 let idadeClassificacao14 = document.querySelector(".idade-classi2");
