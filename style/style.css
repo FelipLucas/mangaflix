@@ -1718,9 +1718,9 @@ header nav a:active {
   font-weight: 600;
 }
 
-.div-images-categories, .div-images-categories2, .div-images-categories3{
+.div-images-categories, .div-images-categories2, .div-images-categories3, .div-images-categories4, .div-images-categories5{ 
   position: relative;
-  display: flex;
+  display: none;
   flex-direction: column;
   gap: .5rem;
   margin: 2rem auto;
@@ -1728,21 +1728,13 @@ header nav a:active {
   height: 100%;
 }
 
-.div-images-categories2, .div-images-categories3{
-  display: none;
-}
-
-/*.div-images-categories3{
-  display: flex;
-}*/
-
-.div-images-categories div, .div-images-categories2 div, .div-images-categories3 div{
+.div-images-categories div, .div-images-categories2 div, .div-images-categories3 div, .div-images-categories4 div, .div-images-categories5 div{
   display: flex;
   align-items: center;
   gap: .5rem;
 }
 
-.div-images-categories img, .div-images-categories2 img, .div-images-categories3 img{
+.div-images-categories img, .div-images-categories2 img, .div-images-categories3 img, .div-images-categories4 img, .div-images-categories5 img{
   width: 250px;
   height: 400px;
   filter: brightness(80%);
@@ -1752,7 +1744,7 @@ header nav a:active {
   transition: .3s ease-in-out;
 }
 
-.div-images-categories img:hover, .div-images-categories2 img:hover, .div-images-categories3 img:hover{
+.div-images-categories img:hover, .div-images-categories2 img:hover, .div-images-categories3 img:hover, .div-images-categories4 img:hover, .div-images-categories5 img:hover{
   filter: brightness(60%);
 }
 
