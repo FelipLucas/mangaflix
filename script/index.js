@@ -489,12 +489,23 @@ imageTop10Five.addEventListener("mouseout", () => {
 });
 
 //categories
-let categories = document.querySelector('.section-categories')
+let body = document.querySelector('body');
+let categories = document.querySelector('.section-categories');
+
 let categoriesAction = document.querySelector('.p-action');
+let categoriesContentAction = document.querySelector('.div-images-categories');
+
 let categoriesAdventure = document.querySelector('.p-adventure');
+let categoriesContentAdventure = document.querySelector('.div-images-categories2');
+
 let categoriesComedy = document.querySelector('.p-comedy');
+let categoriesContentComedy = document.querySelector('.div-images-categories3');
+
 let categoriesFiction = document.querySelector('.p-fiction');
+let categoriesContentFiction = document.querySelector('.div-images-categories4');
+
 let categoriesHorror = document.querySelector('.p-horror');
+
 let categoriesTitle = document.querySelector('.title-categories');
 
 let closerCategoriesBtn = document.querySelector('.div-closer-btn');
@@ -506,7 +517,9 @@ let formularyFiction = document.querySelector('.fiction-categories-formulary');
 let formularyHorror = document.querySelector('.horror-categories-formulary');
 
 formularyAction.addEventListener('click', () =>{
+  body.style.overflow = 'hidden';
   categories.style.display = 'flex';
+  categories.classList.add('animation-categories');
   
   categoriesAction.classList.add('focus-categories');
   categoriesAdventure.classList.remove('focus-categories');
@@ -515,10 +528,13 @@ formularyAction.addEventListener('click', () =>{
   categoriesHorror.classList.remove('focus-categories');
 
   perfil.style.display = 'none';
+  categoriesContentAction.style.display = 'flex';
 });
 
 formularyAdventure.addEventListener('click', () =>{
+  body.style.overflow = 'hidden';
   categories.style.display = 'flex';
+  categories.classList.add('animation-categories');
   categoriesTitle.innerHTML = 'Adventure (冒 険)';
 
   categoriesAdventure.classList.add('focus-categories');
@@ -528,10 +544,14 @@ formularyAdventure.addEventListener('click', () =>{
   categoriesHorror.classList.remove('focus-categories');
 
   perfil.style.display = 'none';
+  categoriesContentAction.style.display = 'none';
+  categoriesContentAdventure.style.display = 'flex';
 });
 
 formularyComedy.addEventListener('click', () =>{
+  body.style.overflow = 'hidden';
   categories.style.display = 'flex';
+  categories.classList.add('animation-categories');
   categoriesTitle.innerHTML = 'Comedy (コメディ)';
 
   categoriesComedy.classList.add('focus-categories');
@@ -541,10 +561,14 @@ formularyComedy.addEventListener('click', () =>{
   categoriesHorror.classList.remove('focus-categories');
 
   perfil.style.display = 'none';
+  categoriesContentComedy.style.display = 'flex';
+  categoriesContentAction.style.display = 'none';
 });
 
 formularyFiction.addEventListener('click', () =>{
+  body.style.overflow = 'hidden';
   categories.style.display = 'flex';
+  categories.classList.add('animation-categories');
   categoriesTitle.innerHTML = 'Fiction (フィクション)';
 
   categoriesFiction.classList.add('focus-categories');
@@ -554,11 +578,14 @@ formularyFiction.addEventListener('click', () =>{
   categoriesHorror.classList.remove('focus-categories');
 
   perfil.style.display = 'none';
+  categoriesContentFiction.style.display = 'flex';
 });
 
 formularyHorror.addEventListener('click', () =>{
+  body.style.overflow = 'hidden';
   categories.style.display = 'flex';
-  categoriesTitle.innerHTML = 'Comedy (コメディ)';
+  categories.classList.add('animation-categories');
+  categoriesTitle.innerHTML = 'Horror (ホラー)';
 
   categoriesHorror.classList.add('focus-categories');
   categoriesAction.classList.remove('focus-categories');
@@ -567,34 +594,52 @@ formularyHorror.addEventListener('click', () =>{
   categoriesFiction.classList.remove('focus-categories');
 
   perfil.style.display = 'none';
+  categoriesContentComedy.style.display = 'flex';
 });
 
 closerCategoriesBtn.addEventListener('click', () =>{
   categories.style.display = 'none';
+  body.style.overflow = 'auto';
 });
 
 categoriesAction.addEventListener('click', () =>{
   categoriesTitle.innerHTML = 'Action (アクション)';
+
+  categoriesContentAction.classList.add('animation-categories');
   categoriesAdventure.classList.remove('focus-categories');
   categoriesComedy.classList.remove('focus-categories');
   categoriesFiction.classList.remove('focus-categories');
   categoriesHorror.classList.remove('focus-categories');
+
+  categoriesContentAction.style.display = 'flex';
+  categoriesContentAdventure.style.display = 'none';
 });
 
 categoriesAdventure.addEventListener('click', () =>{
   categoriesTitle.innerHTML = 'Adventure (冒 険)';
+
+  categoriesContentAdventure.classList.add('animation-categories');
   categoriesAction.classList.remove('focus-categories');
   categoriesComedy.classList.remove('focus-categories');
   categoriesFiction.classList.remove('focus-categories');
   categoriesHorror.classList.remove('focus-categories');
+
+  categoriesContentAction.style.display = 'none';
+  categoriesContentAdventure.style.display = 'flex';
 });
 
 categoriesComedy.addEventListener('click', () =>{
   categoriesTitle.innerHTML = 'Comedy (コメディ)';
+
+  categoriesContentComedy.classList.add('animation-categories');
   categoriesAction.classList.remove('focus-categories');
   categoriesAdventure.classList.remove('focus-categories');
   categoriesFiction.classList.remove('focus-categories');
   categoriesHorror.classList.remove('focus-categories');
+
+  categoriesContentComedy.style.display = 'flex';
+  categoriesContentAdventure.style.display = 'none';
+  categoriesContentAction.style.display = 'none';
 });
 
 categoriesFiction.addEventListener('click', () =>{
