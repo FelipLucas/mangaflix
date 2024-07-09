@@ -613,6 +613,7 @@ formularyHorror.addEventListener('click', () =>{
 
   perfil.style.display = 'none';
   categoriesContentHorror.style.display = 'flex';
+  categoriesContentAction.style.display = 'none';
 });
 
 closerCategoriesBtn.addEventListener('click', () =>{
