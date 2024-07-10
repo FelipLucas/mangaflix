@@ -142,6 +142,87 @@ const openPerfil = setInterval(() => {
   });
 }, 50);
 
+//adiciona filmes a lista
+let bookmark = document.querySelector('.bi-bookmark');
+let bookmarkCheck = document.querySelector('.bi-bookmark-check');
+let bookmarkFill = document.querySelector('.bi-bookmark-fill');
+
+bookmark.addEventListener('click', () =>{
+   bookmark.style.display = 'none';
+   bookmarkCheck.style.display = 'block';
+
+   setTimeout(() =>{
+   bookmarkFill.style.display = 'block';
+   bookmarkCheck.style.display = 'none';
+   }, 500);
+});
+
+bookmarkFill.addEventListener('click', () =>{
+   bookmark.style.display = 'block';
+   bookmarkFill.style.display = 'none';
+});
+
+//dar like ou deslike
+let likeUp = document.querySelector('.liked-up');
+let likeUpFill = document.querySelector('.liked-up-fill');
+
+let likeDown = document.querySelector(".liked-down");
+let likeDownFill = document.querySelector(".liked-down-fill");
+
+let contagemUp = document.querySelector('.p-liked-up');
+let contagemDown = document.querySelector('.p-liked-down');
+
+let likedContageUpAtual = 0;
+let likedContageDownAtual = 0;
+
+likeUp.addEventListener('click', () =>{
+   likeUp.style.display = 'none';
+   likeUpFill.style.display = 'block';
+   likeUpFill.classList.add('liked-animation');
+
+   likeDownFill.style.display = 'none';
+   likeDown.style.display = 'block';
+
+   likedContageUpAtual++;
+   contagemUp.innerHTML = likedContageUpAtual;
+
+   if(likedContageDownAtual > 0){
+      likedContageDownAtual--;
+      contagemDown.innerHTML = likedContageDownAtual;
+   }
+});
+likeUpFill.addEventListener('click', () =>{
+   likeUpFill.style.display = 'none';
+   likeUp.style.display = 'block';
+
+   likedContageUpAtual--;
+   contagemUp.innerHTML = likedContageUpAtual;
+});
+
+likeDown.addEventListener('click', () =>{
+   likeDown.style.display = 'none';
+   likeDownFill.style.display = 'block';
+   likeDownFill.classList.add('liked-animation');
+
+   likeUpFill.style.display = 'none';
+   likeUp.style.display = 'block';
+   
+   likedContageDownAtual++;
+   contagemDown.innerHTML = likedContageDownAtual;
+
+   if(likedContageUpAtual > 0){
+      likedContageUpAtual--;
+      contagemUp.innerHTML = likedContageUpAtual;
+   }
+});
+likeDownFill.addEventListener('click', () =>{
+   likeDownFill.style.display = 'none';
+   likeDown.style.display = 'block';
+
+   likedContageDownAtual--;
+   contagemDown.innerHTML = likedContageDownAtual;
+});
+
 //movies hover
 let imageMovieHover = document.querySelector(".div-movie-slide img");
 let pMovieHover = document.querySelector(".div-movie-slide p");

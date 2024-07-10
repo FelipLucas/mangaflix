@@ -1071,31 +1071,43 @@ header nav a:active {
 }
 
 /*episodes*/
-.section-episode-anime {
+/*.body-episodios-animes{
+   overflow-x: hidden;
+}*/
+
+.section-episode-anime{
   display: flex;
-  gap: 2rem;
-  width: 70%;
+  flex-direction: column;
+  margin: 40px 0;
+}
+
+.div-player-video {
+   position: relative;
+   position: relative;
+   width: 98vw;
+   height: 900px;
+}
+
+.div-player-video video {
+  width: 98vw;
   height: 100%;
-  margin: 7rem auto 0 auto;
 }
 
-.name-espisodio-anime {
-  margin-bottom: 0rem;
-}
-
-.div-episode01-anime video {
-  position: relative;
-  width: 600px;
-  height: 400px;
+.div-play-video{
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   cursor: pointer;
 }
 
 .div-anime-populars {
   display: flex;
   flex-direction: column;
   gap: 2rem;
-  padding: 3rem 2rem;
+  padding: 2rem 2rem;
   width: 350px;
-  height: 105vh;
+  height: 585px;
   background-color: #141414;
   border-left: 0.5px solid #ffffff34;
 }
@@ -1198,6 +1210,210 @@ header nav a:active {
 }
 .div-episodes-buttons svg:last-child {
   margin-left: 5px;
+}
+
+.section-description{
+   display: flex;
+   justify-content: center;
+   margin: 5rem auto;
+   gap: 4rem;
+}
+
+.div-des-name-anime{
+   position: relative;
+   display: flex;
+   align-items: center;
+   gap: 1rem;
+   width: 700px;
+}
+
+.div-des-name-anime p{
+   color: #ffffffca;
+}
+
+.div-des-name-anime h4{
+   color: #ffffffe6;
+}
+
+.div-des-name-anime div{
+   display: flex;
+   align-items: center;
+   gap: .5rem;
+}
+
+.div-name-anime-ratio svg{
+   fill: #e01010;
+}
+
+.div-des-name-anime div p{
+   font-size: 14px;
+}
+
+.div-add-to-list{
+   position: absolute;
+   right: 1rem;
+   cursor: pointer;
+}
+
+.bi-bookmark-check, .bi-bookmark-fill{
+   display: none;
+   fill: #ffffff;
+}
+
+.div-des-animes-like{
+   margin: 3rem 0;;
+}
+
+.div-des-animes-carac{
+   display: flex;
+   flex-direction: column;
+   gap: 1rem;
+}
+
+.div-des-animes-carac h1{
+   font-size: 23px;
+   color: #fffffff4;
+}
+
+.div-des-animes-classi-date{
+   display: flex;
+   align-items: center;
+   gap: .5rem;
+}
+
+.div-des-animes-classi-date p{
+   color: #ffffffca;
+}
+
+.div-des-animes-classi-date img{
+   width: 20px;
+   height: 20px;
+}
+
+.div-des-liked{
+   display: flex;
+   align-items: center;
+   gap: 3rem;
+}
+
+.div-des-liked div{
+   display: flex;
+   align-items: center;
+   gap: .5rem;
+}
+
+.div-des-liked div p{
+   font-weight: 600;
+}
+
+.div-des-liked div svg{
+   width: 24px;
+   height: 24px;
+   cursor: pointer;
+}
+
+.liked-animation{
+   animation: liked-animation .7s ease-in-out;
+}
+
+.liked-up-fill{
+   display: none;
+}
+.liked-down-fill{
+   display: none;
+}
+
+.div-des-anime-history{
+   width: 650px;
+   padding: 17px;
+   margin: 1rem 0;
+   margin-left: -5px;
+   border-radius: 5px;
+   background-color: #0e0e0e;
+}
+
+.div-des-anime-history p{
+   font-size: 15px;
+   font-weight: 500;
+}
+
+.div-anime-next-thumb{
+   display: flex;
+   flex-direction: column;
+   gap: 2rem;
+}
+
+.div-anime-next-thumb h4{
+   font-weight: 600;
+}
+
+.div-thumb-video-next{
+   display: flex;
+   gap: 1rem;
+}
+
+.div-thumb-video-next div:first-child{
+   position: relative;
+}
+
+.div-thumb-video-next div:first-child img{
+   width: 180px;
+   height: 100px;
+   object-fit: cover;
+   image-rendering: optimizeQuality;
+   transition: .3s ease-in-out;
+}
+
+.div-thumb-video-next div:first-child img:hover{
+   filter: brightness(70%);
+}
+
+.div-thumb-video-next div:first-child p{
+   position: absolute;
+   right: 5px;
+   bottom: 5px;
+   padding: 5px;
+   font-weight: 600;
+   background-color: #0a0a0adf;
+}
+
+.div-thumb-video-next div:last-child p:first-child{
+   font-weight: 600;
+}
+
+.div-thumb-video-next div:last-child{
+   display: flex;
+   flex-direction: column;
+   gap: .5rem;
+}
+
+.div-thumb-video-next div:last-child p:last-child{
+   font-size: 13px;
+   color: #ffffffba;
+}
+
+.div-bnt-next-thumb button{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   width: 190px;
+   height: 45px;
+   background-color: transparent;
+   font-weight: 600;
+   color: #ffffffdd;
+   border: 2.5px solid #ffffffd4;
+   cursor: pointer;
+   transition: .3s ease-in-out;
+}
+
+.div-bnt-next-thumb button:hover{
+   color: #ffffff;
+   border: 2.5px solid #ffffff;
+   background-color: #ffffff13;
+}
+
+.div-bnt-next-thumb button svg{
+   margin-right: 5px;
 }
 
 @media only screen and (min-width: 1700px) {
@@ -1814,4 +2030,16 @@ header nav a:active {
   100%{
     opacity: 1;
   }
+}
+@keyframes liked-animation {
+   0%{
+      scale: 1;
+   }
+   50%{
+      scale: 1.2;
+      transform: rotate(-25deg);
+   }
+   100%{
+      scale: 1;
+   }
 }
