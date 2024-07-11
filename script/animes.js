@@ -223,6 +223,83 @@ likeDownFill.addEventListener('click', () =>{
    contagemDown.innerHTML = likedContageDownAtual;
 });
 
+//funçções video
+let video = document.querySelector('.div-player-video video');
+
+let playVideo = document.querySelector(`.bi-play-fill-video`);
+let pauseVideo = document.querySelector(`.bi-pause-fill-video`);
+
+let playVideoTwo = document.querySelector(`.bi-play-fill-video2`);
+let pauseVideoTwo = document.querySelector(`.bi-pause-fill-video2`);
+
+let volume = document.querySelector('.video-volume');
+let volumeRange = document.querySelector('.video-volume div');
+
+
+//funções pausar e despausar video
+playVideo.addEventListener('click', () =>{
+   playVideo.style.display = 'none';
+   pauseVideo.style.display = 'block';
+
+   playVideoTwo.style.display = 'none';
+   pauseVideoTwo.style.display = 'block';
+
+   document.addEventListener('keydown', pauseVideoKey);
+
+   video.play();
+});
+pauseVideo.addEventListener('click', () =>{
+   pauseVideo.style.display = 'none';
+   playVideo.style.display = 'block';
+
+   pauseVideoTwo.style.display = 'none';
+   playVideoTwo.style.display = 'block';
+
+   video.pause();
+});
+
+playVideoTwo.addEventListener('click', () =>{
+   playVideoTwo.style.display = 'none';
+   pauseVideoTwo.style.display = 'block';
+
+   playVideo.style.display = 'none';
+   pauseVideo.style.display = 'block';
+
+   video.play();
+});
+pauseVideoTwo.addEventListener('click', () =>{
+   pauseVideoTwo.style.display = 'none';
+   playVideoTwo.style.display = 'block';
+
+   pauseVideo.style.display = 'none';
+   playVideo.style.display = 'block';
+
+   video.pause();
+});
+
+function pauseVideoKey(event){
+   if(event.code === 'Space'){
+      video.pause();
+
+      setTimeout(() =>{
+         if(event.code === 'Space'){
+            video.play();
+         }
+      }, 1000);
+   }
+}
+
+//aumentar o volume e aparecer para abaixar
+volume.addEventListener('click', () =>{
+   volumeRange.style.display = 'block';
+
+   setTimeout(() =>{
+      volume.addEventListener('click', () =>{
+         volumeRange.style.display = 'none';
+      });
+   }, 500);
+});
+
 //movies hover
 let imageMovieHover = document.querySelector(".div-movie-slide img");
 let pMovieHover = document.querySelector(".div-movie-slide p");
