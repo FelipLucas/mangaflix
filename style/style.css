@@ -1083,7 +1083,6 @@ header nav a:active {
 
 .div-player-video {
    position: relative;
-   position: relative;
    width: 98vw;
    height: 900px;
 }
@@ -1114,8 +1113,10 @@ header nav a:active {
 .section-video-controls{
   position: absolute;
   bottom: 5px;
+  display: none;
   width: 100%;
   height: 10%;
+  animation: categories-animation 1s ease-in-out;
 }
 
 .div-video-controls{
@@ -1211,6 +1212,216 @@ header nav a:active {
   gap: 1.5rem;
 }
 
+.div-ore-episodes-video{
+   position: relative;
+}
+
+.next-episodes-videos{
+   position: absolute;
+   bottom: 4rem;
+   right: -5.1rem;
+   display: none;
+   flex-direction: column;
+   width: 800px;
+   height: 500px;
+   background-color: #141414;
+   z-index: 1;
+   animation: categories-animation 1s ease-in-out;
+}
+
+.div-download-video{
+   position: absolute;
+   bottom: 4rem;
+   right: 0rem;
+   display: none;
+   width: 550px;
+   height: 800px;
+   background-color: #141414;
+   z-index: 1;
+   animation: categories-animation 1s ease-in-out;
+}
+
+.div-languages-container{
+   position: relative;
+   display: flex;
+   justify-content: center;
+   width: 100%;
+   height: 100%;
+}
+
+.div-languages-container h2{
+   margin-bottom: 2rem;
+}
+
+.div-languages-container a{
+   text-decoration: none;
+}
+
+.div-languages-container a:focus{
+   font-weight: 600;
+}
+
+.languages-videos{
+   display: flex;
+   flex-direction: column;
+   gap: 2rem;
+   margin: 4rem 4rem;
+}
+
+.languages-videos div{
+   display: flex;
+   align-items: center;
+   gap: 1rem;
+}
+
+.p-original{
+   font-weight: 600;
+}
+
+.captions-videos{
+   display: flex;
+   flex-direction: column;
+   gap: 2rem;
+   margin: 4rem 4rem;
+}
+
+.captions-videos div{
+   display: flex;
+   align-items: center;
+   gap: 1rem;
+}
+
+.download-mp4{
+   position: absolute;
+   bottom: 2rem;
+   left: 2rem;
+   margin: 2rem 2rem;
+}
+
+.download-mp4 a{
+   text-decoration: none;
+}
+
+.download-mp4 a:hover{
+   text-decoration: underline;
+}
+
+.div-hr-caption{
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   width: .5px;
+   height: 70%;
+   background-color: #ffffff83;
+}
+
+.next-episodes-videos h2{
+   font-size: 22px;
+   padding: 20px;
+   color: #ffffffe6;
+}
+
+.div-next-video-controls1{
+   display: flex;
+   align-items: center;
+   width: 100%;
+   padding: 2rem 0;
+   cursor: pointer;
+}
+
+.div-next-video-controls1:hover{
+   background-color: #2e2e2e;
+}
+
+.div-next-video-controls1 div:first-child{
+   position: relative;
+   display: flex;
+   align-items: center;
+   gap: 2rem;
+   margin: 0 3rem;
+}
+
+.div-next-video-controls1 div:first-child p{
+   font-size: 14px;
+   font-weight: 600;
+}
+
+.div-next-video-controls1 div:last-child{
+   position: absolute;
+   right: 3rem;
+   width: 150px;
+   height: 1px;
+   background: #ffffff7a;
+}
+
+.div-next-video-controls2{
+   position: relative;
+   display: flex;
+   flex-direction: column;
+   gap: 2rem;
+   height: 100%;
+   padding: 2rem 0;
+   border: 3px solid #ffffff;
+   background-color: #0a0a0a;
+}
+
+.description-next-espisode{
+   display: flex;
+   margin: 0 3rem;
+}
+
+.div-des-next-episode-video{
+   display: flex;
+   flex-direction: column;
+}
+
+.div-des-next-episode-video div:first-child{
+   display: flex;
+   align-items: center;
+   width: 100%;
+}
+
+.div-title-next{
+   display: flex;
+   align-items: center;
+   gap: 2rem;
+}
+
+.div-des-next-episode-video div:first-child p{
+   font-weight: 600;
+}
+
+.div-title-next-episode-video{
+   display: flex;
+   align-items: center;
+}
+
+.des-next-episode-image{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   gap: 2rem;
+}
+
+.des-next-episode-image p{
+   width: 500px;
+   font-size: 14px;
+   font-weight: 600;
+}
+
+.des-next-episode-image img{
+   width: 200px;
+}
+
+.next-video-hr{
+   position: absolute;
+   right: 3rem;
+   width: 150px;
+   height: 1px;
+   background: #ffffff7a;
+}
+
 .div-video-timer{
   position: absolute;
   top: 0;
@@ -1220,13 +1431,14 @@ header nav a:active {
   flex-direction: row-reverse;
   align-items: center;
   max-width: 100%;
-  width: calc(100% - 8rem);
+  width: 90%;
   height: 6px;
+  margin-left: -3rem;
   background-color: #3a3a3aca;
 }
 
 .div-video-timer p{
-  transform: translateX(4rem);
+  transform: translateX(6rem);
 }
 
 .video-timer{
@@ -1237,6 +1449,7 @@ header nav a:active {
   height: 6px;
   background-color: #ffffffca;
 }
+
 .div-anime-populars {
   display: flex;
   flex-direction: column;

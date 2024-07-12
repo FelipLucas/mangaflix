@@ -225,6 +225,7 @@ likeDownFill.addEventListener('click', () =>{
 
 //funçções video
 let video = document.querySelector('.div-player-video video');
+let controlsVideo = document.querySelector('.section-video-controls');
 
 let playVideo = document.querySelector(`.bi-play-fill-video`);
 let pauseVideo = document.querySelector(`.bi-pause-fill-video`);
@@ -235,16 +236,59 @@ let pauseVideoTwo = document.querySelector(`.bi-pause-fill-video2`);
 let volume = document.querySelector('.video-volume');
 let volumeRange = document.querySelector('.video-volume div');
 
+let nextVideos = document.querySelector('.next-episodes-videos');
+let moreVideosButton = document.querySelector('.next-episode-button');
+
+let downloadHover = document.querySelector('.div-download-video');
+let downloadButton = document.querySelector('.download-button');
+
+let timerVideo = document.querySelector('.div-video-timer p');
+let minutosVideo = 240000;
+timerVideo.innerHTML = minutosVideo
+
+setInterval(() =>{
+   minutosVideo--
+   timerVideo.innerHTML = minutosVideo;
+},1000)
 
 //funções pausar e despausar video
 playVideo.addEventListener('click', () =>{
    playVideo.style.display = 'none';
-   pauseVideo.style.display = 'block';
 
    playVideoTwo.style.display = 'none';
    pauseVideoTwo.style.display = 'block';
 
+   controlsVideo.style.display = 'block';
+
    document.addEventListener('keydown', pauseVideoKey);
+
+   setTimeout(() =>{
+      controlsVideo.style.display = 'none';  
+
+      video.addEventListener('click', () =>{
+         controlsVideo.style.display = 'none';  
+
+         playVideo.style.display = 'block';
+         pauseVideo.style.display = 'none';
+
+         video.pause();
+
+         setTimeout(() =>{
+            video.addEventListener('click', () =>{
+               controlsVideo.style.display = 'block';  
+
+               playVideo.style.display = 'none';
+               pauseVideo.style.display = 'block';
+
+               setInterval(() =>{
+                  playVideo.style.display = 'none';
+               }, 2000)
+
+               video.play();
+            });
+         }, 3000);
+      });
+   },5000);
 
    video.play();
 });
@@ -264,6 +308,37 @@ playVideoTwo.addEventListener('click', () =>{
 
    playVideo.style.display = 'none';
    pauseVideo.style.display = 'block';
+
+   setInterval(() =>{
+      playVideo.style.display = 'none';
+      pauseVideo.style.display = 'none';
+
+      setTimeout(() =>{
+         controlsVideo.style.display = 'none';  
+
+         video.addEventListener('click', () =>{
+            playVideo.style.display = 'block';
+            pauseVideo.style.display = 'none';
+
+            video.pause();
+
+            setTimeout(() =>{
+               video.addEventListener('click', () =>{
+                  controlsVideo.style.display = 'block';  
+   
+                  playVideo.style.display = 'none';
+                  pauseVideo.style.display = 'block';
+   
+                  setInterval(() =>{
+                     playVideo.style.display = 'none';
+                  }, 2000)
+   
+                  video.play();
+               });
+            }, 3000);
+         });
+      },2000);
+   }, 5000)
 
    video.play();
 });
@@ -287,7 +362,7 @@ function pauseVideoKey(event){
          }
       }, 1000);
    }
-}
+};
 
 //aumentar o volume e aparecer para abaixar
 volume.addEventListener('click', () =>{
@@ -298,6 +373,24 @@ volume.addEventListener('click', () =>{
          volumeRange.style.display = 'none';
       });
    }, 500);
+});
+
+//hover proximo episodio
+moreVideosButton.addEventListener('mouseover', () =>{
+   nextVideos.style.display = 'flex';
+   downloadHover.style.display = 'none';
+});
+video.addEventListener('mouseover', () =>{
+   nextVideos.style.display = 'none';
+});
+
+//hover download
+downloadButton.addEventListener('mouseover', () =>{
+   downloadHover.style.display = 'flex';
+   nextVideos.style.display = 'none';
+});
+video.addEventListener('mouseover', () =>{
+   downloadHover.style.display = 'none';
 });
 
 //movies hover
