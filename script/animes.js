@@ -243,13 +243,20 @@ let downloadHover = document.querySelector('.div-download-video');
 let downloadButton = document.querySelector('.download-button');
 
 let timerVideo = document.querySelector('.div-video-timer p');
-let minutosVideo = 240000;
-timerVideo.innerHTML = minutosVideo
+let barProgess = document.querySelector('.div-video-timer');
+let progess = document.querySelector('.video-timer');
+let videoLoader = document.querySelector('.loader');
+let hour, min, seg, currentHour, currentMin, currentSeg;
 
-setInterval(() =>{
-   minutosVideo--
-   timerVideo.innerHTML = minutosVideo;
-},1000)
+let classificacaoVideo = document.querySelector('.div-classficação-de-idade');
+
+let fullScreenButton = document.querySelector('.full-screen-button');
+
+let skipButton = document.querySelector('.skip-timer-button');
+let segundosSkip = 10;
+let segundosPrevious = 10;
+
+let intro = document.querySelector('.div-intro');
 
 //funções pausar e despausar video
 playVideo.addEventListener('click', () =>{
@@ -260,7 +267,12 @@ playVideo.addEventListener('click', () =>{
 
    controlsVideo.style.display = 'block';
 
+   setInterval(uptadeTImer, 100);
+
+   classVideo();
+
    document.addEventListener('keydown', pauseVideoKey);
+   setInterval(uptadeTImer, 100);
 
    setTimeout(() =>{
       controlsVideo.style.display = 'none';  
@@ -392,6 +404,81 @@ downloadButton.addEventListener('mouseover', () =>{
 video.addEventListener('mouseover', () =>{
    downloadHover.style.display = 'none';
 });
+
+//tela cheia
+fullScreenButton.addEventListener('click', () =>{
+   if(video.requestFullscreen){
+      video.requestFullscreen();
+   } else if(video.webKitFullScreen){
+      video.webKitFullScreen();
+   }
+});
+
+//skip video
+skipButton.addEventListener('click', () =>{
+   skip();
+});
+
+function skip(){
+   video.currentTime += segundosSkip;
+}
+
+function classVideo(){
+   if(video.length = 1){
+      classificacaoVideo.style.display = 'flex';
+
+      setTimeout(() =>{
+         classificacaoVideo.style.display = 'none';
+      }, 5000);
+   }
+}
+
+//timer video
+function convertTimer(hours, minutes, seconds){
+   if(hours < 10 && hours > 0){
+      hours = '0' + String(hours) + ':';
+   } else{
+      hours = '';
+   }
+
+   if(minutes < 10){
+      minutes = '0' + String(minutes);
+   } else if(minutes > 50){
+      minutes = minutes - (Math.floor(minutes / 60) * 60);
+   }
+
+   if(seconds < 10){
+      seconds = '0' + String(seconds);
+   } return String(hours) + String(minutes) + ':' + String(seconds);
+}
+
+function uptadeTImer(){
+   hour = Math.floor(video.duration / 3600);
+   min = Math.floor(video.duration / 60);
+   seg = Math.floor((video.duration / 60) % 1) * 60;
+
+   //current timer
+   currentHour = Math.florr(video.currentTime / 3600);
+   currentMin = Math.florr(video.currentTime / 60);
+   currentMin = Math.florr((video.currentTime / 60) % 1) * 60;
+
+   timerVideo.innerHTML = convertTimer(currentHour, currentMin, currentSeg);
+
+   bufferedEnd = video.buffered.end(video.buffered.length - 1);
+
+   videoLoader.style.width = String((bufferedEnd / video.duration) * 100) + '%';
+}
+
+//intro anime site
+/*function introSite(){
+   window.onload = () =>{
+      intro.style.display = 'block';
+
+      setTimeout(() =>{
+         intro.style.display = 'none';
+      }, 3000);
+   }
+} setInterval(introSite, 10);*/
 
 //movies hover
 let imageMovieHover = document.querySelector(".div-movie-slide img");

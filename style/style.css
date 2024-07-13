@@ -537,7 +537,7 @@ header nav a:active {
   background: linear-gradient(
     90deg,
     rgba(0, 0, 0, 0.85),
-    rgba(0, 0, 0, 0.7) 55%,
+    rgba(0, 0, 0, 0.7) 5%,
     transparent 75%
   );
   z-index: 1;
@@ -1450,6 +1450,83 @@ header nav a:active {
   background-color: #ffffffca;
 }
 
+.loader{
+   position: absolute;
+   top: 20%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   display: none;
+}
+
+.div-loader{
+   width: 50px;
+   height: 50px;
+   border: 6px solid #ffffffca;
+   border-top: 6px solid #0a0a0a;
+   border-radius: 50%;
+   animation: loading-animation 1s infinite;
+}
+
+.div-classficação-de-idade{
+   position: absolute;
+   top: 4rem;
+   left: 4rem;
+   display: none;
+   align-items: center;
+   gap: 1rem;
+   width: 450px;
+   height: 60px;
+   padding: 10px;
+   border-left: 3px solid #ffffff;
+   background-color: #0a0a0a6b;
+   border-radius: 5px;
+   animation: categories-animation 1s ease-in-out;
+}
+
+.div-classficação-de-idade img{
+   width: 60px;
+   height: 60px;
+   margin-left: 0rem;
+   z-index: 2;
+}
+
+.overlay-principal-class{
+   content: "";
+   position: absolute;
+   bottom: 0;
+   left: 0;
+   width: 65%;
+   height: 100%;
+   background: linear-gradient(
+     90deg,
+     rgba(0, 0, 0, 0.85),
+     rgba(0, 0, 0, 0.7) 5%,
+     transparent 75%
+   );
+   z-index: 1;
+}
+
+.classificação-animation-out{
+   animation: categories-out-animation 1s ease-in-out;
+}
+
+.div-intro{
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   display: none;
+   width: 100%;
+   height: 130vh;
+   z-index: 88888;
+   animation: categories-animation .5s ease-in-out;
+}
+
+.div-intro img{
+   width: 100%;
+   height: 100%;
+}
+
 .div-anime-populars {
   display: flex;
   flex-direction: column;
@@ -1563,6 +1640,7 @@ header nav a:active {
 
 .section-description{
    display: flex;
+   flex-wrap: wrap;
    justify-content: center;
    margin: 5rem auto;
    gap: 4rem;
@@ -2380,6 +2458,15 @@ header nav a:active {
     opacity: 1;
   }
 }
+@keyframes categories-out-animation {
+  0%{
+    opacity: 1;
+  }
+  100%{
+   opacity: 0;
+   width: 0;
+  }
+}
 @keyframes liked-animation {
    0%{
       scale: 1;
@@ -2390,5 +2477,13 @@ header nav a:active {
    }
    100%{
       scale: 1;
+   }
+}
+@keyframes loading-animation {
+   from{
+      transform: rotate(none);
+   }
+   to{
+      transform: rotate(360deg);
    }
 }
