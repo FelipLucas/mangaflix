@@ -1115,7 +1115,7 @@ header nav a:active {
 .section-video-controls{
   position: absolute;
   bottom: 5px;
-  display: flex;
+  display: none;
   width: 100%;
   height: 10%;
   animation: categories-animation 1s ease-in-out;
