@@ -235,12 +235,18 @@ let pauseVideoTwo = document.querySelector(`.bi-pause-fill-video2`);
 
 let volume = document.querySelector('.video-volume');
 let volumeRange = document.querySelector('.video-volume div');
+let volumeDrag;
+volumeDrag = false;
 
 let nextVideos = document.querySelector('.next-episodes-videos');
 let moreVideosButton = document.querySelector('.next-episode-button');
 
 let downloadHover = document.querySelector('.div-download-video');
 let downloadButton = document.querySelector('.download-button');
+let captionJapanese = document.querySelector('.p-original.click');
+let captionJapaneseSvg = document.querySelector('.bi-check3');
+let captionPortuguese = document.querySelector('.p-original.focus');
+let captionPortugueseSvg = document.querySelector('.bi-check4');
 
 let timerVideo = document.querySelector('.div-video-timer p');
 let barProgess = document.querySelector('.div-video-timer');
@@ -253,8 +259,16 @@ let classificacaoVideo = document.querySelector('.div-classficação-de-idade');
 let fullScreenButton = document.querySelector('.full-screen-button');
 
 let skipButton = document.querySelector('.skip-timer-button');
+let skipButtonClick = document.querySelector('.div-next-button-click');
+let skipPreviousButton = document.querySelector('.skip-previous-timer-button');
+let skipPreviousButtonClick = document.querySelector('.div-previous-button-click');
 let segundosSkip = 10;
 let segundosPrevious = 10;
+let pctSeek;
+let pctSeekBar;
+
+let pauseOverlay = document.querySelector('.div-des-pause');
+let overlayPause = document.querySelector('.overlay-principal-class');
 
 let intro = document.querySelector('.div-intro');
 
@@ -268,8 +282,6 @@ playVideo.addEventListener('click', () =>{
    controlsVideo.style.display = 'block';
 
    setInterval(uptadeTImer, 100);
-
-   classVideo();
 
    document.addEventListener('keydown', pauseVideoKey);
    setInterval(uptadeTImer, 100);
@@ -285,7 +297,7 @@ playVideo.addEventListener('click', () =>{
 
          video.pause();
 
-         setTimeout(() =>{
+         setInterval(() =>{
             video.addEventListener('click', () =>{
                controlsVideo.style.display = 'block';  
 
@@ -298,9 +310,9 @@ playVideo.addEventListener('click', () =>{
 
                video.play();
             });
-         }, 3000);
+         }, 10);
       });
-   },5000);
+   },7000);
 
    video.play();
 });
@@ -310,6 +322,8 @@ pauseVideo.addEventListener('click', () =>{
 
    pauseVideoTwo.style.display = 'none';
    playVideoTwo.style.display = 'block';
+
+   clearInterval(uptadeTImer, 100);
 
    video.pause();
 });
@@ -321,7 +335,9 @@ playVideoTwo.addEventListener('click', () =>{
    playVideo.style.display = 'none';
    pauseVideo.style.display = 'block';
 
-   setInterval(() =>{
+   setInterval(uptadeTImer, 100);
+
+   setTimeout(() =>{
       playVideo.style.display = 'none';
       pauseVideo.style.display = 'none';
 
@@ -334,7 +350,7 @@ playVideoTwo.addEventListener('click', () =>{
 
             video.pause();
 
-            setTimeout(() =>{
+            setInterval(() =>{
                video.addEventListener('click', () =>{
                   controlsVideo.style.display = 'block';  
    
@@ -347,10 +363,10 @@ playVideoTwo.addEventListener('click', () =>{
    
                   video.play();
                });
-            }, 3000);
+            }, 10);
          });
       },2000);
-   }, 5000)
+   }, 7000)
 
    video.play();
 });
@@ -360,6 +376,21 @@ pauseVideoTwo.addEventListener('click', () =>{
 
    pauseVideo.style.display = 'none';
    playVideo.style.display = 'block';
+
+   clearInterval(uptadeTImer, 100);
+
+   /*setTimeout(() =>{
+      pauseOverlay.style.display = 'flex';
+
+      setInterval(() =>{
+         video.addEventListener('click', () =>{
+            pauseOverlay.style.display = 'none';
+         });
+         playVideo.addEventListener('click', () =>{
+            pauseOverlay.style.display = 'none';
+         });
+      }, 50);
+   }, 30000);*/
 
    video.pause();
 });
@@ -380,11 +411,11 @@ function pauseVideoKey(event){
 volume.addEventListener('click', () =>{
    volumeRange.style.display = 'block';
 
-   setTimeout(() =>{
-      volume.addEventListener('click', () =>{
+   setInterval(() =>{
+      video.addEventListener('click', () =>{
          volumeRange.style.display = 'none';
       });
-   }, 500);
+   }, 50);
 });
 
 //hover proximo episodio
@@ -396,13 +427,41 @@ video.addEventListener('mouseover', () =>{
    nextVideos.style.display = 'none';
 });
 
-//hover download
+//hover download and captions
 downloadButton.addEventListener('mouseover', () =>{
    downloadHover.style.display = 'flex';
    nextVideos.style.display = 'none';
 });
 video.addEventListener('mouseover', () =>{
    downloadHover.style.display = 'none';
+});
+
+captionJapanese.addEventListener('click', () =>{
+   captionJapanese.classList.add('focus');
+   captionPortuguese.classList.remove('focus');
+
+   captionJapaneseSvg.style.display = 'block';
+   captionPortugueseSvg.style.display = 'none';
+
+   controlsVideo.style.display = 'none';
+   playVideo.style.display = 'block';
+   pauseVideo.style.display = 'none';
+
+   video.src = '../videos/Tokyo Ghoul - Season 1/Tokyo Ghoul Eps.01.mp4';
+});
+
+captionPortuguese.addEventListener('click', () =>{
+   captionJapanese.classList.remove('focus');
+   captionPortuguese.classList.add('focus');
+
+   captionJapaneseSvg.style.display = 'none';
+   captionPortugueseSvg.style.display = 'block';
+
+   controlsVideo.style.display = 'none';
+   playVideo.style.display = 'block';
+   pauseVideo.style.display = 'none';
+
+   video.src = 'https://rr8---sn-8p8v-bg0es.googlevideo.com/videoplayback?expire=1721033349&ei=BXKUZpbYF-WMxtYPra6ouAU&ip=179.193.11.19&id=9c76d2711981528f&itag=18&source=blogger&xpc=Egho7Zf3LnoBAQ%3D%3D&mh=iP&mm=31&mn=sn-8p8v-bg0es&ms=au&mv=m&mvi=8&pl=24&susc=bl&eaua=pPBo9J5J0jc&mime=video/mp4&vprv=1&dur=1569.134&lmt=1698372276845369&mt=1721004304&txp=1311224&sparams=expire,ei,ip,id,itag,source,xpc,susc,eaua,mime,vprv,dur,lmt&sig=AJfQdSswRgIhAPgr_OUn5nC4UBKI6tKSApEBOmhUa_sbB-Wffz9Pkd7SAiEAlPO1ZT-Bg54jxbXqG_HrULZFk84Gsv3qAsBSeHz6Q8k%3D&lsparams=mh,mm,mn,ms,mv,mvi,pl&lsig=AHlkHjAwRQIgUub6T4z4bBKy1KjwO6zBEoaxQAGCcgxz-WUYSHYZ4PUCIQCzgQ4K2micYl_TFwOwXPD91jFxoZ-bliVLd2kREujBaw%3D%3D&cpn=V4OSBjdKaCiDlcJq&c=WEB_EMBEDDED_PLAYER&cver=1.20240709.01.00';
 });
 
 //tela cheia
@@ -416,22 +475,24 @@ fullScreenButton.addEventListener('click', () =>{
 
 //skip video
 skipButton.addEventListener('click', () =>{
-   skip();
+   video.currentTime += segundosSkip;
+
+   skipButtonClick.style.display = 'block';
+
+   setTimeout(() =>{
+      skipButtonClick.style.display = 'none';
+   }, 1000);
 });
 
-function skip(){
-   video.currentTime += segundosSkip;
-}
+skipPreviousButton.addEventListener('click', () =>{
+   video.currentTime -= segundosPrevious;
 
-function classVideo(){
-   if(video.length = 1){
-      classificacaoVideo.style.display = 'flex';
+   skipPreviousButtonClick.style.display = 'block';
 
-      setTimeout(() =>{
-         classificacaoVideo.style.display = 'none';
-      }, 5000);
-   }
-}
+   setTimeout(() =>{
+      skipPreviousButtonClick.style.display = 'none';
+   }, 1000);
+});
 
 //timer video
 function convertTimer(hours, minutes, seconds){
@@ -465,8 +526,17 @@ function uptadeTImer(){
    timerVideo.innerHTML = convertTimer(currentHour, currentMin, currentSeg);
 
    bufferedEnd = video.buffered.end(video.buffered.length - 1);
-
    videoLoader.style.width = String((bufferedEnd / video.duration) * 100) + '%';
+   pctSeek = (video.currentTime / video.duration) * 100;
+   progess.style.width = String(pctSeek) + '%';
+
+   if(progess.clientWidth > 0 && progess.clientWidth < 5){
+      classificacaoVideo.style.display = 'flex';
+
+      setTimeout(() =>{
+         classificacaoVideo.style.display = 'none';
+      }, 5000);
+   }
 }
 
 //intro anime site
@@ -479,6 +549,34 @@ function uptadeTImer(){
       }, 3000);
    }
 } setInterval(introSite, 10);*/
+
+barProgess.addEventListener('click', seeker)
+function seeker(event){
+   pctSeekBar = (event.clientX / barProgess.clientWidth) * 100;
+   video.currentTime = (video.duration * pctSeekBar) / 100;
+}
+
+volume.addEventListener('mousedown', startDrag);
+volume.addEventListener('mouseup', startDrag);
+volume.addEventListener('mousemove', showVolume);
+function startDrag(event){
+   if(event.type === 'mousedown'){
+      volumeDrag = true;
+   } else{
+      volumeDrag = false;
+   }
+}
+
+function showVolume(event){
+   if(volumeDrag){
+      var w = volume.clientWidth - 2;
+      var x = event.clientX - volume.offsetLeft;
+      var pctVol = x/w;
+
+      volumeRange.style.width = x + 'px';
+      video.volume = pctVol;
+   }
+}
 
 //movies hover
 let imageMovieHover = document.querySelector(".div-movie-slide img");
