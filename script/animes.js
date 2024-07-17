@@ -543,7 +543,7 @@ captionPortuguese.addEventListener('click', () =>{
    playVideo.style.display = 'block';
    pauseVideo.style.display = 'none';
 
-   video.src = 'https://rr8---sn-8p8v-bg0es.googlevideo.com/videoplayback?expire=1721124601&ei=edaVZvX6N7eN3rsPz7qfwAM&ip=179.193.11.19&id=9c76d2711981528f&itag=22&source=blogger&xpc=Egho7Zf3LnoBAQ%3D%3D&mh=iP&mm=31&mn=sn-8p8v-bg0es&ms=au&mv=m&mvi=8&pl=24&susc=bl&eaua=pPBo9J5J0jc&mime=video/mp4&vprv=1&dur=1569.134&lmt=1698372873389649&mt=1721095265&txp=1311224&sparams=expire,ei,ip,id,itag,source,xpc,susc,eaua,mime,vprv,dur,lmt&sig=AJfQdSswRAIgY9r3Y0u_6Pk3YrhclHHWnss_SShnhNDNwIJqLYKW-g4CIGLM1wyNYNj0EvMTXfBFbHRzGW_ewMxx1T5JRn7Si1Y8&lsparams=mh,mm,mn,ms,mv,mvi,pl&lsig=AHlkHjAwRgIhAMDp2y9APrEtsfb9OVWFg9gK2lVXSLl5_Fa7Jw2sOay1AiEAzzSfURqNkhqivbvk161HVOJl74_EehFkJz45ioE_ssc%3D&cpn=AlP760x_Fhsik5ZQ&c=WEB_EMBEDDED_PLAYER&cver=1.20240710.01.00';
+   video.src = 'https://rr8---sn-8p8v-bg0es.googlevideo.com/videoplayback?expire=1721270122&ei=6g6YZoK0ELbJy_sPz_6KsAo&ip=179.193.11.19&id=9c76d2711981528f&itag=22&source=blogger&xpc=Egho7Zf3LnoBAQ%3D%3D&mh=iP&mm=31&mn=sn-8p8v-bg0es&ms=au&mv=m&mvi=8&pl=24&susc=bl&eaua=pPBo9J5J0jc&mime=video/mp4&vprv=1&dur=1569.134&lmt=1698372873389649&mt=1721240936&txp=1311224&sparams=expire,ei,ip,id,itag,source,xpc,susc,eaua,mime,vprv,dur,lmt&sig=AJfQdSswRQIgO5XX1BIHAcxArFtS6uVEcOybLSQ8b1gc8HCDmxg8bEcCIQDVWxv-YDZ46Xfn-nBagEJ488-PBMpWH4_jxVocZW8qiQ%3D%3D&lsparams=mh,mm,mn,ms,mv,mvi,pl&lsig=AHlkHjAwRgIhANdwlde_dgSPBfMWsX_o3YcSS-D9NZqBUZon_VvWQ1rcAiEAnGBG_YiHPa74CFyaWqyl-xXyQidxRWOQCBvDKGnxF0E%3D&cpn=VEeLDqb2vfhxPb1L&c=WEB_EMBEDDED_PLAYER&cver=1.20240715.01.00';
 });
 
 //tela cheia
