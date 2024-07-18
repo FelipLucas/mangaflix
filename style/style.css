@@ -1402,6 +1402,10 @@ header nav a:active {
    font-weight: 600;
 }
 
+.div-next-video-controls1 a{
+   text-decoration: none;
+}
+
 .div-next-video-controls1 div:last-child{
    position: absolute;
    right: 3rem;
@@ -1445,6 +1449,10 @@ header nav a:active {
 
 .div-des-next-episode-video div:first-child p{
    font-weight: 600;
+}
+
+.div-des-next-episode-video a{
+   text-decoration: none;
 }
 
 .div-title-next-episode-video{
