@@ -1166,7 +1166,7 @@ header nav a:active {
 .section-video-controls{
   position: absolute;
   bottom: 5px;
-  display: flex;
+  display: none;
   width: 100%;
   height: 10%;
   animation: categories-animation 1s ease-in-out;
@@ -1673,7 +1673,7 @@ header nav a:active {
 .div-skip-intro{
    display: none;
    position: absolute;
-   bottom: 8.5rem;
+   bottom: 15%;
    right: 5%;
 }
 
