@@ -1,3 +1,216 @@
+//categories
+let body = document.querySelector('body');
+let categories = document.querySelector('.section-categories');
+let linkCategories = document.querySelector('.a-categoria-nav');
+
+let categoriesAction = document.querySelector('.p-action');
+let categoriesContentAction = document.querySelector('.div-images-categories');
+
+let categoriesAdventure = document.querySelector('.p-adventure');
+let categoriesContentAdventure = document.querySelector('.div-images-categories2');
+
+let categoriesComedy = document.querySelector('.p-comedy');
+let categoriesContentComedy = document.querySelector('.div-images-categories3');
+
+let categoriesFiction = document.querySelector('.p-fiction');
+let categoriesContentFiction = document.querySelector('.div-images-categories4');
+
+let categoriesHorror = document.querySelector('.p-horror');
+let categoriesContentHorror = document.querySelector('.div-images-categories5');
+
+let categoriesTitle = document.querySelector('.title-categories');
+
+let closerCategoriesBtn = document.querySelector('.div-closer-btn');
+
+let formularyAction = document.querySelector('.action-categories-formulary');
+let formularyAdventure = document.querySelector('.adventure-categories-formulary');
+let formularyComedy = document.querySelector('.comedy-categories-formulary');
+let formularyFiction = document.querySelector('.fiction-categories-formulary');
+let formularyHorror = document.querySelector('.horror-categories-formulary');
+
+linkCategories.addEventListener('click', () =>{
+  body.style.overflow = 'hidden';
+  categories.style.display = 'flex';
+  categories.classList.add('animation-categories');
+  
+  categoriesAction.classList.add('focus-categories');
+  categoriesAdventure.classList.remove('focus-categories');
+  categoriesComedy.classList.remove('focus-categories');
+  categoriesFiction.classList.remove('focus-categories');
+  categoriesHorror.classList.remove('focus-categories');
+
+  perfil.style.display = 'none';
+  categoriesContentAction.style.display = 'flex';
+})
+
+formularyAction.addEventListener('click', () =>{
+  body.style.overflow = 'hidden';
+  categories.style.display = 'flex';
+  categories.classList.add('animation-categories');
+  
+  categoriesAction.classList.add('focus-categories');
+  categoriesAdventure.classList.remove('focus-categories');
+  categoriesComedy.classList.remove('focus-categories');
+  categoriesFiction.classList.remove('focus-categories');
+  categoriesHorror.classList.remove('focus-categories');
+
+  perfil.style.display = 'none';
+  categoriesContentAction.style.display = 'flex';
+});
+
+formularyAdventure.addEventListener('click', () =>{
+  body.style.overflow = 'hidden';
+  categories.style.display = 'flex';
+  categories.classList.add('animation-categories');
+  categoriesTitle.innerHTML = 'Adventure (冒 険)';
+
+  categoriesAdventure.classList.add('focus-categories');
+  categoriesAction.classList.remove('focus-categories');
+  categoriesComedy.classList.remove('focus-categories');
+  categoriesFiction.classList.remove('focus-categories');
+  categoriesHorror.classList.remove('focus-categories');
+
+  perfil.style.display = 'none';
+  categoriesContentAction.style.display = 'none';
+  categoriesContentAdventure.style.display = 'flex';
+});
+
+formularyComedy.addEventListener('click', () =>{
+  body.style.overflow = 'hidden';
+  categories.style.display = 'flex';
+  categories.classList.add('animation-categories');
+  categoriesTitle.innerHTML = 'Comedy (コメディ)';
+
+  categoriesComedy.classList.add('focus-categories');
+  categoriesAction.classList.remove('focus-categories');
+  categoriesAdventure.classList.remove('focus-categories');
+  categoriesFiction.classList.remove('focus-categories');
+  categoriesHorror.classList.remove('focus-categories');
+
+  perfil.style.display = 'none';
+  categoriesContentComedy.style.display = 'flex';
+  categoriesContentAction.style.display = 'none';
+});
+
+formularyFiction.addEventListener('click', () =>{
+  body.style.overflow = 'hidden';
+  categories.style.display = 'flex';
+  categories.classList.add('animation-categories');
+  categoriesTitle.innerHTML = 'Fiction (フィクション)';
+
+  categoriesFiction.classList.add('focus-categories');
+  categoriesAction.classList.remove('focus-categories');
+  categoriesAdventure.classList.remove('focus-categories');
+  categoriesComedy.classList.remove('focus-categories');
+  categoriesHorror.classList.remove('focus-categories');
+
+  perfil.style.display = 'none';
+  categoriesContentFiction.style.display = 'flex';
+  categoriesContentAction.style.display = 'none';
+});
+
+formularyHorror.addEventListener('click', () =>{
+  body.style.overflow = 'hidden';
+  categories.style.display = 'flex';
+  categories.classList.add('animation-categories');
+  categoriesTitle.innerHTML = 'Horror (ホラー)';
+
+  categoriesHorror.classList.add('focus-categories');
+  categoriesAction.classList.remove('focus-categories');
+  categoriesAdventure.classList.remove('focus-categories');
+  categoriesComedy.classList.remove('focus-categories');
+  categoriesFiction.classList.remove('focus-categories');
+
+  perfil.style.display = 'none';
+  categoriesContentHorror.style.display = 'flex';
+  categoriesContentAction.style.display = 'none';
+});
+
+closerCategoriesBtn.addEventListener('click', () =>{
+  categories.style.display = 'none';
+  body.style.overflow = 'auto';
+});
+
+categoriesAction.addEventListener('click', () =>{
+  categoriesTitle.innerHTML = 'Action (アクション)';
+
+  categoriesContentAction.classList.add('animation-categories');
+  categoriesAdventure.classList.remove('focus-categories');
+  categoriesComedy.classList.remove('focus-categories');
+  categoriesFiction.classList.remove('focus-categories');
+  categoriesHorror.classList.remove('focus-categories');
+
+  categoriesContentAction.style.display = 'flex';
+  categoriesContentAdventure.style.display = 'none';
+  categoriesContentComedy.style.display = 'none';
+  categoriesContentFiction.style.display = 'none';
+  categoriesContentHorror.style.display = 'none';
+});
+
+categoriesAdventure.addEventListener('click', () =>{
+  categoriesTitle.innerHTML = 'Adventure (冒 険)';
+
+  categoriesContentAdventure.classList.add('animation-categories');
+  categoriesAction.classList.remove('focus-categories');
+  categoriesComedy.classList.remove('focus-categories');
+  categoriesFiction.classList.remove('focus-categories');
+  categoriesHorror.classList.remove('focus-categories');
+
+  categoriesContentAdventure.style.display = 'flex';
+  categoriesContentAction.style.display = 'none';
+  categoriesContentComedy.style.display = 'none';
+  categoriesContentFiction.style.display = 'none';
+  categoriesContentHorror.style.display = 'none';
+});
+
+categoriesComedy.addEventListener('click', () =>{
+  categoriesTitle.innerHTML = 'Comedy (コメディ)';
+
+  categoriesContentComedy.classList.add('animation-categories');
+  categoriesAction.classList.remove('focus-categories');
+  categoriesAdventure.classList.remove('focus-categories');
+  categoriesFiction.classList.remove('focus-categories');
+  categoriesHorror.classList.remove('focus-categories');
+
+  categoriesContentComedy.style.display = 'flex';
+  categoriesContentAdventure.style.display = 'none';
+  categoriesContentAction.style.display = 'none';
+  categoriesContentFiction.style.display = 'none';
+  categoriesContentHorror.style.display = 'none';
+});
+
+categoriesFiction.addEventListener('click', () =>{
+  categoriesTitle.innerHTML = 'Fiction (フィクション)';
+
+  categoriesContentFiction.classList.add('animation-categories');
+  categoriesAction.classList.remove('focus-categories');
+  categoriesAdventure.classList.remove('focus-categories');
+  categoriesComedy.classList.remove('focus-categories');
+  categoriesHorror.classList.remove('focus-categories');
+
+  categoriesContentFiction.style.display =  `flex`;
+  categoriesContentComedy.style.display = 'none';
+  categoriesContentAdventure.style.display = 'none';
+  categoriesContentAction.style.display = 'none';
+  categoriesContentHorror.style.display = 'none';
+});
+
+categoriesHorror.addEventListener('click', () =>{
+  categoriesTitle.innerHTML = 'Horror (ホラー)';
+
+  categoriesContentHorror.classList.add('animation-categories');
+  categoriesAction.classList.remove('focus-categories');
+  categoriesAdventure.classList.remove('focus-categories');
+  categoriesComedy.classList.remove('focus-categories');
+  categoriesFiction.classList.remove('focus-categories');
+
+  categoriesContentHorror.style.display = 'flex';
+  categoriesContentAction.style.display = 'none';
+  categoriesContentAdventure.style.display = 'none';
+  categoriesContentComedy.style.display = 'none';
+  categoriesContentFiction.style.display =  `none`;
+});
+
 /*menu*/
 var menu = document.querySelector("header");
 var notification = document.querySelector(".bi-bell");
@@ -224,10 +437,12 @@ likeDownFill.addEventListener('click', () =>{
 });
 
 //funçções video
-let divVideo = document.querySelector('.div-player-video');
 let video = document.querySelector('.div-player-video video');
-let spacePlay = false;
+let videoSrc = document.querySelector('.div-player-video video source');
+let videoSrcJapanese = document.querySelector(".div-src-japanese source");
+let divVideo = document.querySelector('.div-player-video');
 let controlsVideo = document.querySelector('.section-video-controls');
+let spacePlay = false;
 
 let playVideo = document.querySelector(`.bi-play-fill-video`);
 let pauseVideo = document.querySelector(`.bi-pause-fill-video`);
@@ -259,6 +474,7 @@ let hour, min, seg, currentHour, currentMin, currentSeg;
 let classificacaoVideo = document.querySelector('.div-classficação-de-idade');
 
 let fullScreenButton = document.querySelector('.full-screen-button');
+let fullScreenKeyValue = false;
 
 let skipButton = document.querySelector('.skip-timer-button');
 let skipButtonClick = document.querySelector('.div-next-button-click');
@@ -283,12 +499,23 @@ playVideo.addEventListener('click', () =>{
 
    controlsVideo.style.display = 'block';
 
+   //videoHover.style.display = 'block';
+
    setInterval(uptadeTImer, 100);
 
-   volume.addEventListener('click', mutedVol);
-   document.addEventListener('keydown', pauseVideoKey);
    video.addEventListener('waiting', loader);
    video.addEventListener('playing', loader);
+   volume.addEventListener('click', mutedVol);
+   document.addEventListener('keydown', pauseVideoKey);
+   document.addEventListener('keydown', fullScreenKey);
+   setInterval(skipOppening, 10);
+
+   video.addEventListener('mouseover', () =>{
+      video.classList.add('filter-video');
+   })
+   video.addEventListener('mouseout', () =>{
+      video.classList.remove('filter-video');
+   })
    
    setTimeout(() =>{
       controlsVideo.style.display = 'none';  
@@ -529,7 +756,7 @@ captionJapanese.addEventListener('click', () =>{
    playVideo.style.display = 'block';
    pauseVideo.style.display = 'none';
 
-   video.src = '../videos/Tokyo Ghoul - Season 1/Tokyo Ghoul Eps.01.mp4';
+   video.src = videoSrcJapanese.src;
 });
 
 captionPortuguese.addEventListener('click', () =>{
@@ -543,21 +770,28 @@ captionPortuguese.addEventListener('click', () =>{
    playVideo.style.display = 'block';
    pauseVideo.style.display = 'none';
 
-   video.src = 'https://rr8---sn-8p8v-bg0es.googlevideo.com/videoplayback?expire=1721270122&ei=6g6YZoK0ELbJy_sPz_6KsAo&ip=179.193.11.19&id=9c76d2711981528f&itag=22&source=blogger&xpc=Egho7Zf3LnoBAQ%3D%3D&mh=iP&mm=31&mn=sn-8p8v-bg0es&ms=au&mv=m&mvi=8&pl=24&susc=bl&eaua=pPBo9J5J0jc&mime=video/mp4&vprv=1&dur=1569.134&lmt=1698372873389649&mt=1721240936&txp=1311224&sparams=expire,ei,ip,id,itag,source,xpc,susc,eaua,mime,vprv,dur,lmt&sig=AJfQdSswRQIgO5XX1BIHAcxArFtS6uVEcOybLSQ8b1gc8HCDmxg8bEcCIQDVWxv-YDZ46Xfn-nBagEJ488-PBMpWH4_jxVocZW8qiQ%3D%3D&lsparams=mh,mm,mn,ms,mv,mvi,pl&lsig=AHlkHjAwRgIhANdwlde_dgSPBfMWsX_o3YcSS-D9NZqBUZon_VvWQ1rcAiEAnGBG_YiHPa74CFyaWqyl-xXyQidxRWOQCBvDKGnxF0E%3D&cpn=VEeLDqb2vfhxPb1L&c=WEB_EMBEDDED_PLAYER&cver=1.20240715.01.00';
+   video.src = videoSrc.src;
 });
 
 //tela cheia
 fullScreenButton.addEventListener('click', () =>{
    if(!document.webkitFullScreenElement){
-      divVideo.webkitRequestFullScreen();
+      divVideo.webkitRequestFullscreen();
    } else{
-      document.webkitExitFullScreen();
+      document.webkitExitFullscreen();
    }
 });
 
-let iframe = document.querySelector('.iframe-watch');
-function loadIframe(){
-   iframe.play();
+function fullScreenKey(event){
+   if(!document.webkitFullScreenElement && event.code === 'KeyF' && fullScreenKeyValue === false){
+      divVideo.webkitRequestFullScreen();
+
+      //fullScreenKeyValue = true;
+   } else if(fullScreenKeyValue === true){
+      document.webkitExitFullScreen();
+
+      spacePlay = false;
+   }
 }
 
 //skip video
