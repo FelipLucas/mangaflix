@@ -510,7 +510,6 @@ playVideo.addEventListener('click', () =>{
    document.addEventListener('keydown', muteVolKey);
    document.addEventListener('keydown', fullScreenKey);
    document.addEventListener('keydown', skipKey);
-   setInterval(skipOppening, 10);
 
    video.addEventListener('mouseover', () =>{
       video.classList.add('filter-video');
