@@ -493,6 +493,11 @@ let shareButtonLeft = document.querySelector('.div-button-share-left');
 let shareCLoserButton = document.querySelector('.div-closer-btn-share');
 let shareValue = false;
 
+let currentUrl = document.URL;
+let textUrl = document.querySelector('.p-url-copy');
+textUrl.innerHTML = currentUrl;
+console.log(currentUrl)
+
 let pauseOverlay = document.querySelector('.div-des-pause');
 let overlayPause = document.querySelector('.overlay-principal-class');
 
@@ -967,7 +972,7 @@ shareButtonLeft.addEventListener('click', () =>{
 });
 
 //intro anime site
-/*function introSite(){
+function introSite(){
    window.onload = () =>{
       intro.style.display = 'block';
 
@@ -975,7 +980,7 @@ shareButtonLeft.addEventListener('click', () =>{
          intro.style.display = 'none';
       }, 3000);
    }
-} setInterval(introSite, 10);*/
+} setInterval(introSite, 10);
 
 
 //movies hover
