@@ -485,6 +485,14 @@ let segundosPrevious = 10;
 let pctSeek;
 let pctSeekBar;
 
+let divShare = document.querySelector('.div-share-open');
+let containerShare = document.querySelector('.div-share-links');
+let shareButtonOpen = document.querySelector('.div-share');
+let shareButton = document.querySelector('.div-button-share');
+let shareButtonLeft = document.querySelector('.div-button-share-left');
+let shareCLoserButton = document.querySelector('.div-closer-btn-share');
+let shareValue = false;
+
 let pauseOverlay = document.querySelector('.div-des-pause');
 let overlayPause = document.querySelector('.overlay-principal-class');
 
@@ -510,6 +518,7 @@ playVideo.addEventListener('click', () =>{
    document.addEventListener('keydown', muteVolKey);
    document.addEventListener('keydown', fullScreenKey);
    document.addEventListener('keydown', skipKey);
+   setInterval(skipOppening, 10);
 
    video.addEventListener('mouseover', () =>{
       video.classList.add('filter-video');
@@ -919,6 +928,44 @@ function loader(event){
    }
 }
 
+barProgess.addEventListener('click', seeker)
+function seeker(event){
+   pctSeekBar = (event.clientX / barProgess.clientWidth) * 100;
+   video.currentTime = (video.duration * pctSeekBar) / 100;
+}
+
+//share
+shareButtonOpen.addEventListener('click', () =>{
+   divShare.style.display = 'flex';
+});
+
+shareCLoserButton.addEventListener('click', () =>{
+   divShare.style.display = 'none';
+});
+
+shareButton.addEventListener('click', () =>{
+
+   if(shareValue === false){
+      shareValue = true;
+
+      containerShare.style.margin = '-15%';
+
+      shareButton.style.display = 'none';
+      shareButtonLeft.style.display = 'block';
+   }
+});
+
+shareButtonLeft.addEventListener('click', () =>{
+   if(shareValue === true){
+      shareValue = false;
+
+      containerShare.style.margin = '0';
+
+      shareButton.style.display = 'block';
+      shareButtonLeft.style.display = 'none';
+   }
+});
+
 //intro anime site
 /*function introSite(){
    window.onload = () =>{
@@ -930,11 +977,6 @@ function loader(event){
    }
 } setInterval(introSite, 10);*/
 
-barProgess.addEventListener('click', seeker)
-function seeker(event){
-   pctSeekBar = (event.clientX / barProgess.clientWidth) * 100;
-   video.currentTime = (video.duration * pctSeekBar) / 100;
-}
 
 //movies hover
 let imageMovieHover = document.querySelector(".div-movie-slide img");
