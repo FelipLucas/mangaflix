@@ -495,8 +495,8 @@ let shareValue = false;
 
 let currentUrl = document.URL;
 let textUrl = document.querySelector('.p-url-copy');
+let urlButton = document.querySelector('.section-link-copy div button')
 textUrl.innerHTML = currentUrl;
-console.log(currentUrl)
 
 let pauseOverlay = document.querySelector('.div-des-pause');
 let overlayPause = document.querySelector('.overlay-principal-class');
@@ -917,6 +917,7 @@ function informationsPause(){
       overlayPause.style.display = 'none';
    }
 } setInterval(informationsPause, 50);
+
 //loader
 function loader(event){
    switch(event.type){
@@ -972,7 +973,7 @@ shareButtonLeft.addEventListener('click', () =>{
 });
 
 //intro anime site
-function introSite(){
+/*function introSite(){
    window.onload = () =>{
       intro.style.display = 'block';
 
@@ -980,7 +981,24 @@ function introSite(){
          intro.style.display = 'none';
       }, 3000);
    }
-} setInterval(introSite, 10);
+} setInterval(introSite, 10);*/
+
+//copy text
+urlButton.addEventListener('click', () =>{
+   urlButton.innerHTML = 'Copied' +  '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check-lg" viewBox="0 0 16 16"><path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425z"/></svg>';
+
+   setTimeout(() =>{
+      urlButton.innerHTML = 'Copy';
+   }, 1000);
+})
+
+function copyText(){
+   textUrl.select();
+   textUrl.setSelectionRange(0, 99999);
+
+   document.execCommand("copy");
+   window.alert('hello world');
+}
 
 
 //movies hover
