@@ -6,7 +6,7 @@
     <link rel="shortcut icon" href="../images/images.png" type="image/x-icon"/>
     <link rel="stylesheet" href="../style/style.css" />
     <script src="../script/animes.js" defer></script>
-    <title>Tragedy - Tokyo Ghoul Episóde 001</title>
+    <title> The strongest Man in the World- One Punch Episóde 001</title>
   </head>
   <body>
    <head>
@@ -402,8 +402,8 @@
     <main>
       <section class="section-episode-anime">
           <div class="div-player-video">
-             <video poster="https://images2.alphacoders.com/545/thumb-1920-545916.jpg" preload="none">
-               <source src="https://rr6---sn-8p8v-bg0e7.googlevideo.com/videoplayback?expire=1721556184&ei=WGycZom5Gea-y_sPzcDmwAY&ip=179.193.11.19&id=9c76d2711981528f&itag=22&source=blogger&xpc=Egho7Zf3LnoBAQ%3D%3D&mh=iP&mm=31&mn=sn-8p8v-bg0e7&ms=au&mv=m&mvi=6&pl=24&susc=bl&eaua=pPBo9J5J0jc&mime=video/mp4&vprv=1&dur=1569.134&lmt=1698372873389649&mt=1721527006&txp=1311224&sparams=expire,ei,ip,id,itag,source,xpc,susc,eaua,mime,vprv,dur,lmt&sig=AJfQdSswRgIhAMafkVDW4ZXxkNQcbDUPZIlurOp-6oVZc1oPNP0a0JhwAiEAkidIaYpayZhRsaf-z9YSLor0XYDzP7eif_mPO4ocztA%3D&lsparams=mh,mm,mn,ms,mv,mvi,pl&lsig=AHlkHjAwRQIhAIe9hpGBIFDhOoZImkh5kCaQQRPfYyk4dKC4TECmUuG8AiAb1fD65zTMuJUHz8qNXkVf898YTmYkPvL3aKeUgaJ1AQ%3D%3D&cpn=P3nu1JQpiCjnTixa&c=WEB_EMBEDDED_PLAYER&cver=1.20240716.01.00" type="video/mp4">
+             <video poster="https://images6.alphacoders.com/670/thumb-1920-670102.jpg" preload="none">
+               <source src="https://video.wixstatic.com/video/9b007f_2df0ea8a15164a158f3b4bf344b6a57b/1080p/mp4/file.mp4?u=0&b=0" type="video/mp4">
              </video>
              <div class="div-src-japanese">
                <source src="../videos/Tokyo Ghoul - Season 1/Tokyo Ghoul Eps.01.mp4">
@@ -418,8 +418,8 @@
              </div>
              <div class="overlay-principal-class"></div>
              <div class="div-classficação-de-idade">
-               <img src="https://logodownload.org/wp-content/uploads/2017/07/classificacao-18-anos-logo-1.png" alt="">
-               <p>violência, crueldade, sexo explícito e situação sexual </p>
+               <img src="https://logodownload.org/wp-content/uploads/2017/07/classificacao-14-anos-logo-2.png" alt="">
+               <p>cenas de aborto, estigma ou preconceito, eutánasia.</p>
                <div class="overlay-principal-class2"></div>
             </div>
             <div class="div-previous-button-click">
@@ -657,10 +657,10 @@
             </div>
             <div class="div-des-animes-like">
                <div class="div-des-animes-carac">
-                  <h1>E1 - Tragédia</h1>
+                  <h1>E1 - The Stongest Man</h1>
                   <div class="div-des-animes-classi-date">
-                     <img src="https://logodownload.org/wp-content/uploads/2017/07/classificacao-18-anos-logo-1.png" alt="">
-                     <p>⋏ Legendado</p>
+                     <img src="https://logodownload.org/wp-content/uploads/2017/07/classificacao-14-anos-logo-2.png" alt="">
+                     <p>⋏ Substitle</p>
                      <p>|</p>
                      <p>09-07-2024</p>
                   </div>
@@ -1022,14 +1022,23 @@
          let barProgessTwo = document.querySelector('.div-video-timer');
 
          function skipOppening(){
-            if(video.currentTime >= 1447){
+            if(video.currentTime >= 1330){
                skipOppeningButton.style.display = 'block';
-               skipOppeningButtonTxt.innerHTML = 'skip trailer'
+               skipOppeningButtonTxt.innerHTML = 'skip trailer';
 
                skipOppeningButton.addEventListener('click', () =>{
                   video.currentTime = 1600;
                })
-            } else{
+            }
+
+            if(video.currentTime >= 193 && video.currentTime <= 280){
+               skipOppeningButton.style.display = 'block';
+               skipOppeningButtonTxt.innerHTML = 'skip intro';
+
+               skipOppeningButton.addEventListener('click', () =>{
+                  video.currentTime = 280;
+               })
+            } else if (video.currentTime < 193 || video.currentTime > 200 && video.currentTime < 1330){
                skipOppeningButton.style.display = 'none';
             }
          }
