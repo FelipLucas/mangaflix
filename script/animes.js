@@ -527,6 +527,10 @@ playVideo.addEventListener('click', () =>{
 
    video.addEventListener('mouseover', () =>{
       video.classList.add('filter-video');
+
+      setTimeout(() =>{
+         video.classList.remove('filter-video');
+      }, 5000);
    })
    video.addEventListener('mouseout', () =>{
       video.classList.remove('filter-video');

@@ -1915,7 +1915,7 @@ header nav a:active {
    transform: translate(-50%, -50%);
    display: none;
    flex-direction: column;
-   width: 600px;
+   width: 550px;
    height: 450px;
    background: #0a0a0a;
    border-radius: 5px;
