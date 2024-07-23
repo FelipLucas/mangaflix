@@ -1007,21 +1007,15 @@ nextEpisodeButton.addEventListener('click', () =>{
    if(nextEpisodeValue === false){
       nextEpisode.style.display = 'flex';
 
+      nextEpisodeValue = true;
       video.addEventListener('click', () =>{
          nextEpisode.style.display = 'none';
       });
    } else{
+      nextEpisodeValue = false;
       nextEpisode.style.display = 'none';
    }
 });
-nextEpisodeImg.addEventListener('click', () =>{
-   if(!document.webkitFullScreenElement){
-      divVideo.webkitRequestFullScreen();
-      video.play();
-   } else{
-      document.webkitExitFullscreen();
-   }
-})
 
 //movies hover
 let imageMovieHover = document.querySelector(".div-movie-slide img");
