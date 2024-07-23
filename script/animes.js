@@ -498,6 +498,11 @@ let textUrl = document.querySelector('.p-url-copy');
 let urlButton = document.querySelector('.section-link-copy div button')
 textUrl.innerHTML = currentUrl;
 
+let nextEpisode = document.querySelector('.div-next-button');
+let nextEpisodeButton = document.querySelector('.next-episode-btn');
+let nextEpisodeImg = document.querySelector('.div-next-button div:last-child img');
+let nextEpisodeValue = false;
+
 let pauseOverlay = document.querySelector('.div-des-pause');
 let overlayPause = document.querySelector('.overlay-principal-class');
 
@@ -996,6 +1001,27 @@ urlButton.addEventListener('click', () =>{
       urlButton.innerHTML = 'Copy';
    }, 1000);
 });
+
+//next video full
+nextEpisodeButton.addEventListener('click', () =>{
+   if(nextEpisodeValue === false){
+      nextEpisode.style.display = 'flex';
+
+      video.addEventListener('click', () =>{
+         nextEpisode.style.display = 'none';
+      });
+   } else{
+      nextEpisode.style.display = 'none';
+   }
+});
+nextEpisodeImg.addEventListener('click', () =>{
+   if(!document.webkitFullScreenElement){
+      divVideo.webkitRequestFullScreen();
+      video.play();
+   } else{
+      document.webkitExitFullscreen();
+   }
+})
 
 //movies hover
 let imageMovieHover = document.querySelector(".div-movie-slide img");
