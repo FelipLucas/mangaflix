@@ -1619,13 +1619,13 @@ header nav a:active {
    bottom: 0;
    left: 0;
    display: none;
-   width: 65%;
+   width: 40%;
    height: 100%;
    background: linear-gradient(
      90deg,
-     rgba(0, 0, 0, 0.85),
-     rgba(0, 0, 0, 0.7) 55%,
-     transparent 75%
+     rgba(0, 0, 0, 0.87),
+     rgba(0, 0, 0, 0.85) 55%,
+     transparent 95%
    );
    z-index: 1;
 }
@@ -1678,27 +1678,84 @@ header nav a:active {
    animation: categories-animation 1s ease-in-out;
 }
 
-.div-des-pause div{
+.div-is-watch-to{
+   position: relative;
+}
+
+.div-logo-pause-container{
+   position: absolute;
+   top: -4rem;
+   left: -4rem;
+   transform: rotate(-15deg);
+   font-size: 25px;
+   color: #ffffffd6;
+}
+
+.div-pause-container, .div-pause-container-two{
    display: flex;
    flex-direction: column;
    gap: 1rem;
 }
 
-.div-des-pause div:first-child p{
+.div-specifics-pause{
+   display: flex;
+   align-items: center;
+   gap: 1rem;
+}
+
+.div-des-pause div:first-child div img{
+   width: 25px;
+   height: 25px;
+   border-radius: 5px;
+}
+
+.div-pause-container p{
    font-size: 12px;
    color: #ffffffca;
 }
 
-.div-des-pause div:first-child h1{
+.div-pause-container h1{
    font-size: 45px;
 }
 
-.div-des-pause div:first-child h3{
+.div-pause-container h3{
    font-size: 16px;
 }
 
-.div-des-pause div:last-child p:last-child{
-   color: #ffffffca;
+.div-pause-container-two p{
+   color: #ffffffe5;
+}
+
+.btn-keep-watching{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   gap: 1rem;
+   width: 350px;
+   height: 45px;
+   margin-top: 1rem;
+   font-size: 16px;
+   font-weight: 600;
+   color: #000000;
+   border: .5px solid #ffffffca;
+   border-radius: 5px;
+   cursor: pointer;
+}
+
+.btn-restore-watching{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   gap: 1rem;
+   width: 350px;
+   height: 45px;
+   font-size: 16px;
+   font-weight: 600;
+   color: #ffffff;
+   background-color: transparent;
+   border: .5px solid #ffffff90;
+   border-radius: 5px;
+   cursor: pointer;
 }
 
 .div-previous-button-click{

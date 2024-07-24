@@ -505,6 +505,9 @@ let nextEpisodeValue = false;
 
 let pauseOverlay = document.querySelector('.div-des-pause');
 let overlayPause = document.querySelector('.overlay-principal-class');
+let buttonKeepWatchimg = document.querySelector('.btn-keep-watching');
+let buttonRestoreWatchimg = document.querySelector('.btn-restore-watching');
+let buttonWatchingValue = false;
 
 let intro = document.querySelector('.div-intro');
 
@@ -559,6 +562,9 @@ playVideo.addEventListener('click', () =>{
                playVideo.style.display = 'none';
                pauseVideo.style.display = 'block';
 
+               pauseOverlay.style.display = 'none';
+               overlayPause.style.display = 'none';
+
                setInterval(() =>{
                   playVideo.style.display = 'none';
                }, 2000)
@@ -579,6 +585,7 @@ pauseVideo.addEventListener('click', () =>{
    playVideoTwo.style.display = 'block';
 
    clearInterval(uptadeTImer, 100);
+   setTimeout(pausedVideo, 50);
 
    video.pause();
 });
@@ -632,10 +639,81 @@ pauseVideoTwo.addEventListener('click', () =>{
    pauseVideo.style.display = 'none';
    playVideo.style.display = 'block';
 
-   clearInterval(uptadeTImer, 100);
+   clearTimeout(uptadeTImer, 100);
+   setTimeout(pausedVideo, 50);
 
    video.pause();
 });
+
+//paused function
+/*function pausedVideo(){
+   if(buttonWatchingValue === false){
+      setTimeout(() =>{
+         pauseOverlay.style.display = 'flex';
+         overlayPause.style.display = 'block';
+
+         video.pause();
+      }, 10000);
+   } else{
+      pauseOverlay.style.display = 'none';
+      overlayPause.style.display = 'none';
+
+      video.play();
+   }
+
+   //keep watching
+   buttonKeepWatchimg.addEventListener('click', () =>{
+   playVideo.style.display = 'none';
+
+   playVideoTwo.style.display = 'none';
+   pauseVideoTwo.style.display = 'block';
+
+   controlsVideo.style.display = 'block';
+
+   pauseOverlay.style.display = 'none';
+   overlayPause.style.display = 'none';
+   
+   setTimeout(() =>{
+      controlsVideo.style.display = 'none';  
+
+      video.addEventListener('click', () =>{
+         controlsVideo.style.display = 'none';  
+
+         playVideo.style.display = 'block';
+         pauseVideo.style.display = 'none';
+
+         video.pause();
+
+         setTimeout(() =>{
+            video.addEventListener('click', () =>{
+               controlsVideo.style.display = 'block';  
+
+               playVideo.style.display = 'none';
+               pauseVideo.style.display = 'block';
+
+               pauseOverlay.style.display = 'none';
+               overlayPause.style.display = 'none';
+
+               setInterval(() =>{
+                  playVideo.style.display = 'none';
+               }, 2000)
+
+               video.play();
+            });
+         }, 10);
+      });
+   },7000);
+
+   video.play();
+});
+
+buttonRestoreWatchimg.addEventListener('click', () =>{
+   video.currentTime = 0;
+
+   pauseOverlay.style.display = 'none';
+   overlayPause.style.display = 'none'
+});
+}*/
 
 //pause with key
 function pauseVideoKey(event){
@@ -649,6 +727,7 @@ function pauseVideoKey(event){
       playVideo.style.display = 'block';
       pauseVideo.style.display = 'none';
 
+      setTimeout(pausedVideo, 50);
 
    } else if(event.code === 'Space' && spacePlay === true){
       video.play();
@@ -659,6 +738,11 @@ function pauseVideoKey(event){
 
       playVideo.style.display = 'none';
       pauseVideo.style.display = 'block';
+
+      pauseOverlay.style.display = 'none';
+      overlayPause.style.display = 'none';
+
+      clearTimeout(pausedVideo);
 
       setTimeout(() =>{
          playVideo.style.display = 'none';
@@ -914,19 +998,6 @@ function uptadeTImer(){
    }
 }
 
-//container pause
-function informationsPause(){
-   if(pauseVideoTwo.length = 0){
-      setTimeout(() =>{
-         pauseOverlay.style.display = 'flex';
-         overlayPause.style.display = 'block';
-      }, 5000);
-   } else{
-      pauseOverlay.style.display = 'none';
-      overlayPause.style.display = 'none';
-   }
-} setInterval(informationsPause, 50);
-
 //loader
 function loader(event){
    switch(event.type){
@@ -988,7 +1059,7 @@ shareButtonLeft.addEventListener('click', () =>{
 
       setTimeout(() =>{
          intro.style.display = 'none';
-      }, 3000);
+      }, 1700);
    }
 } setInterval(introSite, 10);*/
 
@@ -1015,6 +1086,13 @@ nextEpisodeButton.addEventListener('click', () =>{
       nextEpisodeValue = false;
       nextEpisode.style.display = 'none';
    }
+});
+nextEpisodeImg.addEventListener('click', () =>{
+   setTimeout(() =>{
+      if(!document.webkitFullScreenElement){
+         divVideo.webkitRequestFullScreen();
+      }
+   }, 3000);
 });
 
 //movies hover
