@@ -403,7 +403,7 @@
       <section class="section-episode-anime">
           <div class="div-player-video">
              <video poster="https://i.pinimg.com/564x/10/e2/d5/10e2d5288aed7acdf5c7efa2c69f77e4.jpg" preload="none">
-               <source src="https://rr1---sn-8p8v-bg0e7.googlevideo.com/videoplayback?expire=1721812291&ei=w1SgZribJcuuxtYP1uOJ4Ag&ip=152.234.122.222&id=7ef219324458aaea&itag=22&source=blogger&xpc=Egho7Zf3LnoBAQ%3D%3D&mh=gu&mm=31&mn=sn-8p8v-bg0e7&ms=au&mv=m&mvi=1&pl=24&susc=bl&eaua=pPBo9J5J0jc&mime=video/mp4&vprv=1&dur=1453.058&lmt=1697741812506590&mt=1721782631&txp=1311224&sparams=expire,ei,ip,id,itag,source,xpc,susc,eaua,mime,vprv,dur,lmt&sig=AJfQdSswRQIhAP1VTGdy9pgPvcwUm0n2DzI05w3L_WROVqgtg1h_wyngAiBQt4I5MkE3jHKBh5PT2SGl1P0FQFwbBUCkmu5pYQB7MA%3D%3D&lsparams=mh,mm,mn,ms,mv,mvi,pl&lsig=AGtxev0wRAIgOVLI8nkV2u-6QtyDowJJ0lwXYWhEwZTx9TWe7Wf9xOwCICn1Hy6PrXtFtOEUoZ9poXufgmIZm8xKGEuKX_c3Q8WZ&cpn=PHF9s_Z_K371ZDDb&c=WEB_EMBEDDED_PLAYER&cver=1.20240721.00.00" type="video/mp4">
+               <source src="https://rr1---sn-8p8v-bg0e7.googlevideo.com/videoplayback?expire=1721881536&ei=QGOhZvDSEeHh1QG2-Nm4BA&ip=152.234.122.222&id=7ef219324458aaea&itag=22&source=blogger&xpc=Egho7Zf3LnoBAQ%3D%3D&mh=gu&mm=31&mn=sn-8p8v-bg0e7&ms=au&mv=m&mvi=1&pcm2cms=yes&pl=24&susc=bl&eaua=pPBo9J5J0jc&mime=video/mp4&vprv=1&dur=1453.058&lmt=1697741812506590&mt=1721852231&txp=1311224&sparams=expire,ei,ip,id,itag,source,xpc,susc,eaua,mime,vprv,dur,lmt&sig=AJfQdSswRgIhALgN26PPk9C_T4QNVcXAAfpcow8KVWM2_IW1Ghb9HBY1AiEAukfQdWTG7Dwovvm-_qX2Mg8Xs4OpV2-uOCSJAyAozpQ%3D&lsparams=mh,mm,mn,ms,mv,mvi,pcm2cms,pl&lsig=AGtxev0wRgIhANvxVqVNMnplRI8kgIzg61R95FIH8_t0lip7vCwJOJKGAiEAofl1lS-rQveuZIVbzKrPlR2KpOh3zobLEi0Q_NzaTwg%3D&cpn=MvIKWrs9EbITyj-b&c=WEB_EMBEDDED_PLAYER&cver=1.20240722.01.00" type="video/mp4">
              </video>
              <div class="div-src-japanese">
                <source src="../videos/Tokyo Ghoul - Season 1/Tokyo Ghoul Eps.07.mp4">
@@ -501,7 +501,7 @@
                            </div>
                         </div>
                         <div class="des-next-episode-image">
-                           <img src="https://imgsrv.crunchyroll.com/cdn-cgi/image/fit=contain,format=auto,quality=70,width=320,height=180/catalog/crunchyroll/1ebd8fa36102e4d84e423043ca49bf4b.jpe" alt="">
+                           <img src="https://imgsrv.crunchyroll.com/cdn-cgi/image/fit=contain,format=auto,quality=70,width=320,height=180/catalog/crunchyroll/88b7d84c96b428539f9790e80f6f3235.jpe" alt="">
                            <p>
                               A sinister threat is invading Tokyo: flesh-eating "ghouls" who appear identical to humans and blend into their population. 
                               Reserved college student Ken Kaneki buries his nose in books and avoids the news of the growing crisis. 
@@ -583,7 +583,7 @@
                         </a>
                      </div>
                      <p>
-                        <strong>VII.  Capivity</strong> <br>
+                        <strong>VIII.  Capivity</strong> <br>
                         <br>
                         Kaneki desperately fights the desire to eat human flesh, the only thing that can satisfy his hunger, as a ghoul. 
                         He meets Hide again and leaves with him, content with the camaraderie. But will his weakened state be a risk to Hide?
@@ -745,7 +745,7 @@
             <h4>NEXT EPISODE</h4>
             <div class="div-thumb-video-next">
                <div>
-                  <a href="tokyoGhoul-002.html">
+                  <a href="tokyoGhoul-008.html">
                      <img src="https://imgsrv.crunchyroll.com/cdn-cgi/image/fit=contain,format=auto,quality=70,width=320,height=180/catalog/crunchyroll/88b7d84c96b428539f9790e80f6f3235.jpe" alt="">
                      <p>24m</p>
                      <div class="div-pause-video-next-episode">
@@ -1072,14 +1072,21 @@
          let barProgessTwo = document.querySelector('.div-video-timer');
 
          function skipOppening(){
-            if(video.currentTime >= 1447){
+            if(video.currentTime >= 1334){
                skipOppeningButton.style.display = 'block';
-               skipOppeningButtonTxt.innerHTML = 'skip trailer'
+               skipOppeningButtonTxt.innerHTML = 'skip trailer';
 
                skipOppeningButton.addEventListener('click', () =>{
                   video.currentTime = 1600;
-               })
-            } else{
+               });
+            } if(video.currentTime >= 148.5 && video.currentTime <= 230){
+               skipOppeningButton.style.display = 'block';
+               skipOppeningButtonTxt.innerHTML = 'skip intro';
+
+               skipOppeningButton.addEventListener('click', () =>{
+                  video.currentTime = 230;
+               });
+            } else if(video.currentTime < 148.5 || video.currentTime > 230 && video.currentTime < 1334){
                skipOppeningButton.style.display = 'none';
             }
          }

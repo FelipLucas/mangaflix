@@ -1799,6 +1799,7 @@ header nav a:active {
    position: absolute;
    bottom: 15%;
    right: 5%;
+   animation: categories-animation .5s ease-in-out;
 }
 
 .div-skip-intro button{
