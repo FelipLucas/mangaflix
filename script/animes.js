@@ -585,7 +585,7 @@ pauseVideo.addEventListener('click', () =>{
    playVideoTwo.style.display = 'block';
 
    clearInterval(uptadeTImer, 100);
-   setTimeout(pausedVideo, 50);
+   //setTimeout(pausedVideo, 50);
 
    video.pause();
 });
@@ -640,13 +640,13 @@ pauseVideoTwo.addEventListener('click', () =>{
    playVideo.style.display = 'block';
 
    clearTimeout(uptadeTImer, 100);
-   setTimeout(pausedVideo, 50);
+   //setTimeout(pausedVideo, 50);
 
    video.pause();
 });
 
 //paused function
-/*function pausedVideo(){
+function pausedVideo(){
    if(buttonWatchingValue === false){
       setTimeout(() =>{
          pauseOverlay.style.display = 'flex';
@@ -713,7 +713,7 @@ buttonRestoreWatchimg.addEventListener('click', () =>{
    pauseOverlay.style.display = 'none';
    overlayPause.style.display = 'none'
 });
-}*/
+}
 
 //pause with key
 function pauseVideoKey(event){
@@ -1093,142 +1093,4 @@ nextEpisodeImg.addEventListener('click', () =>{
          divVideo.webkitRequestFullScreen();
       }
    }, 3000);
-});
-
-//movies hover
-let imageMovieHover = document.querySelector(".div-movie-slide img");
-let pMovieHover = document.querySelector(".div-movie-slide p");
-
-let imageMovieHoverTwo = document.querySelector(".div-movie-slide2 img");
-let pMovieHoverTwo = document.querySelector(".div-movie-slide2 p");
-
-let imageMovieHoverThree = document.querySelector(".div-movie-slide3 img");
-let pMovieHoverThree = document.querySelector(".div-movie-slide3 p");
-
-let imageMovieFour = document.querySelector(".div-movie-slide4 img");
-let pMovieHoverFour = document.querySelector(".div-movie-slide4 p");
-
-let imageMovieHoverFive = document.querySelector(".div-movie-slide5 img");
-let pMovieHoverFive = document.querySelector(".div-movie-slide5 p");
-
-let imageMovieHoverSix = document.querySelector(".div-movie-slide6 img");
-let pMovieHoverSix = document.querySelector(".div-movie-slide6 p");
-
-let imageMovieHoverSeven = document.querySelector(".div-movie-slide7 img");
-let pMovieHoverSeven = document.querySelector(".div-movie-slide7 p");
-
-let imageMovieHoverEigth = document.querySelector(".div-movie-slide8 img");
-let pMovieHoverEigth = document.querySelector(".div-movie-slide8 p");
-
-imageMovieHover.addEventListener("mouseover", () => {
-  pMovieHover.style.display = "block";
-});
-imageMovieHover.addEventListener("mouseout", () => {
-  pMovieHover.style.display = "none";
-});
-
-pMovieHover.addEventListener("mouseover", () => {
-  pMovieHover.style.display = "block";
-  imageMovieHover.style.scale = "1.03";
-});
-pMovieHover.addEventListener("mouseout", () => {
-  pMovieHover.style.display = "none";
-});
-
-imageMovieHoverTwo.addEventListener("mouseover", () => {
-  pMovieHoverTwo.style.display = "block";
-});
-imageMovieHoverTwo.addEventListener("mouseout", () => {
-  pMovieHoverTwo.style.display = "none";
-});
-
-pMovieHoverTwo.addEventListener("mouseover", () => {
-  pMovieHoverTwo.style.display = "block";
-});
-pMovieHoverTwo.addEventListener("mouseout", () => {
-  pMovieHoverTwo.style.display = "none";
-});
-
-imageMovieHoverThree.addEventListener("mouseover", () => {
-  pMovieHoverThree.style.display = "block";
-});
-imageMovieHoverThree.addEventListener("mouseout", () => {
-  pMovieHoverThree.style.display = "none";
-});
-
-pMovieHoverThree.addEventListener("mouseover", () => {
-  pMovieHoverThree.style.display = "block";
-});
-pMovieHoverThree.addEventListener("mouseout", () => {
-  pMovieHoverThree.style.display = "none";
-});
-
-imageMovieFour.addEventListener("mouseover", () => {
-  pMovieHoverFour.style.display = "block";
-});
-imageMovieFour.addEventListener("mouseout", () => {
-  pMovieHoverFour.style.display = "none";
-});
-
-pMovieHoverFour.addEventListener("mouseover", () => {
-  pMovieHoverFour.style.display = "block";
-});
-pMovieHoverFour.addEventListener("mouseout", () => {
-  pMovieHoverFour.style.display = "none";
-});
-
-imageMovieHoverFive.addEventListener("mouseover", () => {
-  pMovieHoverFive.style.display = "block";
-});
-imageMovieHoverFive.addEventListener("mouseout", () => {
-  pMovieHoverFive.style.display = "none";
-});
-
-pMovieHoverFive.addEventListener("mouseover", () => {
-  pMovieHoverFive.style.display = "block";
-});
-pMovieHoverFive.addEventListener("mouseout", () => {
-  pMovieHoverFive.style.display = "none";
-});
-
-imageMovieHoverSix.addEventListener("mouseover", () => {
-  pMovieHoverSix.style.display = "block";
-});
-imageMovieHoverSix.addEventListener("mouseout", () => {
-  pMovieHoverSix.style.display = "none";
-});
-
-pMovieHoverSix.addEventListener("mouseover", () => {
-  pMovieHoverSix.style.display = "block";
-});
-pMovieHoverSix.addEventListener("mouseout", () => {
-  pMovieHoverSix.style.display = "none";
-});
-
-imageMovieHoverSeven.addEventListener("mouseover", () => {
-  pMovieHoverSeven.style.display = "block";
-});
-imageMovieHoverSeven.addEventListener("mouseout", () => {
-  pMovieHoverSeven.style.display = "none";
-});
-
-pMovieHoverSeven.addEventListener("mouseover", () => {
-  pMovieHoverSeven.style.display = "block";
-});
-pMovieHoverSeven.addEventListener("mouseout", () => {
-  pMovieHoverSeven.style.display = "none";
-});
-
-imageMovieHoverEigth.addEventListener("mouseover", () => {
-  pMovieHoverEigth.style.display = "block";
-});
-imageMovieHoverEigth.addEventListener("mouseout", () => {
-  pMovieHoverEigth.style.display = "none";
-});
-
-pMovieHoverEigth.addEventListener("mouseover", () => {
-  pMovieHoverEigth.style.display = "block";
-});
-pMovieHoverEigth.addEventListener("mouseout", () => {
-  pMovieHoverEigth.style.display = "none";
 });
