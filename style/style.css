@@ -1084,7 +1084,7 @@ header nav a:active {
   background-color: #141414;
 }
 
-.div-episodes-movies-next-season div {
+.div-episodes-movies-next-season div:first-child{
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1101,7 +1101,22 @@ header nav a:active {
   color: #ffffffa0;
 }
 
-/*episodes*/
+.div-season-2{
+   display: none;
+   flex-direction: column;
+   gap: 1rem;
+   animation: categories-animation 1s ease-in-out;
+}
+
+.div-open-season2{
+   cursor: pointer;
+}
+
+.bi-caret-up-fill-season2{
+   display: none;
+}
+
+/*episodes animes*/
 /*.body-episodios-animes{
    overflow-x: hidden;
 }*/
