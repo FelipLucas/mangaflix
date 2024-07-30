@@ -573,7 +573,7 @@
                      </div>
                      <div>
                         <div class="video-next-click">
-                           <a href="onePunchMan-002.html">
+                           <a href="onePunchMan-003.html">
                               <img src="https://animesonlinecc.to/wp-content/uploads/2019/06/wPTn2p2IwaFj8hPoM8MTyMo4sFH-300x170.jpg" alt="">
    
                               <div class="div-play-next-button">
@@ -584,7 +584,7 @@
                            </a>
                         </div>
                         <p>
-                           <strong>II.  The Obsessive Scientist</strong> <br>
+                           <strong>III.  The Obsessive Scientist</strong> <br>
                            <br>
                            The seemingly unimpressive Saitama has a rather unique hobby: being a hero. In order to pursue his childhood dream, 
                            Saitama relentlessly rained for three years, losing all of his hair in the process. 
@@ -1054,8 +1054,18 @@
          let skipOppeningButtonTxt = document.querySelector('.div-skip-intro button');
          let barProgessTwo = document.querySelector('.div-video-timer');
 
+         let divVideo = document.querySelector('.div-player-video');
+         let video = document.querySelector('.div-player-video video');
+
+         function onload(){
+            if(!document.webkitFullScreenElement){
+            divVideo.requestFullscreen();
+            } 
+         } setTimeout(onload, 50);
+            
+
          function skipOppening(){
-            if(video.currentTime >= 1330){
+          if(video.currentTime >= 1330){
                skipOppeningButton.style.display = 'block';
                skipOppeningButtonTxt.innerHTML = 'skip trailer';
 
@@ -1063,17 +1073,16 @@
                   video.currentTime = 1600;
                });
             }
-
-            if(video.currentTime >= 120 && video.currentTime <= 285){
+          if(video.currentTime >= 120 && video.currentTime <= 205){
                skipOppeningButton.style.display = 'block';
                skipOppeningButtonTxt.innerHTML = 'skip intro';
 
                skipOppeningButton.addEventListener('click', () =>{
                   video.currentTime = 205;
                });
-            } else if (video.currentTime < 120 || video.currentTime > 285 && video.currentTime < 1330){
-               skipOppeningButton.style.display = 'none';
-            };
+            } else if(video.currentTime < 120 || video.currentTime > 205 && video.currentTime < 1330){
+              skipOppeningButton.style.display = 'none';
+            }
          }
       </script>
   </body>
