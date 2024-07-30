@@ -807,18 +807,23 @@
       let seasonTwoArrow = document.querySelector('.div-open-season2');
       let seasonTwoArrowSvgOne = document.querySelector('.bi-caret-down-fill-season2');
       let seasonTwoArrowSvgTwo = document.querySelector('.bi-caret-up-fill-season2');
+      let pNextSeason = document.querySelector('.div-episodes-movies-next-season div:first-child');
       let arrowSeasonValue = false;
 
       seasonTwoArrow.addEventListener('click', () =>{
          if(arrowSeasonValue === false){
             seasonTwo.style.display = 'flex';
 
-         seasonTwoArrowSvgOne.style.display = 'none';
-         seasonTwoArrowSvgTwo.style.display = 'block';
+            seasonTwoArrowSvgOne.style.display = 'none';
+            seasonTwoArrowSvgTwo.style.display = 'block';
 
+            pNextSeason.style.background = '#da171790';
+            
             arrowSeasonValue = true;
          } else if(arrowSeasonValue === true){
             seasonTwo.style.display = 'none';
+            
+            pNextSeason.style.background = '#0a0a0a';
 
             seasonTwoArrowSvgOne.style.display = 'block';
             seasonTwoArrowSvgTwo.style.display = 'none';

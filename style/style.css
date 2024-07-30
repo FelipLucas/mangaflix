@@ -1090,7 +1090,7 @@ header nav a:active {
   align-items: center;
   padding: 18px 30px;
   margin-left: -10px;
-  background-color: #da171790;
+  background-color: #0a0a0a;
 }
 
 .div-episodes-movies-next-season div p {
@@ -1682,6 +1682,8 @@ header nav a:active {
    height: 100%;
 }
 
+
+/*paused video*/
 .div-des-pause{
    position: absolute;
    top: 30%;

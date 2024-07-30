@@ -598,14 +598,36 @@
             </div>
           </div>
           <div class="div-des-pause">
-            <div>
-               <p>Your is watch to</p>
-               <h1>Tokyo Ghoul</h1>
-               <h3>Tokyo Ghoul</h3>
+            <div class="div-pause-container">
+               <div class="div-is-watch-to">
+                  <p>Your is watch to:</p>
+                  <div class="div-logo-pause-container">
+                     漫画を読む
+                  </div>
+               </div>
+               <h1>One Punch Man</h1>
+               <div class="div-specifics-pause">
+                  <p>2014</p>
+                  <p>❅</p>
+                  <h3>one punch man</h3>
+                  <p>❅</p>
+                  <img src="https://logodownload.org/wp-content/uploads/2017/07/classificacao-14-anos-logo-2.png" alt="">
+               </div>
             </div>
-            <div>
-               <p>Season 1 | E:1</p>
-               <p>Think of a story in which you are the protagonist. It would probably be a tragedy, wouldn't it? <br> Well, that's Kaneki's story...</p>
+            <div class="div-pause-container-two">
+               <p><strong>Season 1 | E:2</strong></p>
+               <p>Think of a story in which you are the protagonist. It would probably be a tragedy, wouldn't it? <br> Well, that's Saitama's story...</p>
+               <!--<button class="btn-keep-watching">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="#000" width="20" height="20" viewBox="0 0 24 24" role="img" data-icon="PlayStandard" aria-hidden="true" class="bi-play-fill-video2" style="display: block;"><path d="M5 2.69127C5 1.93067 5.81547 1.44851 6.48192 1.81506L23.4069 11.1238C24.0977 11.5037 24.0977 12.4963 23.4069 12.8762L6.48192 22.1849C5.81546 22.5515 5 22.0693 5 21.3087V2.69127Z" fill="#000"></path></svg>
+                  Keep Watching
+               </button>
+               <button class="btn-restore-watching">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-arrow-counterclockwise" viewBox="0 0 16 16">
+                     <path fill-rule="evenodd" d="M8 3a5 5 0 1 1-4.546 2.914.5.5 0 0 0-.908-.417A6 6 0 1 0 8 2z"/>
+                     <path d="M8 4.466V.534a.25.25 0 0 0-.41-.192L5.23 2.308a.25.25 0 0 0 0 .384l2.36 1.966A.25.25 0 0 0 8 4.466"/>
+                   </svg>
+                   Restore
+               </button>-->
             </div>
           </div>
 
@@ -1054,16 +1076,6 @@
          let skipOppeningButtonTxt = document.querySelector('.div-skip-intro button');
          let barProgessTwo = document.querySelector('.div-video-timer');
 
-         let divVideo = document.querySelector('.div-player-video');
-         let video = document.querySelector('.div-player-video video');
-
-         function onload(){
-            if(!document.webkitFullScreenElement){
-            divVideo.requestFullscreen();
-            } 
-         } setTimeout(onload, 50);
-            
-
          function skipOppening(){
           if(video.currentTime >= 1330){
                skipOppeningButton.style.display = 'block';
@@ -1073,6 +1085,7 @@
                   video.currentTime = 1600;
                });
             }
+
           if(video.currentTime >= 120 && video.currentTime <= 205){
                skipOppeningButton.style.display = 'block';
                skipOppeningButtonTxt.innerHTML = 'skip intro';

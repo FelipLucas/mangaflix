@@ -443,6 +443,7 @@ let videoSrcJapanese = document.querySelector(".div-src-japanese source");
 let divVideo = document.querySelector('.div-player-video');
 let controlsVideo = document.querySelector('.section-video-controls');
 let spacePlay = false;
+let nextVideoDiv = document.querySelector('.video-next-click');
 
 let playVideo = document.querySelector(`.bi-play-fill-video`);
 let pauseVideo = document.querySelector(`.bi-pause-fill-video`);
@@ -517,6 +518,9 @@ playVideo.addEventListener('click', () =>{
 
    playVideoTwo.style.display = 'none';
    pauseVideoTwo.style.display = 'block';
+
+   pauseOverlay.style.display = 'none';
+   overlayPause.style.display = 'none';
 
    controlsVideo.style.display = 'block';
 
@@ -707,12 +711,12 @@ function pausedVideo(){
    video.play();
 });
 
-buttonRestoreWatchimg.addEventListener('click', () =>{
-   video.currentTime = 0;
+   buttonRestoreWatchimg.addEventListener('click', () =>{
+      video.currentTime = 0;
 
-   pauseOverlay.style.display = 'none';
-   overlayPause.style.display = 'none'
-});
+      pauseOverlay.style.display = 'none';
+      overlayPause.style.display = 'none'
+   });
 }
 
 //pause with key
@@ -1087,10 +1091,14 @@ nextEpisodeButton.addEventListener('click', () =>{
       nextEpisode.style.display = 'none';
    }
 });
-nextEpisodeImg.addEventListener('click', () =>{
-   setTimeout(() =>{
-      if(!document.webkitFullScreenElement){
-         divVideo.webkitRequestFullScreen();
-      }
-   }, 3000);
-});
+
+nextVideoDiv.addEventListener('click', () =>{
+   nextVideoFullScreen();
+})
+
+function nextVideoFullScreen(){
+   video.play();
+   if(!document.webkitFullScreenElement){
+      divVideo.requestFullscreen();
+   }
+};
