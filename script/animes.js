@@ -651,6 +651,10 @@ pauseVideoTwo.addEventListener('click', () =>{
 
 //paused function
 function pausedVideo(){
+   if(divVideo.requestFullscreen()){
+      pauseOverlay.style.display = 'none';
+      overlayPause.style.display = 'none';
+   }
    if(buttonWatchingValue === false){
       setTimeout(() =>{
          pauseOverlay.style.display = 'flex';
@@ -732,7 +736,6 @@ function pauseVideoKey(event){
       pauseVideo.style.display = 'none';
 
       setTimeout(pausedVideo, 50);
-
    } else if(event.code === 'Space' && spacePlay === true){
       video.play();
       spacePlay = false;

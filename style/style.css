@@ -1101,18 +1101,18 @@ header nav a:active {
   color: #ffffffa0;
 }
 
-.div-season-2{
+.div-season-2, .div-season-3, .div-season-4{
    display: none;
    flex-direction: column;
    gap: 1rem;
    animation: categories-animation 1s ease-in-out;
 }
 
-.div-open-season2{
+.div-open-season2, .div-open-season3, .div-open-season4{
    cursor: pointer;
 }
 
-.bi-caret-up-fill-season2{
+.bi-caret-up-fill-season2, .bi-caret-up-fill-season3, .bi-caret-up-fill-season4{
    display: none;
 }
 
