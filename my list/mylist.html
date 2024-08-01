@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../images/images.png" type="image/x-icon"/>
+    <link rel="stylesheet" href="../style/style.css">
+    <title>My List Dashboard</title>
+</head>
+<body>
+    <head>
+        <header class="header-my-list">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left-short" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M12 8a.5.5 0 0 1-.5.5H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5a.5.5 0 0 1 .5.5"/>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8"/>
+                </svg>
+                <div class="div-my-list-dashboard">
+                    <a href="../index.html">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor" class="bi bi-house-door-fill" viewBox="0 0 16 16">
+                            <path d="M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5"/>
+                        </svg>
+                    </a>
+                    <p>my list dashboard ../</p>
+                </div>
+                <div class="div-my-list-align">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="9" height="9" fill="currentColor" class="bi bi-share-fill" viewBox="0 0 16 16">
+                        <path d="M11 2.5a2.5 2.5 0 1 1 .603 1.628l-6.718 3.12a2.5 2.5 0 0 1 0 1.504l6.718 3.12a2.5 2.5 0 1 1-.488.876l-6.718-3.12a2.5 2.5 0 1 1 0-3.256l6.718-3.12A2.5 2.5 0 0 1 11 2.5"/>
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="9" height="9" fill="currentColor" class="bi bi-chat-left-text" viewBox="0 0 16 16">
+                        <path d="M14 1a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H4.414A2 2 0 0 0 3 11.586l-2 2V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12.793a.5.5 0 0 0 .854.353l2.853-2.853A1 1 0 0 1 4.414 12H14a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"/>
+                        <path d="M3 3.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5M3 6a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9A.5.5 0 0 1 3 6m0 2.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5"/>
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="9" height="9" fill="currentColor" class="bi bi-clock-history" viewBox="0 0 16 16">
+                        <path d="M8.515 1.019A7 7 0 0 0 8 1V0a8 8 0 0 1 .589.022zm2.004.45a7 7 0 0 0-.985-.299l.219-.976q.576.129 1.126.342zm1.37.71a7 7 0 0 0-.439-.27l.493-.87a8 8 0 0 1 .979.654l-.615.789a7 7 0 0 0-.418-.302zm1.834 1.79a7 7 0 0 0-.653-.796l.724-.69q.406.429.747.91zm.744 1.352a7 7 0 0 0-.214-.468l.893-.45a8 8 0 0 1 .45 1.088l-.95.313a7 7 0 0 0-.179-.483m.53 2.507a7 7 0 0 0-.1-1.025l.985-.17q.1.58.116 1.17zm-.131 1.538q.05-.254.081-.51l.993.123a8 8 0 0 1-.23 1.155l-.964-.267q.069-.247.12-.501m-.952 2.379q.276-.436.486-.908l.914.405q-.24.54-.555 1.038zm-.964 1.205q.183-.183.35-.378l.758.653a8 8 0 0 1-.401.432z"/>
+                        <path d="M8 1a7 7 0 1 0 4.95 11.95l.707.707A8.001 8.001 0 1 1 8 0z"/>
+                        <path d="M7.5 3a.5.5 0 0 1 .5.5v5.21l3.248 1.856a.5.5 0 0 1-.496.868l-3.5-2A.5.5 0 0 1 7 9V3.5a.5.5 0 0 1 .5-.5"/>
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="9" height="9" fill="currentColor" class="bi bi-three-dots" viewBox="0 0 16 16">
+                        <path d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3"/>
+                    </svg>
+                </div>
+            </div>
+        </header>
+        <div class="div-image-my-list">
+            <img src="https://i.pinimg.com/564x/50/c0/b8/50c0b83e669da736b802da69a2da99bc.jpg" alt="">
+            <div>
+                <img src="../images/image-removebg-preview (1).png" alt="">
+            </div>
+        </div>
+    </head>
+    <main>
+        <div class="div-galerry-view">
+            <div class="div-title-gallery-view">
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" class="bi bi-border-all" viewBox="0 0 16 16">
+                    <path d="M0 0h16v16H0zm1 1v6.5h6.5V1zm7.5 0v6.5H15V1zM15 8.5H8.5V15H15zM7.5 15V8.5H1V15z"/>
+                </svg>
+            </div>
+            <div class="div-line-gallery"></div>
+        </div>
+        <section class="section-gallery-view-favorites">
+            <div class="div-gallery-view-favorites1">
+                <a href=""><img src="https://yt3.googleusercontent.com/NJVhJg3vkCKuZ70-7DonlYwd5lBy3WWGHmggmFmGmVJhx___hcAk1gWBmJiTF7gUL3DHAiA7uHE=s160-c-k-c0x00ffffff-no-rj" alt=""></a>  
+                <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor" class="bi bi-heart-fill-mylist1" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314"/>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor" class="bi bi-heart-mylist1" viewBox="0 0 16 16">
+                    <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15"/>
+                </svg>
+            </div>
+            <div class="div-gallery-view-favorites2">
+                <a href=""><img src="https://w0.peakpx.com/wallpaper/222/549/HD-wallpaper-hunter-x-hunter-black-and-white-gon-killua.jpg" alt=""></a>
+                <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor" class="bi bi-heart-fill-mylist2" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314"/>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor" class="bi bi-heart-mylist2" viewBox="0 0 16 16">
+                    <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15"/>
+                </svg>
+            </div>
+            <div class="div-gallery-view-favorites3">
+                <a href=""><img src="https://static1.cbrimages.com/wordpress/wp-content/uploads/2019/10/one-punch-man-104-header.jpg" alt=""></a>
+                <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor" class="bi bi-heart-fill-mylist3" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314"/>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor" class="bi bi-heart-mylist3" viewBox="0 0 16 16">
+                    <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15"/>
+                </svg>
+            </div>
+            <div class="div-gallery-view-favorites4">
+                <a href=""><img src="https://motionbgs.com/i/c/960x540/media/5652/ippo-hajime-no-ippo.jpg" alt=""></a>
+                <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor" class="bi bi-heart-fill-mylist4" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314"/>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor" class="bi bi-heart-mylist4" viewBox="0 0 16 16">
+                    <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15"/>
+                </svg>
+            </div>
+        </section>
+        <section class="section-gallery-view-favorites">
+            <div class="div-gallery-view-favorites5">
+                <a href=""><img src="https://i.pinimg.com/736x/45/b4/da/45b4da77420ccfff9ab8196944c8cf26.jpg" alt=""></a>  
+                <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor" class="bi bi-heart-fill-mylist5" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314"/>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor" class="bi bi-heart-mylist5" viewBox="0 0 16 16">
+                    <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15"/>
+                </svg>
+            </div>
+            <div class="div-gallery-view-favorites6">
+                <a href=""><img src="https://c4.wallpaperflare.com/wallpaper/516/492/878/anime-my-hero-academia-tomura-shigaraki-wallpaper-preview.jpg" alt=""></a>
+                <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor" class="bi bi-heart-fill-mylist6" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314"/>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor" class="bi bi-heart-mylist6" viewBox="0 0 16 16">
+                    <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15"/>
+                </svg>
+            </div>
+            <div class="div-gallery-view-favorites7">
+                <a href=""><img src="https://static1.cbrimages.com/wordpress/wp-content/uploads/2019/10/one-punch-man-104-header.jpg" alt=""></a>
+                <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor" class="bi bi-heart-fill-mylist7" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314"/>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor" class="bi bi-heart-mylist7" viewBox="0 0 16 16">
+                    <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15"/>
+                </svg>
+            </div>
+            <div class="div-more-favorites">
+                <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-plus-lg" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2"/>
+                     </svg>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script>
+        let divFavoriteList = document.querySelector('.div-gallery-view-favorites1');
+        let favoriteFillList = document.querySelector('.bi-heart-fill-mylist1');
+        let favoriteList = document.querySelector('.bi-heart-mylist1');
+
+        let divFavoriteListTwo = document.querySelector('.div-gallery-view-favorites2');
+        let favoriteFillListTwo = document.querySelector('.bi-heart-fill-mylist2');
+        let favoriteListTwo = document.querySelector('.bi-heart-mylist2');
+
+        let divFavoriteListThree = document.querySelector('.div-gallery-view-favorites3');
+        let favoriteFillListThree = document.querySelector('.bi-heart-fill-mylist3');
+        let favoriteListThree = document.querySelector('.bi-heart-mylist3');
+
+        let divFavoriteListFour = document.querySelector('.div-gallery-view-favorites4');
+        let favoriteFillListFour = document.querySelector('.bi-heart-fill-mylist4');
+        let favoriteListFour = document.querySelector('.bi-heart-mylist4');
+
+        let divFavoriteListFive = document.querySelector('.div-gallery-view-favorites5');
+        let favoriteFillListFive = document.querySelector('.bi-heart-fill-mylist5');
+        let favoriteListFive = document.querySelector('.bi-heart-mylist5');
+
+        let divFavoriteListSix = document.querySelector('.div-gallery-view-favorites6');
+        let favoriteFillListSix = document.querySelector('.bi-heart-fill-mylist6');
+        let favoriteListSix = document.querySelector('.bi-heart-mylist6');
+
+        let divFavoriteListSeven = document.querySelector('.div-gallery-view-favorites7');
+        let favoriteFillListSeven = document.querySelector('.bi-heart-fill-mylist7');
+        let favoriteListSeven = document.querySelector('.bi-heart-mylist7');
+
+        favoriteFillList.addEventListener('click', () =>{
+            favoriteFillList.style.display = 'none';
+            favoriteList.style.display = 'block';
+
+            setTimeout(() =>{
+                divFavoriteList.style.display = 'none';
+            }, 1000);
+        });
+
+        favoriteFillListTwo.addEventListener('click', () =>{
+            favoriteFillListTwo.style.display = 'none';
+            favoriteListTwo.style.display = 'block';
+
+            setTimeout(() =>{
+                divFavoriteListTwo.style.display = 'none';
+            }, 1000);
+        });
+
+        favoriteFillListThree.addEventListener('click', () =>{
+            favoriteFillListThree.style.display = 'none';
+            favoriteListThree.style.display = 'block';
+
+            setTimeout(() =>{
+                divFavoriteListThree.style.display = 'none';
+            }, 1000);
+        });
+
+        favoriteFillListFive.addEventListener('click', () =>{
+            favoriteFillListFive.style.display = 'none';
+            favoriteListFive.style.display = 'block';
+
+            setTimeout(() =>{
+                divFavoriteListFive.style.display = 'none';
+            }, 1000);
+        });
+
+        favoriteFillListSix.addEventListener('click', () =>{
+            favoriteFillListSix.style.display = 'none';
+            favoriteListSix.style.display = 'block';
+
+            setTimeout(() =>{
+                divFavoriteListSix.style.display = 'none';
+            }, 1000);
+        });
+
+        favoriteFillListSeven.addEventListener('click', () =>{
+            favoriteFillListSeven.style.display = 'none';
+            favoriteListSeven.style.display = 'block';
+
+            setTimeout(() =>{
+                divFavoriteListSeven.style.display = 'none';
+            }, 1000);
+        });
+    </script>
+</body>
+</html>
