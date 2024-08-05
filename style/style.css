@@ -2,6 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Anton&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
 @import url('https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 * {
   margin: 0;
   padding: 0;
@@ -2945,7 +2946,7 @@ header nav a:active {
    display: flex;
    flex-direction: column;
    margin: 12rem 12rem 4rem 12rem;
-   width: 160px;
+   width: 160px;  
 }
 
 .div-life-title{
@@ -2977,8 +2978,8 @@ header nav a:active {
 
 .section-personal-list{
    display: flex;
-   flex-direction: column;
-   width: 300px;
+   gap: 4rem;
+   width: calc(100%-12rem);
    height: 600px;
    margin: 0 12rem;
 }
@@ -2988,7 +2989,7 @@ header nav a:active {
    align-items: center;
    gap: 1rem;
    padding: 20px;
-   width: 100%;
+   width: 250px;
    height: 60px;
    border-radius: 5px;
    background-color: #141414;
@@ -3026,7 +3027,6 @@ header nav a:active {
    font-size: 14px;
    color: #ffffffe3;
 }
-
 .div-personal-list-itens svg{
    fill: #ffffffe3;
 }
@@ -3034,6 +3034,98 @@ header nav a:active {
 .div-personal-list-itens div{
    font-size: 20px;
    font-weight: 600;
+}
+
+.div-personal-wishlist{
+   display: none;
+   flex-direction: column;
+   gap: .5rem;
+   width: 100%;
+   padding: 15px;
+   animation: categories-animation 1s ease-in-out;
+}
+
+.div-personal-wishlist p{
+   font-size: 12px;
+   color: #ffffffe3;
+}
+
+.div-hr-wishlist{
+   width: 100%;
+   height: .5px;
+   margin: 2rem auto;
+   background-color: #161616;
+}
+
+.div-number-days span{
+   color: #ffffff;
+}
+
+.div-personal-images{
+   display: flex;
+   gap: 4rem;
+}
+
+.div-personal-images img{
+   cursor: pointer;
+}
+
+.div-img-principal{
+   position: relative;
+   width: 700px;
+   height: 400px;
+}
+
+.div-favorite-wishlist, .div-favorite-wishlist2, .div-favorite-wishlist3{
+   position: absolute;
+   bottom: 1rem;
+   right: 1rem;
+   display: none;
+   align-items: center;
+   gap: .5rem;
+   animation: categories-animation 1s ease-in-out;
+}
+
+.div-favorite-wishlist svg, .div-favorite-wishlist2 svg, .div-favorite-wishlist3 svg{
+   cursor: pointer;
+}
+
+.div-favorite-wishlist svg:last-child, .div-favorite-wishlist2 svg:last-child, .div-favorite-wishlist3 svg:last-child{
+   display: none;
+}
+
+.img-personal-wishlist-principal{
+   width: 700px;
+   height: 400px;
+   object-fit: cover;
+   transition: .3s ease-in-out;
+}
+
+.img-personal-wishlist-principal:hover{
+   filter: brightness(80%);
+}
+
+.div-img-wishlist-secondary{
+   display: flex;
+   flex-direction: column;
+   gap: 2rem;
+}
+
+.div-favorite-secondary, .div-favorite-secondary2{
+   position: relative;
+   width: 300px;
+   height: 150px;
+}
+
+.div-img-wishlist-secondary img, .div-favorite-secondary2 img{
+   width: 300px;
+   height: 150px;
+   object-fit: cover;
+   transition: .3s ease-in-out;
+}
+
+.div-img-wishlist-secondary img:hover, .div-favorite-secondary2 img:hover{
+   filter: brightness(80%);
 }
 
 @keyframes p-movie-animation {
