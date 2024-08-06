@@ -3196,6 +3196,47 @@ header nav a:active {
    background: #ffffff;
 }
 
+.div-add-itens-chosen{
+   position: absolute;
+   top: 40%;
+   right: 30%;
+   display: none;
+   flex-direction: column;
+   width: 500px;
+   height: 600px;
+   border-radius: 5px;
+   background: #0a0a0a;
+}
+
+.div-itens-chosen-closer{
+   position: relative;
+}
+
+.div-itens-chosen-closer div{
+   position: absolute;
+   top: -4rem;
+   left: 95%;
+   width: 100%;
+   cursor: pointer;
+}
+
+.div-add-itens-chosen div{
+   display: flex;
+   align-items: center;
+   gap: 1rem;
+   padding: 20px 20px 0 20px;
+   max-width: 100%;
+   width: 100%;
+}
+
+.div-add-itens-chosen div img{
+   max-width: 250px;
+   width: 250px;
+   height: 150px;
+   object-fit: cover;
+   cursor: pointer;
+}
+
 @keyframes p-movie-animation {
   from {
     display: none;

@@ -242,8 +242,8 @@
             </div>
             <div class="div-slider-buttons">
                <div class="div-circle-mylist first3"></div>
-               <div class="div-circle-mylist second"></div>
-               <div class="div-circle-mylist three3 active"></div>
+               <div class="div-circle-mylist second2"></div>
+               <div class="div-circle-mylist three active"></div>
             </div>
          </div>
          <div class="div-list-is-clear">
@@ -251,7 +251,26 @@
                <path fill-rule="evenodd" d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2"/>
              </svg>
          </div>
-      </section>
+         <div class="div-add-itens-chosen">
+            <div class="div-itens-chosen-closer">
+               <img src="https://i1.sndcdn.com/artworks-uPIOymySS0GTOJpt-Aw8UKQ-t500x500.jpg" alt="">
+               <img src="https://www.hdwallpapers.in/thumbs/2020/hunter_x_hunter_hisoka_morow_black_and_white_photo_hd_anime-t2.jpg" alt="">
+
+               <div>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
+                     <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z"/>
+                   </svg>
+               </div>
+            </div>
+            <div>
+               <img src="https://wallpapercave.com/wp/wp6592419.jpg" alt="">
+               <img src="https://i.pinimg.com/564x/fc/5a/7c/fc5a7cf41b489ab58178c3a479342c16.jpg" alt="">
+            </div>
+            <div>
+               <img src="https://i.pinimg.com/564x/fc/5a/7c/fc5a7cf41b489ab58178c3a479342c16.jpg" alt="">
+               <img src="https://wallpapercave.com/wp/wp6592419.jpg" alt="">
+            </div>
+         </div>
     </main>
     <script>
       let wishList = document.querySelector('.div-personal-list-itens');
@@ -280,10 +299,15 @@
       let divClearAddToList = document.querySelector('.div-list-is-clear');
 
       let clickCircleList = document.querySelector('.div-circle-mylist.first2');
+      let clickCircleListFirst3 = document.querySelector('.div-circle-mylist.first3');
       let clickCircleListTwo = document.querySelector('.div-circle-mylist.second');
+      let clickCircleListTwo2 = document.querySelector('.div-circle-mylist.second2');
       let clickCircleListThree = document.querySelector('.div-circle-mylist.three');
+      let clickCircleListThree2 = document.querySelector('.div-circle-mylist.three2');
 
-      console.log(clickCircleList);
+      let divAddChosenListClearBox = document.querySelector('.div-list-is-clear');
+      let divAddChosenList = document.querySelector('.div-add-itens-chosen');
+      let closerAddChosenList = document.querySelector('.div-itens-chosen-closer div');
       
       //abre a wishlist
       wishList.addEventListener('click', () =>{
@@ -373,10 +397,24 @@
          allImagesList.style.display = 'flex';
          allImagesListTwo.style.display = 'none';
       });
+      clickCircleListFirst3.addEventListener('click', () =>{
+         allImagesListThree.style.display = 'none';
+         allImagesList.style.display = 'flex';
+         allImagesListTwo.style.display = 'none';
+         
+         allImagesList.classList.add('animation-categories');
+      });
 
       clickCircleListTwo.addEventListener('click', () =>{
          allImagesList.style.display = 'none';
          allImagesListTwo.style.display = 'flex';
+         
+         allImagesList.classList.add('animation-categories');
+      });
+      clickCircleListTwo2.addEventListener('click', () =>{
+         allImagesList.style.display = 'none';
+         allImagesListTwo.style.display = 'flex';
+         allImagesListThree.style.display = 'none';
          
          allImagesList.classList.add('animation-categories');
       });
@@ -385,6 +423,20 @@
          allImagesListThree.style.display = 'flex';
          allImagesList.style.display = 'none';
          allImagesListTwo.style.display = 'none';
+      });
+      clickCircleListThree2.addEventListener('click', () =>{
+         allImagesListThree.style.display = 'flex';
+         allImagesList.style.display = 'none';
+         allImagesListTwo.style.display = 'none';
+      });
+
+      //closer add to mylist
+      divAddChosenListClearBox.addEventListener('click', () =>{
+         divAddChosenList.style.display = 'flex';
+      });
+
+      closerAddChosenList.addEventListener('click', () =>{
+         divAddChosenList.style.display = 'none';
       });
     </script>
 </body>
