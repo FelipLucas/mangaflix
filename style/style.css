@@ -3062,8 +3062,24 @@ header nav a:active {
 }
 
 .div-personal-images{
+   position: relative;
    display: flex;
    gap: 4rem;
+   width: 100%;
+}
+.div-personal-images2{
+   position: relative;
+   display: none;
+   gap: 4rem;
+   width: 100%;
+   animation: categories-animation 1s ease-in-out;
+}
+.div-personal-images3{
+   position: relative;
+   display: none;
+   gap: 4rem;
+   width: 100%;
+   animation: categories-animation 1s ease-in-out;
 }
 
 .div-personal-images img{
@@ -3126,6 +3142,58 @@ header nav a:active {
 
 .div-img-wishlist-secondary img:hover, .div-favorite-secondary2 img:hover{
    filter: brightness(80%);
+}
+
+.div-list-is-clear{
+   display: none;
+   justify-content: center;
+   align-items: center;
+   width: 800px;
+   height: 400px;
+   margin: 0 auto;
+   border: .5px solid #ffffff;
+   transition: .3s ease-in-out;
+   animation: categories-animation 1s ease-in-out;
+   cursor: pointer;
+}
+
+.div-list-is-clear:hover{
+   background-color: #ffffff0c;
+}
+
+.div-list-is-clear svg{
+   width: 35px;
+   height: 35px;
+}
+
+.div-slider-buttons{
+   position: absolute;
+   top: 30%;
+   right: 0rem;
+   display: flex;
+   flex-direction: column;
+   gap: .5rem;
+}
+
+.div-slider-buttons div{
+   width: 10px;
+   height: 10px;
+   border-radius: 50%;
+   border: .5px solid #ffffff;
+   cursor: pointer;
+   transition: .3s ease-in-out;
+}
+
+.div-slider-buttons div.active{
+   background: #ffffff;
+}
+
+.active{
+   background: #ffffff;
+}
+
+.div-slider-buttons div:hover{
+   background: #ffffff;
 }
 
 @keyframes p-movie-animation {
