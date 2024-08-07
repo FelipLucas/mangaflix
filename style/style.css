@@ -3092,7 +3092,7 @@ header nav a:active {
    height: 400px;
 }
 
-.div-favorite-wishlist, .div-favorite-wishlist2, .div-favorite-wishlist3{
+.div-favorite-wishlist, .div-favorite-wishlist2, .div-favorite-wishlist3, .div-favorite-wishlist4{ 
    position: absolute;
    bottom: 1rem;
    right: 1rem;
@@ -3102,11 +3102,26 @@ header nav a:active {
    animation: categories-animation 1s ease-in-out;
 }
 
-.div-favorite-wishlist svg, .div-favorite-wishlist2 svg, .div-favorite-wishlist3 svg{
+.div-favorite-wishlist svg, .div-favorite-wishlist2 svg, .div-favorite-wishlist3 svg, .div-favorite-wishlist4 svg{
    cursor: pointer;
 }
 
-.div-favorite-wishlist svg:last-child, .div-favorite-wishlist2 svg:last-child, .div-favorite-wishlist3 svg:last-child{
+.div-favorite-wishlist svg:last-child, .div-favorite-wishlist2 svg:last-child, .div-favorite-wishlist3 svg:last-child, .div-favorite-wishlist4 svg:last-child{
+   display: none;
+}
+
+.div-images-wishlist-title{
+   position: absolute;
+   bottom: 1rem;
+   left: 1rem;
+   animation: categories-animation 1s ease-in-out;
+}
+.div-images-wishlist-title p{
+   font-size: 16px;
+   font-family: 'Courier New', Courier, monospace;
+}
+
+.div-images-wishlist-title.first, .div-images-wishlist-title.second, .div-images-wishlist-title.three, .div-images-wishlist-title.four, .div-images-wishlist-title.five, .div-images-wishlist-title.six{
    display: none;
 }
 
@@ -3206,6 +3221,7 @@ header nav a:active {
    height: 600px;
    border-radius: 5px;
    background: #0a0a0a;
+   animation: categories-animation 1s ease-in-out;
 }
 
 .div-itens-chosen-closer{
@@ -3235,6 +3251,11 @@ header nav a:active {
    height: 150px;
    object-fit: cover;
    cursor: pointer;
+   transition: .3s ease-in-out;
+}
+
+.div-add-itens-chosen div img:hover{
+  filter: brightness(80%);
 }
 
 @keyframes p-movie-animation {
