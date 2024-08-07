@@ -650,8 +650,8 @@ pauseVideoTwo.addEventListener('click', () =>{
 });
 
 //paused function
-function pausedVideo(){
-   if(divVideo.requestFullscreen()){
+/*function pausedVideo(){
+   if(pauseOverlay.length === 1){
       pauseOverlay.style.display = 'none';
       overlayPause.style.display = 'none';
    }
@@ -721,7 +721,7 @@ function pausedVideo(){
       pauseOverlay.style.display = 'none';
       overlayPause.style.display = 'none'
    });
-}
+}*/
 
 //pause with key
 function pauseVideoKey(event){

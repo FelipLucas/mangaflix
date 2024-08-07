@@ -2944,7 +2944,6 @@ header nav a:active {
 .div-life{
    position: relative;
    display: flex;
-   flex-direction: column;
    margin: 12rem 12rem 4rem 12rem;
    width: 160px;  
 }
@@ -2978,6 +2977,7 @@ header nav a:active {
 
 .section-personal-list{
    display: flex;
+   /*flex-wrap: wrap;*/
    gap: 4rem;
    width: calc(100%-12rem);
    height: 600px;
@@ -3064,6 +3064,7 @@ header nav a:active {
 .div-personal-images{
    position: relative;
    display: flex;
+   flex-wrap: wrap;
    gap: 4rem;
    width: 100%;
 }
