@@ -2923,22 +2923,40 @@ header nav a:active {
    height: 200px;
 }
 
-.div-image-my-list div{
+.div-cat-image-mylist{
    position: absolute;
    bottom: -5px;
    left: 5rem;
 }
 
-.div-image-my-list div img{
+.div-cat-image-mylist img{
    width: 80px;
    height: 80px;
 }
 
-.div-image-my-list img{
+.image-mylist-principal{
    width: 100%;
    height: 100%;
    object-fit: cover;
    image-rendering: optimizeQuality;
+}
+
+.div-pen-svg{
+   position: absolute;
+   top: 1rem;
+   right: 1rem;
+   padding: 7px;
+   border-radius: 50%;
+   background-color: #000000;
+   cursor: pointer;
+}
+
+.div-pen-svg label{
+   cursor: pointer;
+}
+
+.div-pen-svg input{
+   display: none;
 }
 
 .div-life{
